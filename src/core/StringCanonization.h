@@ -5,6 +5,10 @@
 #include "../types/Permutation.h"
 #include "../types/PermutationGroupCoset.h"
 
+#include <string>
+
+using namespace std;
+
 PermutationGroupCoset stringCanonization(
     string str,
     ElementSet elems,

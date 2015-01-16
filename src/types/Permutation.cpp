@@ -1,5 +1,13 @@
 #include "Permutation.h"
 
+Permutation::Permutation(int n) {
+    size = n;
+    perm = new int[size];
+    for (int i = 0; i < size; ++i) {
+        perm[i] = i;
+    }
+}
+
 Permutation::Permutation(Permutation* nperm) {
     size = nperm->getSize();
     perm = new int[size];

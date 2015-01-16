@@ -3,7 +3,7 @@ DEFAULT_WARNINGS = -Wall -Wextra -Werror -Wno-sign-compare -Wno-unused-result -W
 DEFAULT_WARNINGS_ALL = -Wall -Wextra -Werror
 CFLAGS = -std=c++11 -O3
 
-DIRS = ../src/types/ ../src/utils/ # ../src/core/
+DIRS = ../src/types/ ../src/utils/ ../src/core/
 SOURCES = $(foreach d, $(DIRS), $(wildcard $(d)*.cpp) )
 OBJECTS = $(SOURCES:.cpp=.o)
 

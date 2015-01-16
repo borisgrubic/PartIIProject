@@ -1,6 +1,8 @@
 #include "Utils.h"
 
 #include <stack>
+#include <queue>
+#include <vector>
 #include <stddef.h>
 
 using namespace std;
@@ -126,5 +128,120 @@ ElementSet* findBlockSystem(
                 }
         }
     }
+    bool isTrivial = true;
+    for (int i = 1; i < elems->getN(); ++i) {
+        if (blockId[(*elems)[0]] != blockId[(*elems)[i]]) {
+            isTrivial = false;
+        }
+    }
+    if (isTrivial) {
+        delete[] blockId;
+        return NULL;
+    }
     return new ElementSet(n, blockId);
 }
+
+Permutation* filter(
+    vector< vector<Permutation*> >& cosetRep,
+    ElementSet* elems,
+    ElementSet* blockSystem,
+    Permutation* filterPerm
+) {
+    for (int i = 0; i < (int)cosetRep.size(); ++i) {
+        for (int j = 0; j < (int)cosetRep[i].size(); ++j) {
+            Permutation* checkPerm = 
+                cosetRep[i][j]->getInverse()->compose(filterPerm);
+            bool inCoset = true;
+            if (i == 0) {
+                int m = elems->getN();
+                for (int k = 0; k < m; ++k) {
+                    int x = (*checkPerm)[(*elems)[k]];
+                    if ((*blockSystem)[x] != (*blockSystem)[(*elems)[k]]) {
+                        inCoset = false;
+                        break;
+                    }
+                }
+            } else {
+                if ((*checkPerm)[i] != i) {
+                    inCoset = false;
+                }
+            }
+            if (inCoset) {
+                delete filterPerm;
+                filterPerm = checkPerm;
+                break;
+            } else {
+                cosetRep[i].push_back(checkPerm);
+                return new Permutation(checkPerm);
+            }
+        }
+    }    
+    return NULL;
+}
+
+PermutationGroup* findBlockSystemStabilizer(
+    int n,
+    ElementSet* elems, 
+    ElementSet* blockSystem, 
+    PermutationGroup* group, 
+    Permutation*** cosetRepresentatives, 
+    int* size
+) {
+    vector< vector<Permutation*> > cosetRep(n, vector<Permutation*>());
+    for (int i = 0; i < n; ++i) {
+        cosetRep[i].push_back(new Permutation(n));
+    }
+    int gensSize = group->getGenSize();
+    Permutation** generators = group->getGenerators();
+    queue<Permutation*> queue;
+    for (int i = 0; i < gensSize; ++i) {
+        Permutation* newCoset = 
+            filter(cosetRep, elems, blockSystem, generators[i]);
+        if (newCoset) {
+            queue.push(newCoset);
+        }
+    }
+    while (!queue.empty()) {
+        Permutation* curCoset = queue.front();
+        queue.pop();
+        for (int i = 0; i < (int)cosetRep.size(); ++i)
+            for (int j = 0; j < (int)cosetRep[i].size(); ++j) {
+                Permutation* filterPerm = 
+                    cosetRep[i][j]->compose(curCoset);
+                Permutation* newCoset =
+                    filter(cosetRep, elems, blockSystem, filterPerm);
+                if (newCoset) {
+                    queue.push(newCoset);
+                }
+                delete filterPerm;
+                filterPerm = 
+                    curCoset->compose(cosetRep[i][j]);
+                newCoset =
+                    filter(cosetRep, elems, blockSystem, filterPerm);
+                if (newCoset) {
+                    queue.push(newCoset);
+                }
+                delete filterPerm;
+            }
+    } 
+    int stabGenSize = 0;
+    for (int i = 1; i < n; ++i) {
+        stabGenSize += cosetRep[i].size();
+    }
+    int p = 0;
+    Permutation** stabGen = new Permutation*[stabGenSize]; 
+    for (int i = 1; i < n; ++i)
+        for (int j = 0; j < (int)cosetRep[i].size(); ++j) {
+            stabGen[p++] = new Permutation(cosetRep[i][j]);
+        }
+    *size = cosetRep[0].size();
+    *cosetRepresentatives = new Permutation*[*size];
+    for (int i = 0; i < *size; ++i) {
+        (*cosetRepresentatives)[i] = new Permutation(cosetRep[0][i]);
+    }
+    for (int i = 0; i < (int)cosetRep.size(); ++i)
+        for (int j = 0; j < (int)cosetRep[i].size(); ++j)
+            delete cosetRep[i][j];
+    return new PermutationGroup(stabGenSize, stabGen);
+}
+

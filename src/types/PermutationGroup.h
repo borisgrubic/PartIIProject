@@ -9,6 +9,7 @@ class PermutationGroup {
     Permutation** gens;
 
     public:
+    PermutationGroup(PermutationGroup*);
     PermutationGroup(int, Permutation**);
     ~PermutationGroup();
     int getGenSize();

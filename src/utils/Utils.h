@@ -7,5 +7,6 @@
 ElementSet* findOrbit(int, int, PermutationGroup*);
 ElementSet* findMinimalBlockSystem(int, ElementSet*, PermutationGroup*);
 ElementSet* findBlockSystem(int, int, ElementSet*, PermutationGroup*);
+PermutationGroup* findBlockSystemStabilizer(int, ElementSet*, ElementSet*, PermutationGroup*, Permutation***, int*);
 
 #endif

@@ -7,6 +7,7 @@ class Permutation {
     int* perm;
 
     public:
+    Permutation(int);
     Permutation(Permutation*);
     Permutation(int, int*);
     ~Permutation();
