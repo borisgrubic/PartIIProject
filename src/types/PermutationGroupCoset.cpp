@@ -20,3 +20,10 @@ Permutation* PermutationGroupCoset::getPermutation() {
 PermutationGroup* PermutationGroupCoset::getGroup() {
     return permutationGroup;
 }
+
+void PermutationGroupCoset::setPermutation(Permutation* perm) {
+    if (permutation) {
+        delete permutation;
+    }
+    permutation = perm;
+}

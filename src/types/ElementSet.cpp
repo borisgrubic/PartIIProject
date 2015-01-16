@@ -21,7 +21,7 @@ int& ElementSet::operator[](const int idx) {
     if (idx >= 0 && idx < n) {
         return elems[idx];
     }
-    return -1;
+    throw "Index out of bounds";
 }
 
 ElementSet* ElementSet::substract(ElementSet* elemSet) {

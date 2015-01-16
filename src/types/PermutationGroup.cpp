@@ -1,6 +1,6 @@
 #include "PermutationGroup.h"
 
-PermutationGroup::PermutationGroup(int ngenSize, Permutation* ngens) {
+PermutationGroup::PermutationGroup(int ngenSize, Permutation** ngens) {
     genSize = ngenSize;
     gens = ngens;
 }
@@ -16,6 +16,6 @@ int PermutationGroup::getGenSize() {
     return genSize;
 }
 
-Permutation** getGenerators() {
+Permutation** PermutationGroup::getGenerators() {
     return gens;
 }

@@ -1,4 +1,6 @@
-#include "StringCanonization"
+#include "StringCanonization.h"
+
+#include "../utils/Utils.h"
 
 PermutationGroupCoset* stringCanonization(
     string str,
@@ -10,7 +12,7 @@ PermutationGroupCoset* stringCanonization(
         return coset;
     }
 
-    ElementSet* orbit = findOrbit((*elems)[0], coset->getGroup());
+    ElementSet* orbit = findOrbit(str.size(), (*elems)[0], coset->getGroup());
     bool isTransitive = orbit->getN() == elems->getN();
     if (!isTransitive) {
         ElementSet* rest = elems.substract(orbit);
@@ -27,15 +29,20 @@ PermutationGroupCoset* stringCanonization(
             inducedAction
         );
 
+        delete tmpResult;
         delete orbit;
         delete rest;
         return result;
     } else {
-        // coset->getPermutation is transitive on elems
+        // coset->getGroup is transitive on elems
         ElementSet* minimalBlockSystem = 
-            findMinimalBlockSystem(elems, coset->getGroup());
+            findMinimalBlockSystem(str.size(), elems, coset->getGroup());
         PermutationGroup* stabilizer =
-            findBlockSystemStabilizer(elems, minimalBlockSystem, coset->getGroup());
+            findBlockSystemStabilizer(
+                elems, 
+                minimalBlockSystem, 
+                coset->getGroup()
+            );
         int size;
         PermutationGroupCoset** cosets =
             decomposeGroup(coset->getGroup(), stabilizer, &size);
@@ -47,12 +54,14 @@ PermutationGroupCoset* stringCanonization(
         }
         PermutationGroupCoset** tmpResults = new (PermutationGroupCoset*)[size];
         for (int i = 0; i < size; ++i) {
-            tmpResults[i] = stringCanonization(str, elems, cosets[i], inducedAction);
+            tmpResults[i] = 
+                stringCanonization(str, elems, cosets[i], inducedAction);
         }
 
         char** tmpStrings = new (char*)[size];
         for (int i = 0; i < size; ++i) {
-            string changedStr = (*inducedAction)(str, tmpResults[i]->getPermutation());
+            string changedStr = 
+                (*inducedAction)(str, tmpResults[i]->getPermutation());
             tmpStrings[i] = new char[elems->getN() + 1];
             tmpStrings[i][elems->getN()] = '\0';
             for (int j = 0; j < elems->getN(); ++j) {
@@ -87,7 +96,8 @@ PermutationGroupCoset* stringCanonization(
         Permutation* idxInv = tmpResults[idx]->getPermutation()->getInverse();
         for (int i = idx + 1; i < size; ++i) {
             if (strcmp(tmpStrings[idx], tmpStrings[i]) == 0) {
-                generators[nxt++] = idxInv->compose(tmpResults[i]->getPermutation());
+                generators[nxt++] = 
+                    idxInv->compose(tmpResults[i]->getPermutation());
             }
         }
 
@@ -98,10 +108,11 @@ PermutationGroupCoset* stringCanonization(
 
         delete minimalBlockSystem;
         delete stabilizer;
+        delete orbit;
         for (int i = 0; i < size; ++i) {
             delete cosets[i];
             delete tmpResults[i];
-            delete tmpStrings[i];
+            delete[] tmpStrings[i];
         }
         delete[] cosets;
         delete[] tmpResults;

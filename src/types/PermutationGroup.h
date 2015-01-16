@@ -9,10 +9,10 @@ class PermutationGroup {
     Permutation** gens;
 
     public:
-    PermutationGroup(int, Permutation*);
+    PermutationGroup(int, Permutation**);
     ~PermutationGroup();
     int getGenSize();
     Permutation** getGenerators();
-}
+};
 
 #endif

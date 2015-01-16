@@ -13,6 +13,6 @@ class ElementSet {
     int* getElems();
     int& operator[](const int idx);
     ElementSet* substract(ElementSet*);
-}
+};
 
 #endif

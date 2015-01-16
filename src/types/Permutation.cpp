@@ -1,5 +1,13 @@
 #include "Permutation.h"
 
+Permutation::Permutation(Permutation* nperm) {
+    size = nperm->getSize();
+    perm = new int[size];
+    for (int i = 0; i < size; ++i) {
+        perm[i] = (*nperm)[i];
+    }
+}
+
 Permutation::Permutation(int nsize, int* nperm) {
     size = nsize;
     perm = nperm;
@@ -18,16 +26,24 @@ int* Permutation::getPermutation() {
 }
 
 int& Permutation::operator[](const int idx) {
-    if (idx >= 1 && idx <= size) {
+    if (idx >= 0 && idx < size) {
         return perm[idx];
     }
-    return -1;
+    throw "Index out of bounds";
 }
 
 Permutation* Permutation::getInverse() {
     int* nperm = new int[size];
     for (int i = 0; i < size; ++i) {
         nperm[perm[i]] = i;
+    }
+    return new Permutation(size, nperm);
+}
+
+Permutation* Permutation::compose(Permutation* perm) {
+    int* nperm = new int[size];
+    for (int i = 0; i < size; ++i) {
+        nperm[i] = (*perm)[(*this)[i]];
     }
     return new Permutation(size, nperm);
 }

@@ -7,12 +7,14 @@ class Permutation {
     int* perm;
 
     public:
+    Permutation(Permutation*);
     Permutation(int, int*);
     ~Permutation();
     int getSize();
     int* getPermutation();
     int& operator[](const int);
     Permutation* getInverse();
+    Permutation* compose(Permutation*);
 };
 
 #endif

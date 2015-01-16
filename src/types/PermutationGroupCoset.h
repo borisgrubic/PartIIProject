@@ -14,6 +14,7 @@ class PermutationGroupCoset {
     ~PermutationGroupCoset();
     Permutation* getPermutation();
     PermutationGroup* getGroup();
-}
+    void setPermutation(Permutation*);
+};
 
 #endif
