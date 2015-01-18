@@ -27,11 +27,10 @@ int& ElementSet::operator[](const int idx) {
 ElementSet* ElementSet::substract(ElementSet* elemSet) {
     int nn = n - elemSet->getN();
     int* nelems = new int[nn];
-    int* subElems = elemSet->getElems();
     int j = 0;
     int p = 0;
     for (int i = 0; i < n; ++i) {
-        if (elems[i] != subElems[j]) {
+        if (j == elemSet->getN() || elems[i] != (*elemSet)[j]) {
             nelems[p++] = elems[i];
         } else {
             j++;

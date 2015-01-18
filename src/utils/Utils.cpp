@@ -54,8 +54,6 @@ ElementSet* findMinimalBlockSystem(
         if (blockSystem) {
             minimalBlockSystem = blockSystem;
             break;
-        } else {
-            delete blockSystem;
         }
     }
     if (minimalBlockSystem == NULL) {
@@ -69,25 +67,30 @@ ElementSet* findMinimalBlockSystem(
         // group acts imprimitively on elems, try recursion
         int cnt = 0;
         for (int i = 0; i < m; ++i)
-            if ((*minimalBlockSystem)[i] == (*elems)[i]) {
+            if ((*minimalBlockSystem)[(*elems)[i]] == (*elems)[i]) {
                 // representative of its block
                 ++cnt;
             }
         int p = 0;
         int* nelems = new int[cnt];
         for (int i = 0; i < m; ++i)
-            if ((*minimalBlockSystem)[i] == (*elems)[i]) {
+            if ((*minimalBlockSystem)[(*elems)[i]] == (*elems)[i]) {
                 nelems[p++] = (*elems)[i];
             }
         ElementSet* blocks = new ElementSet(cnt, nelems);
         ElementSet* finalBlocks = findMinimalBlockSystem(n, blocks, group);
         for (int i = 0; i < cnt; ++i) {
             for (int j = 0; j < m; ++j) {
-                if ((*minimalBlockSystem)[j] == (*blocks)[i]) {
-                    (*minimalBlockSystem)[j] = (*finalBlocks)[i];
+                if ((*minimalBlockSystem)[(*elems)[j]] == (*blocks)[i]) {
+                    (*minimalBlockSystem)[(*elems)[j]] = (*finalBlocks)[i];
                 }
             }
         } 
+        int* resArray = new int[m];
+        for (int i = 0; i < m; ++i)
+            resArray[i] = (*minimalBlockSystem)[(*elems)[i]];
+        delete minimalBlockSystem;
+        minimalBlockSystem = new ElementSet(m, resArray);
         delete blocks;
         delete finalBlocks;
     }
