@@ -12,6 +12,7 @@ class ElementSet {
     int getN();
     int* getElems();
     int& operator[](const int idx);
+    int find(int);
     ElementSet* substract(ElementSet*);
 };
 

@@ -24,6 +24,13 @@ int& ElementSet::operator[](const int idx) {
     throw "Index out of bounds";
 }
 
+int ElementSet::find(int x) {
+    for (int i = 0; i < n; ++i)
+        if (elems[i] == x)
+            return i;
+    return -1;
+}
+
 ElementSet* ElementSet::substract(ElementSet* elemSet) {
     int nn = n - elemSet->getN();
     int* nelems = new int[nn];

@@ -9,13 +9,14 @@ PermutationGroupCoset* stringCanonization(
     string str,
     ElementSet* elems,
     PermutationGroupCoset* coset,
-    string (*inducedAction)(string, Permutation)
+    string (*inducedAction)(string, Permutation*)
 ) {
     if (elems->getN() == 1) {
-        return coset;
+        return new PermutationGroupCoset(coset);
     }
 
-    ElementSet* orbit = findOrbit(str.size(), (*elems)[0], coset->getGroup());
+    int n = coset->getPermutation()->getSize();
+    ElementSet* orbit = findOrbit(n, (*elems)[0], coset->getGroup());
     bool isTransitive = orbit->getN() == elems->getN();
     if (!isTransitive) {
         ElementSet* rest = elems->substract(orbit);
@@ -39,12 +40,12 @@ PermutationGroupCoset* stringCanonization(
     } else {
         // coset->getGroup is transitive on elems
         ElementSet* minimalBlockSystem = 
-            findMinimalBlockSystem(str.size(), elems, coset->getGroup());
+            findMinimalBlockSystem(n, elems, coset->getGroup());
         Permutation** cosetRepresentatives;
         int size;
         PermutationGroup* stabilizer =
             findBlockSystemStabilizer(
-                str.size(),
+                n,
                 elems, 
                 minimalBlockSystem, 
                 coset->getGroup(),
@@ -101,7 +102,7 @@ PermutationGroupCoset* stringCanonization(
         }
         int nxt = tmpGensSize;
         Permutation* idxInv = tmpResults[idx]->getPermutation()->getInverse();
-        for (int i = idx + 1; i < size; ++i) {
+        for (int i = idx; i < size; ++i) {
             if (strcmp(tmpStrings[idx], tmpStrings[i]) == 0) {
                 generators[nxt++] = 
                     idxInv->compose(tmpResults[i]->getPermutation());
@@ -113,6 +114,7 @@ PermutationGroupCoset* stringCanonization(
             new PermutationGroup(tmpGensSize + cnt, generators)
         );
 
+        delete idxInv;
         delete minimalBlockSystem;
         delete stabilizer;
         delete orbit;
@@ -120,7 +122,9 @@ PermutationGroupCoset* stringCanonization(
             delete cosets[i];
             delete tmpResults[i];
             delete[] tmpStrings[i];
+            delete cosetRepresentatives[i];
         }
+        delete[] cosetRepresentatives;
         delete[] cosets;
         delete[] tmpResults;
         delete[] tmpStrings;

@@ -2,6 +2,7 @@
 
 #include "types/TestTypes.h"
 #include "utils/TestUtils.h"
+#include "core/TestCore.h"
 
 using namespace std;
 
@@ -11,4 +12,7 @@ int main() {
 
     TestUtils testUtils;
     testUtils.test();
+
+    TestCore testCore;
+    testCore.test();
 }

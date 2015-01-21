@@ -11,6 +11,7 @@ class PermutationGroupCoset {
 
     public:
     PermutationGroupCoset(Permutation*, PermutationGroup*);
+    PermutationGroupCoset(PermutationGroupCoset*);
     ~PermutationGroupCoset();
     Permutation* getPermutation();
     PermutationGroup* getGroup();

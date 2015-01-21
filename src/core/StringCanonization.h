@@ -9,11 +9,11 @@
 
 using namespace std;
 
-PermutationGroupCoset stringCanonization(
+PermutationGroupCoset* stringCanonization(
     string str,
-    ElementSet elems,
-    PermutationGroupCoset coset,
-    string (*inducedAction)(string, Permutation)
+    ElementSet* elems,
+    PermutationGroupCoset* coset,
+    string (*inducedAction)(string, Permutation*)
 );
 
 #endif

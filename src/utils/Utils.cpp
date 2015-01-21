@@ -1,5 +1,6 @@
 #include "Utils.h"
 
+#include <iostream>
 #include <stack>
 #include <queue>
 #include <vector>
@@ -150,35 +151,44 @@ Permutation* filter(
     ElementSet* blockSystem,
     Permutation* filterPerm
 ) {
+    Permutation* perm = new Permutation(filterPerm);
     for (int i = 0; i < (int)cosetRep.size(); ++i) {
+        bool inCoset = false;
         for (int j = 0; j < (int)cosetRep[i].size(); ++j) {
-            Permutation* checkPerm = 
-                cosetRep[i][j]->getInverse()->compose(filterPerm);
-            bool inCoset = true;
+            Permutation* tmp = cosetRep[i][j]->getInverse();
+            Permutation* checkPerm = tmp->compose(perm);
+            delete tmp;
+            bool found = true;
             if (i == 0) {
                 int m = elems->getN();
                 for (int k = 0; k < m; ++k) {
                     int x = (*checkPerm)[(*elems)[k]];
-                    if ((*blockSystem)[x] != (*blockSystem)[(*elems)[k]]) {
-                        inCoset = false;
+                    int idx = elems->find(x);
+                    if (idx == -1 || (*blockSystem)[idx] != (*blockSystem)[k]) {
+                        found = false;
                         break;
                     }
                 }
             } else {
-                if ((*checkPerm)[i] != i) {
-                    inCoset = false;
+                if ((*checkPerm)[i - 1] != i - 1) {
+                    found = false;
                 }
             }
-            if (inCoset) {
-                delete filterPerm;
-                filterPerm = checkPerm;
+            if (found) {
+                delete perm;
+                inCoset = true;
+                perm = checkPerm;
                 break;
             } else {
-                cosetRep[i].push_back(checkPerm);
-                return new Permutation(checkPerm);
+                delete checkPerm;
             }
         }
+        if (!inCoset) {
+            cosetRep[i].push_back(perm);
+            return new Permutation(perm);
+        }
     }    
+    delete perm;
     return NULL;
 }
 
@@ -191,8 +201,10 @@ PermutationGroup* findBlockSystemStabilizer(
     int* size
 ) {
     vector< vector<Permutation*> > cosetRep(n, vector<Permutation*>());
+    vector<Permutation*> permList;
     for (int i = 0; i < n; ++i) {
         cosetRep[i].push_back(new Permutation(n));
+        permList.push_back(new Permutation(n));
     }
     int gensSize = group->getGenSize();
     Permutation** generators = group->getGenerators();
@@ -202,30 +214,36 @@ PermutationGroup* findBlockSystemStabilizer(
             filter(cosetRep, elems, blockSystem, generators[i]);
         if (newCoset) {
             queue.push(newCoset);
+            permList.push_back(newCoset);
         }
     }
+    vector<Permutation*> newPermList;
     while (!queue.empty()) {
         Permutation* curCoset = queue.front();
         queue.pop();
-        for (int i = 0; i < (int)cosetRep.size(); ++i)
-            for (int j = 0; j < (int)cosetRep[i].size(); ++j) {
-                Permutation* filterPerm = 
-                    cosetRep[i][j]->compose(curCoset);
-                Permutation* newCoset =
-                    filter(cosetRep, elems, blockSystem, filterPerm);
-                if (newCoset) {
-                    queue.push(newCoset);
-                }
-                delete filterPerm;
-                filterPerm = 
-                    curCoset->compose(cosetRep[i][j]);
-                newCoset =
-                    filter(cosetRep, elems, blockSystem, filterPerm);
-                if (newCoset) {
-                    queue.push(newCoset);
-                }
-                delete filterPerm;
+        newPermList.clear();
+        for (int i = 0; i < (int)permList.size(); ++i) {
+            Permutation* filterPerm = 
+                permList[i]->compose(curCoset);
+            Permutation* newCoset =
+                filter(cosetRep, elems, blockSystem, filterPerm);
+            if (newCoset) {
+                queue.push(newCoset);
+                newPermList.push_back(newCoset);
             }
+            delete filterPerm;
+            filterPerm = 
+                curCoset->compose(permList[i]);
+            newCoset =
+                filter(cosetRep, elems, blockSystem, filterPerm);
+            if (newCoset) {
+                queue.push(newCoset);
+                newPermList.push_back(newCoset);
+            }
+            delete filterPerm;
+        }
+        for (int i = 0; i < (int)newPermList.size(); ++i)
+            permList.push_back(newPermList[i]);
     } 
     int stabGenSize = 0;
     for (int i = 1; i < n; ++i) {
@@ -245,6 +263,8 @@ PermutationGroup* findBlockSystemStabilizer(
     for (int i = 0; i < (int)cosetRep.size(); ++i)
         for (int j = 0; j < (int)cosetRep[i].size(); ++j)
             delete cosetRep[i][j];
+    for (int i = 0; i < (int)permList.size(); ++i)
+        delete permList[i];
     return new PermutationGroup(stabGenSize, stabGen);
 }
 

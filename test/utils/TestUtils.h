@@ -4,9 +4,16 @@
 #include "../../src/types/PermutationGroup.h"
 #include "../../src/types/ElementSet.h"
 
+#include <vector>
+
+using namespace std;
+
 class TestUtils {
     public:
     bool test();
+
+    static PermutationGroup* generateGroup(int, PermutationGroup*);
+    static bool sameGroups(PermutationGroup*, vector<Permutation*>);
 
     private:
     bool testFindOrbit();
@@ -15,6 +22,8 @@ class TestUtils {
     bool testFindBlockSystem(int, int, ElementSet*, PermutationGroup*, int*);
     bool testFindMinimalBlockSystem();
     bool testFindMinimalBlockSystem(int, ElementSet*, PermutationGroup*, int*);
+    bool testFindBlockSystemStabilizer();
+    bool testFindBlockSystemStabilizer(int, ElementSet*, PermutationGroup*);
 };
 
 #endif

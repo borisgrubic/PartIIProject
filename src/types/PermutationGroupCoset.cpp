@@ -8,6 +8,11 @@ PermutationGroupCoset::PermutationGroupCoset(
     permutationGroup = permGroup;
 }
 
+PermutationGroupCoset::PermutationGroupCoset(PermutationGroupCoset* ncoset) {
+    permutation = new Permutation(ncoset->getPermutation());
+    permutationGroup = new PermutationGroup(ncoset->getGroup());
+}
+
 PermutationGroupCoset::~PermutationGroupCoset() {
     delete permutation;
     delete permutationGroup;
