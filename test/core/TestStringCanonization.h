@@ -5,32 +5,28 @@
 #include "../../src/types/Permutation.h"
 #include "../../src/types/PermutationGroupCoset.h"
 
-#include <string>
-
-using namespace std;
-
 class TestStringCanonization {
     public:
     bool test();
 
     private:
     bool testStringCanonization(
-        string,
-        string, 
+        ElementSet*,
+        ElementSet*, 
         ElementSet*, 
         PermutationGroupCoset*,
-        string (*inducedAction)(string, Permutation*),
+        ElementSet* (*inducedAction)(ElementSet*, Permutation*),
         bool
     );
     bool checkValidityOfResult(
         PermutationGroupCoset*,
-        string,
+        ElementSet*,
         ElementSet*,
         PermutationGroupCoset*,
-        string (*inducedAction)(string, Permutation*)
+        ElementSet* (*inducedAction)(ElementSet*, Permutation*)
     );
 
-    static string normalAction(string, Permutation*);
+    static ElementSet* normalAction(ElementSet*, Permutation*);
 };
 
 #endif

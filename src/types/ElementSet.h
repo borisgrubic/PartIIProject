@@ -7,11 +7,14 @@ class ElementSet {
     int* elems;
 
     public:
+    ElementSet(ElementSet*);
     ElementSet(int, int*);
     ~ElementSet();
     int getN();
     int* getElems();
     int& operator[](const int idx);
+    bool operator==(ElementSet&);
+    bool operator<(ElementSet&);
     int find(int);
     ElementSet* substract(ElementSet*);
 };

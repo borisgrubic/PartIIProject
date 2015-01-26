@@ -3,13 +3,12 @@
 #include "../utils/Utils.h"
 
 #include <assert.h>
-#include <string.h>
 
 PermutationGroupCoset* stringCanonization(
-    string str,
+    ElementSet* str,
     ElementSet* elems,
     PermutationGroupCoset* coset,
-    string (*inducedAction)(string, Permutation*)
+    ElementSet* (*inducedAction)(ElementSet*, Permutation*)
 ) {
     if (elems->getN() == 1) {
         return new PermutationGroupCoset(coset);
@@ -66,28 +65,19 @@ PermutationGroupCoset* stringCanonization(
                 stringCanonization(str, elems, cosets[i], inducedAction);
         }
 
-        char** tmpStrings = new char*[size];
+        ElementSet** tmpStrings = new ElementSet*[size];
         for (int i = 0; i < size; ++i) {
-            string changedStr = 
+            tmpStrings[i] =
                 (*inducedAction)(str, tmpResults[i]->getPermutation());
-            tmpStrings[i] = new char[elems->getN() + 1];
-            tmpStrings[i][elems->getN()] = '\0';
-            for (int j = 0; j < elems->getN(); ++j) {
-                tmpStrings[i][j] = changedStr[(*elems)[j]];
-            }
         }
 
-        int idx = -1;
-        int cnt = 0;
-        for (int i = 0; i < size; ++i) {
-            int cmpRes = 1;
-            if (idx != -1) {
-                cmpRes = strcmp(tmpStrings[idx], tmpStrings[i]);
-            }
-            if (cmpRes > 0) {
+        int idx = 0;
+        int cnt = 1;
+        for (int i = 1; i < size; ++i) {
+            if ((*tmpStrings[i]) < (*tmpStrings[idx])) {
                 idx = i;
                 cnt = 1;
-            } else if (cmpRes == 0) {
+            } else if ((*tmpStrings[i]) == (*tmpStrings[idx])) {
                 ++cnt;
             }
         }
@@ -103,7 +93,7 @@ PermutationGroupCoset* stringCanonization(
         int nxt = tmpGensSize;
         Permutation* idxInv = tmpResults[idx]->getPermutation()->getInverse();
         for (int i = idx; i < size; ++i) {
-            if (strcmp(tmpStrings[idx], tmpStrings[i]) == 0) {
+            if ((*tmpStrings[idx]) == (*tmpStrings[i])) {
                 generators[nxt++] = 
                     idxInv->compose(tmpResults[i]->getPermutation());
             }
@@ -121,7 +111,7 @@ PermutationGroupCoset* stringCanonization(
         for (int i = 0; i < size; ++i) {
             delete cosets[i];
             delete tmpResults[i];
-            delete[] tmpStrings[i];
+            delete tmpStrings[i];
             delete cosetRepresentatives[i];
         }
         delete[] cosetRepresentatives;

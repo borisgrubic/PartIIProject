@@ -1,5 +1,12 @@
 #include "ElementSet.h"
 
+ElementSet::ElementSet(ElementSet* elemSet) {
+    n = elemSet->getN();
+    elems = new int[n];
+    for (int i = 0; i < n; ++i)
+        elems[i] = (*elemSet)[i];
+}
+
 ElementSet::ElementSet(int nn, int* nelems) {
     n = nn;
     elems = nelems;
@@ -22,6 +29,25 @@ int& ElementSet::operator[](const int idx) {
         return elems[idx];
     }
     throw "Index out of bounds";
+}
+
+bool ElementSet::operator==(ElementSet& other) {
+    if (n != other.getN()) return false;
+    for (int i = 0; i < n; ++i)
+        if ((*this)[i] != other[i])
+            return false;
+    return true;
+}
+
+bool ElementSet::operator<(ElementSet& other) {
+    int limit = n;
+    if (other.n < limit) {
+        limit = other.n;
+    }
+    for (int i = 0; i < limit; ++i)
+        if ((*this)[i] != other[i])
+            return (*this)[i] < other[i];
+    return n < other.n;
 }
 
 int ElementSet::find(int x) {

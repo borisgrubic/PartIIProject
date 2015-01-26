@@ -5,15 +5,11 @@
 #include "../types/Permutation.h"
 #include "../types/PermutationGroupCoset.h"
 
-#include <string>
-
-using namespace std;
-
 PermutationGroupCoset* stringCanonization(
-    string str,
+    ElementSet* str,
     ElementSet* elems,
     PermutationGroupCoset* coset,
-    string (*inducedAction)(string, Permutation*)
+    ElementSet* (*inducedAction)(ElementSet*, Permutation*)
 );
 
 #endif
