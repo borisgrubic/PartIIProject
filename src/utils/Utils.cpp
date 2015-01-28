@@ -268,3 +268,54 @@ PermutationGroup* findBlockSystemStabilizer(
     return new PermutationGroup(stabGenSize, stabGen);
 }
 
+int binom(int a, int b) {
+    int res = 1;
+    for (int i = 0; i < b; ++i) {
+        res *= (a - i);
+        res /= (i + 1);
+    }
+    return res;
+}
+
+ElementSet* findSubset(int idx, int n) {
+    int cnt = 0;
+    int size = 0;
+    while (cnt < idx) {
+        size++;
+        cnt += binom(n, size);
+    }
+    cnt -= binom(n, size);
+    int* elems = new int[size];
+    int last = -1;
+    for (int i = 0; i < size; ++i) {
+        int cur = last + 1;
+        bool stop = false;
+        while (!stop) {
+            int tmp = binom(n - cur - 1, size - i - 1);
+            if (cnt + tmp >= idx) {
+                stop = true;
+            } else {
+                ++cur;
+                cnt += tmp;
+            }
+        }
+        elems[i] = cur;
+        last = cur;
+    }
+    return new ElementSet(size, elems);
+}
+
+int findSubsetIdx(int* array, int size, int n) {
+    int ret = 0;
+    for (int t = 1; t < size; ++t) {
+        ret += binom(n, t);
+    }
+    int last = -1;
+    for (int i = 0; i < size; ++i) {
+        for (int j = last + 1; j < array[i]; ++j) {
+            ret += binom(n - j - 1, size - i - 1);
+        }
+        last = array[i];
+    }
+    return ret;
+}

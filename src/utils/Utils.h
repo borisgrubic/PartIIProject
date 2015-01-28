@@ -9,4 +9,8 @@ ElementSet* findMinimalBlockSystem(int, ElementSet*, PermutationGroup*);
 ElementSet* findBlockSystem(int, int, ElementSet*, PermutationGroup*);
 PermutationGroup* findBlockSystemStabilizer(int, ElementSet*, ElementSet*, PermutationGroup*, Permutation***, int*);
 
+ElementSet* findSubset(int, int);
+int findSubsetIdx(int*, int, int);
+int binom(int, int);
+
 #endif

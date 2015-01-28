@@ -9,6 +9,8 @@ class TestStringCanonization {
     public:
     bool test();
 
+    static ElementSet* normalAction(ElementSet*, Permutation*);
+
     private:
     bool testStringCanonization(
         ElementSet*,
@@ -25,8 +27,6 @@ class TestStringCanonization {
         PermutationGroupCoset*,
         ElementSet* (*inducedAction)(ElementSet*, Permutation*)
     );
-
-    static ElementSet* normalAction(ElementSet*, Permutation*);
 };
 
 #endif

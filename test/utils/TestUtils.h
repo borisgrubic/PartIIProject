@@ -24,6 +24,11 @@ class TestUtils {
     bool testFindMinimalBlockSystem(int, ElementSet*, PermutationGroup*, int*);
     bool testFindBlockSystemStabilizer();
     bool testFindBlockSystemStabilizer(int, ElementSet*, PermutationGroup*);
+    bool testBinom();
+    bool testFindSubset(int, int, ElementSet*);
+    bool testFindSubset();
+    bool testFindSubsetIdx();
+    bool testFindSubsetIdx(int*, int, int, int);
 };
 
 #endif

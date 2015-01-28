@@ -13,6 +13,9 @@ bool TestUtils::test() {
     if (!testFindBlockSystem()) return false;
     if (!testFindMinimalBlockSystem()) return false;
     if (!testFindBlockSystemStabilizer()) return false;
+    if (!testBinom()) return false;
+    if (!testFindSubset()) return false;
+    if (!testFindSubsetIdx()) return false;
     return true;
 }
 
@@ -495,6 +498,74 @@ bool TestUtils::testFindBlockSystemStabilizer() {
             }
         )
     );
+
+    if (ok) cout << "OK!" << endl;
+    else cout << "Fail!" << endl;
+    return ok;
+}
+
+bool TestUtils::testBinom() {
+    cout << "  Testing binom... ";
+
+    bool ok = true;
+    ok &= binom(25, 50) == 0;
+    ok &= binom(0, 25) == 0;
+    ok &= binom(50, 0) == 1;
+    ok &= binom(3, 2) == 3;
+    ok &= binom(10, 5) == 252;
+    ok &= binom(20, 13) == 77520;
+
+    if (ok) cout << "OK!" << endl;
+    else cout << "Fail!" << endl;
+    return ok;
+}
+
+bool TestUtils::testFindSubset(int idx, int n, ElementSet* result) {
+    ElementSet* subset = findSubset(idx, n);
+
+    bool ret = true;
+    if (!((*subset) == (*result))) {
+        ret = false;
+    }
+
+    delete subset;
+    delete result;
+    return ret;
+}
+
+bool TestUtils::testFindSubset() {
+    cout << "  Testing findSubset... ";
+
+    bool ok = true;
+    ok &= testFindSubset(1, 100, new ElementSet(1, new int[1]{0}));
+    ok &= testFindSubset(6, 3, new ElementSet(2, new int[2]{1, 2}));
+    ok &= testFindSubset(7, 3, new ElementSet(3, new int[3]{0, 1, 2}));
+    ok &= testFindSubset(9, 4, new ElementSet(2, new int[2]{1, 3}));
+    ok &= testFindSubset(13, 4, new ElementSet(3, new int[3]{0, 2, 3}));
+
+    if (ok) cout << "OK!" << endl;
+    else cout << "Fail!" << endl;
+    return ok;
+}
+
+bool TestUtils::testFindSubsetIdx(int* array, int size, int n, int result) {
+    int idx = findSubsetIdx(array, size, n);
+
+    bool ret = idx == result;
+
+    delete[] array;
+    return ret;
+}
+
+bool TestUtils::testFindSubsetIdx() {
+    cout << "  Testing findSubsetIdx... ";
+
+    bool ok = true;
+    ok &= testFindSubsetIdx(new int[1]{0}, 1, 100, 0);
+    ok &= testFindSubsetIdx(new int[2]{1, 2}, 2, 3, 5);
+    ok &= testFindSubsetIdx(new int[3]{0, 1, 2}, 3, 3, 6);
+    ok &= testFindSubsetIdx(new int[2]{1, 3}, 2, 4, 8);
+    ok &= testFindSubsetIdx(new int[3]{0, 2, 3}, 3, 4, 12);
 
     if (ok) cout << "OK!" << endl;
     else cout << "Fail!" << endl;

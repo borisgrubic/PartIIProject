@@ -7,12 +7,13 @@ class ElementSet {
     int* elems;
 
     public:
+    ElementSet(int);
     ElementSet(ElementSet*);
     ElementSet(int, int*);
     ~ElementSet();
     int getN();
     int* getElems();
-    int& operator[](const int idx);
+    int& operator[](const int);
     bool operator==(ElementSet&);
     bool operator<(ElementSet&);
     int find(int);

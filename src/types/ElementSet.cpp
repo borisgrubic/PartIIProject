@@ -1,5 +1,13 @@
 #include "ElementSet.h"
 
+ElementSet::ElementSet(int nn) {
+    n = nn;
+    elems = new int[n];
+    for (int i = 0; i < n; ++i) {
+        elems[i] = i;
+    }
+}
+
 ElementSet::ElementSet(ElementSet* elemSet) {
     n = elemSet->getN();
     elems = new int[n];
