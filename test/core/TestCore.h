@@ -8,6 +8,7 @@ class TestCore {
     private:
     bool testStringCanonization();
     bool testBipartiteGraphCanonization();
+    bool testGraphCanonization();
 };
 
 #endif

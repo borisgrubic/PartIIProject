@@ -15,9 +15,10 @@ TEST_TARGET = testAll
 all: $(OBJECTS)
 
 test: $(TEST_TARGET) $(TEST_OBJECTS) $(OBJECTS)
+	./$(TEST_TARGET)
 	
 $(TEST_TARGET): $(TEST_OBJECTS) $(OBJECTS)
-	$(CC) $(notdir $(TEST_OBJECTS)) $(notdir $(OBJECTS)) -g -o $(TEST_TARGET) && ./$(TEST_TARGET)
+	$(CC) $(notdir $(TEST_OBJECTS)) $(notdir $(OBJECTS)) -g -o $(TEST_TARGET)
 
 .cpp.o:
 	$(CC) $(DEFAULT_WARNINGS_ALL) $(CFLAGS) $< -g -c -o $(notdir $@)
