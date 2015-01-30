@@ -70,14 +70,15 @@ bool TestGraphCanonization::testGraphCanonization(
     EdgeSet* edges1,
     ElementSet* nodes2,
     EdgeSet* edges2,
+    PermutationGroupCoset* coset,
     bool resultsAreSame
 ) {
-    PermutationGroupCoset* result1 = graphCanonization(nodes1, edges1);
-    PermutationGroupCoset* result2 = graphCanonization(nodes2, edges2);
+    PermutationGroupCoset* result1 = graphCanonization(nodes1, edges1, coset);
+    PermutationGroupCoset* result2 = graphCanonization(nodes2, edges2, coset);
 
     bool ret = true;
-    // ret &= checkValidityOfResult(result1, nodes1, edges1);
-    // ret &= checkValidityOfResult(result2, nodes2, edges2);
+    ret &= checkValidityOfResult(result1, nodes1, edges1);
+    ret &= checkValidityOfResult(result2, nodes2, edges2);
 
     ElementSet* adjacencyList1 = getAdjacencyList(nodes1, edges1);
     ElementSet* adjacencyList2 = getAdjacencyList(nodes2, edges2);
@@ -88,6 +89,7 @@ bool TestGraphCanonization::testGraphCanonization(
 
     ret &= (resultsAreSame == ((*finalGraph1) == (*finalGraph2)));
 
+    delete coset;
     delete nodes1;
     delete edges1;
     delete nodes2;
@@ -99,6 +101,28 @@ bool TestGraphCanonization::testGraphCanonization(
     delete finalGraph1;
     delete finalGraph2;
     return ret;
+}
+
+PermutationGroupCoset* TestGraphCanonization::createCoset(int n) {
+    int* permArray1 = new int[n];
+    int* permArray2 = new int[n];
+    for (int i = 0; i < n; ++i) {
+        permArray1[i] = (i + 1) % n;
+        permArray2[i] = i;
+    }
+    if (n > 1) {
+        std::swap(permArray2[0], permArray2[1]);
+    }
+    return new PermutationGroupCoset(
+            new Permutation(n),
+            new PermutationGroup(
+                2,
+                new Permutation*[2]{
+                    new Permutation(n, permArray1),
+                    new Permutation(n, permArray2)
+                }
+            )
+        );
 }
 
 bool TestGraphCanonization::test() {
@@ -120,6 +144,7 @@ bool TestGraphCanonization::test() {
                 new Edge(2, 1)
             }
         ),
+        createCoset(3),
         true
     );
     ok &= testGraphCanonization(
@@ -139,6 +164,7 @@ bool TestGraphCanonization::test() {
                 new Edge(1, 2)
             }
         ),
+        createCoset(3),
         false
     );
     ok &= testGraphCanonization(
@@ -159,6 +185,7 @@ bool TestGraphCanonization::test() {
                 new Edge(2, 0)
             }
         ),
+        createCoset(3),
         false
     );
     ok &= testGraphCanonization(
@@ -190,6 +217,7 @@ bool TestGraphCanonization::test() {
                 new Edge(1, 3)
             }
         ),
+        createCoset(4),
         true
     );
     // ok &= testGraphCanonization(

@@ -5,7 +5,11 @@
 #include "../types/EdgeSet.h"
 #include "../types/PermutationGroupCoset.h"
 
-PermutationGroupCoset* graphCanonization(ElementSet*, EdgeSet*);
+PermutationGroupCoset* graphCanonization(
+    ElementSet*,
+    EdgeSet*,
+    PermutationGroupCoset*
+);
 ElementSet* graphInducedAction(ElementSet*, Permutation*);
 
 #endif

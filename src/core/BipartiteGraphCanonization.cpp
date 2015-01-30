@@ -36,6 +36,10 @@ PermutationGroupCoset* bipartiteGraphCanonization(
         din[i] = 0;
     for (int i = 0; i < edgeSet->getN(); ++i) {
         int rightNode = (*edgeSet)[i]->getDest();
+        int idx = rightNodes->find(rightNode);
+        if (idx == -1) {
+            idx = rightNodes->find((*edgeSet)[i]->getFrom());
+        }
         din[rightNodes->find(rightNode)]++;
     }
     int maxDin = din[0];
@@ -55,6 +59,8 @@ PermutationGroupCoset* bipartiteGraphCanonization(
 
     int* elems = new int[cnt];
     int* edgeCnt = new int[m];
+    int* lastId = new int[m];
+    for (int i = 0; i < m; ++i) lastId[i] = -1;
     for (int i = 0; i < cnt; ++i) {
         ElementSet* subset = findSubset(i + 1, n);
 
@@ -63,8 +69,16 @@ PermutationGroupCoset* bipartiteGraphCanonization(
         }
         for (int j = 0; j < edgeSet->getN(); ++j) {
             Edge* edge = (*edgeSet)[j];
-            if (subset->find(leftNodes->find(edge->getFrom())) != -1) {
-                ++edgeCnt[rightNodes->find(edge->getDest())];
+            int from = edge->getFrom();
+            int dest = edge->getDest();
+            if (leftNodes->find(from) == -1) {
+                std::swap(from, dest);
+            }
+            int fromIdx = leftNodes->find(from);
+            int destIdx = rightNodes->find(dest);
+            if (subset->find(fromIdx) != -1 && lastId[destIdx] != fromIdx) {
+                ++edgeCnt[destIdx];
+                lastId[destIdx] = fromIdx;
             }
         }
 
@@ -137,6 +151,7 @@ PermutationGroupCoset* bipartiteGraphCanonization(
     delete tmpResult;
     delete str;
     delete elemSet;
+    delete[] lastId;
     delete[] din;
     delete[] edgeCnt;
     return result;

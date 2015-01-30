@@ -15,6 +15,7 @@ class TestGraphCanonization {
         EdgeSet*,
         ElementSet*,
         EdgeSet*,
+        PermutationGroupCoset*,
         bool
     );
     bool checkValidityOfResult(
@@ -26,6 +27,7 @@ class TestGraphCanonization {
         ElementSet*,
         EdgeSet*
     );
+    PermutationGroupCoset* createCoset(int);
 };
 
 #endif

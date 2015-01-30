@@ -20,38 +20,18 @@ ElementSet* graphInducedAction(ElementSet* str, Permutation* perm) {
 
 PermutationGroupCoset* graphCanonization(
     ElementSet* nodes, 
-    EdgeSet* edges
+    EdgeSet* edges,
+    PermutationGroupCoset* coset
 ) {
     int n = nodes->getN();
     int* adjacencyList = new int[n * n];
     for (int i = 0; i < n * n; ++i) adjacencyList[i] = 0;
     for (int j = 0; j < edges->getN(); ++j) {
-        int from = (*edges)[j]->getFrom();
-        int dest = (*edges)[j]->getDest();
+        int from = nodes->find((*edges)[j]->getFrom());
+        int dest = nodes->find((*edges)[j]->getDest());
         adjacencyList[from * n + dest] = 1;
     }
     ElementSet* adjacencyListStr = new ElementSet(n * n, adjacencyList);
-
-    int* permArray1 = new int[n];
-    int* permArray2 = new int[n];
-    for (int i = 0; i < n; ++i) {
-        permArray1[i] = (i + 1) % n;
-        permArray2[i] = i;
-    }
-    if (n > 1) {
-        std::swap(permArray2[0], permArray2[1]);
-    }
-    PermutationGroupCoset* coset =
-        new PermutationGroupCoset(
-            new Permutation(n),
-            new PermutationGroup(
-                2,
-                new Permutation*[2]{
-                    new Permutation(n, permArray1),
-                    new Permutation(n, permArray2)
-                }
-            )
-        );
 
     PermutationGroupCoset* result =
         stringCanonization(
@@ -62,6 +42,5 @@ PermutationGroupCoset* graphCanonization(
         );
 
     delete adjacencyListStr;
-    delete coset;
     return result;
 }
