@@ -3,6 +3,7 @@
 #include "TestStringCanonization.h"
 #include "TestBipartiteGraphCanonization.h"
 #include "TestGraphCanonization.h"
+#include "TestBoundedValenceGraphCanonization.h"
 
 #include <iostream>
 
@@ -13,6 +14,7 @@ bool TestCore::test() {
     if (!testStringCanonization()) return false;
     if (!testBipartiteGraphCanonization()) return false;
     if (!testGraphCanonization()) return false;
+    if (!testBoundedValenceGraphCanonization()) return false;
     return true;
 }
 
@@ -38,6 +40,15 @@ bool TestCore::testGraphCanonization() {
     cout << "  Testing graphCanonization... ";
     TestGraphCanonization testGraphCanonization;
     bool ok = testGraphCanonization.test();
+    if (ok) cout << "OK!" << endl;
+    else cout << "Fail!" << endl;
+    return ok;
+}
+
+bool TestCore::testBoundedValenceGraphCanonization() {
+    cout << "  Testing boundedGraphCanonization... ";
+    TestBoundedValenceGraphCanonization testBoundedValenceGraphCanonization;
+    bool ok = testBoundedValenceGraphCanonization.test();
     if (ok) cout << "OK!" << endl;
     else cout << "Fail!" << endl;
     return ok;

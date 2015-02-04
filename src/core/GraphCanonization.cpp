@@ -5,17 +5,42 @@
 #include <iostream>
 #include <assert.h>
 
-ElementSet* graphInducedAction(ElementSet* str, Permutation* perm) {
+ElementSet* graphInducedAction(
+    ElementSet* str,
+    Permutation* perm,
+    ElementSet* startElems
+) {
     int* resElems = new int[str->getN()];
-    int n = perm->getSize();
+    int n = startElems->getN();
     assert(str->getN() == n * n);
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            resElems[(*perm)[i] * n + (*perm)[j]] =
+            int node1 = (*startElems)[i];
+            int node2 = (*startElems)[j];
+            int image1 = startElems->find((*perm)[node1]);
+            int image2 = startElems->find((*perm)[node2]);
+            resElems[image1 * n + image2] =
                 (*str)[i * n + j];
         }
     }
     return new ElementSet(str->getN(), resElems);
+}
+
+ElementSet* getGraphRestrictedString(
+    ElementSet* str,
+    ElementSet* elem,
+    ElementSet* startElems
+) {
+    int m = elem->getN();
+    int n = startElems->getN();
+    ElementSet* ret = new ElementSet(n * m);
+    for (int i = 0; i < m; ++i)
+        for (int j = 0; j < n; ++j) {
+            int node = (*elem)[i];
+            int pos = startElems->find(node);
+            (*ret)[i * n + j] = (*str)[pos * n + j];
+        }
+    return ret;
 }
 
 PermutationGroupCoset* graphCanonization(
@@ -33,12 +58,14 @@ PermutationGroupCoset* graphCanonization(
     }
     ElementSet* adjacencyListStr = new ElementSet(n * n, adjacencyList);
 
-    PermutationGroupCoset* result =
+    PermutationGroupCoset* result = 
         stringCanonization(
             adjacencyListStr,
             nodes,
             coset,
-            &graphInducedAction
+            &graphInducedAction,
+            &getGraphRestrictedString,
+            nodes
         );
 
     delete adjacencyListStr;

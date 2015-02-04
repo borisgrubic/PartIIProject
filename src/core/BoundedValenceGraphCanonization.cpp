@@ -4,16 +4,19 @@
 #include "GraphCanonization.h"
 
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 PermutationGroupCoset* boundedValenceGraphCanonization(
     ElementSet* nodes, 
-    EdgeSet* edgeSet
+    EdgeSet* edgeSet,
+    int fixEdgeIdx
 ) {
     int n = nodes->getN();
     int m = edgeSet->getN();
     if (m == 0) {
+        // TODO: fix
         return new PermutationGroupCoset(
             new Permutation(n),
             new PermutationGroup(
@@ -29,6 +32,7 @@ PermutationGroupCoset* boundedValenceGraphCanonization(
     bool* markEdge = new bool[m];
     vector<int> curNodes;
     vector<Edge*> curEdges;
+    vector<Edge*> nextEdges;
     vector< vector<int> > adj(n, vector<int>());
     for (int i = 0; i < m; ++i) {
         adj[edges[i]->getFrom()].push_back(i);
@@ -36,19 +40,18 @@ PermutationGroupCoset* boundedValenceGraphCanonization(
     }
     vector<int> curQueue;
     vector<int> nextQueue;
-    curQueue.push_back(edges[0]->getFrom());
-    curQueue.push_back(edges[0]->getDest());
+    curQueue.push_back(edges[fixEdgeIdx]->getFrom());
+    curQueue.push_back(edges[fixEdgeIdx]->getDest());
     for (int i = 0; i < n; ++i) markNode[i] = false;
-    markNode[edges[0]->getFrom()] = true;
-    markNode[edges[0]->getDest()] = true;
+    markNode[edges[fixEdgeIdx]->getFrom()] = true;
+    markNode[edges[fixEdgeIdx]->getDest()] = true;
     for (int i = 0; i < m; ++i) markEdge[i] = false;
-    markEdge[0] = true;
+    markEdge[fixEdgeIdx] = true;
     int cnt = m - 1;
     int* permArray1 = new int[n];
-    int* permArray2 = new int[n];
     for (int i = 0; i < n; ++i) permArray1[i] = i;
-    permArray1[edges[0]->getFrom()] = edges[0]->getDest();
-    permArray1[edges[0]->getDest()] = edges[0]->getFrom();
+    permArray1[edges[fixEdgeIdx]->getFrom()] = edges[fixEdgeIdx]->getDest();
+    permArray1[edges[fixEdgeIdx]->getDest()] = edges[fixEdgeIdx]->getFrom();
     PermutationGroupCoset* result = new PermutationGroupCoset(
         new Permutation(n),
         new PermutationGroup(
@@ -59,9 +62,9 @@ PermutationGroupCoset* boundedValenceGraphCanonization(
             }
         )
     );
-    curNodes.push_back(edges[0]->getFrom());
-    curNodes.push_back(edges[0]->getDest());
-    curEdges.push_back(edges[0]);
+    curNodes.push_back(edges[fixEdgeIdx]->getFrom());
+    curNodes.push_back(edges[fixEdgeIdx]->getDest());
+    curEdges.push_back(edges[fixEdgeIdx]);
     bool over = false;
     do {
         if (cnt == 0) over = true;
@@ -81,12 +84,13 @@ PermutationGroupCoset* boundedValenceGraphCanonization(
             }
         }
 
+        sort(curNodes.begin(), curNodes.end());
         int* tmpNodes = new int[curNodes.size()];
         for (int i = 0; i < (int)curNodes.size(); ++i)
             tmpNodes[i] = curNodes[i];
         Edge** tmpEdges = new Edge*[curEdges.size()];
         for (int i = 0; i < (int)curEdges.size(); ++i)
-            tmpEdges[i] = curEdges[i];
+            tmpEdges[i] = new Edge(curEdges[i]);
         EdgeSet* tmpEdgeSet = new EdgeSet(curEdges.size(), tmpEdges);
         ElementSet* tmpElementSet = new ElementSet(curNodes.size(), tmpNodes);
         PermutationGroupCoset* tmpResult = graphCanonization(
@@ -100,6 +104,7 @@ PermutationGroupCoset* boundedValenceGraphCanonization(
         result = tmpResult;
 
         nextQueue.clear();
+        nextEdges.clear();
         for (int i = 0; i < (int)curQueue.size(); ++i) {
             int node = curQueue[i];
             for (int j = 0; j < (int)adj[node].size(); ++j) {
@@ -112,21 +117,23 @@ PermutationGroupCoset* boundedValenceGraphCanonization(
                     markNode[nnode] = true;
                     markEdge[edgeIdx] = true;
                     nextQueue.push_back(nnode);
+                    nextEdges.push_back(edges[edgeIdx]);
                     curEdges.push_back(edges[edgeIdx]);
                     --cnt;
                 }
             }
         }
 
+        sort(nextQueue.begin(), nextQueue.end());
         int* tmpRightNodes = new int[nextQueue.size()];
         for (int i = 0; i < (int)nextQueue.size(); ++i)
             tmpRightNodes[i] = nextQueue[i];
-        tmpEdges = new Edge*[curEdges.size()];
-        for (int i = 0; i < (int)curEdges.size(); ++i)
-            tmpEdges[i] = curEdges[i];
+        tmpEdges = new Edge*[nextEdges.size()];
+        for (int i = 0; i < (int)nextEdges.size(); ++i)
+            tmpEdges[i] = new Edge(nextEdges[i]);
         ElementSet* tmpRightNodesSet = 
             new ElementSet(nextQueue.size(), tmpRightNodes);
-        tmpEdgeSet = new EdgeSet(curEdges.size(), tmpEdges);
+        tmpEdgeSet = new EdgeSet(nextEdges.size(), tmpEdges);
 
         tmpResult = bipartiteGraphCanonization(
             tmpElementSet,
@@ -150,7 +157,5 @@ PermutationGroupCoset* boundedValenceGraphCanonization(
 
     delete[] markNode;
     delete[] markEdge;
-    delete[] permArray1;
-    delete[] permArray2;
     return result;
 }

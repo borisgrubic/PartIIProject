@@ -11,6 +11,8 @@ class Edge {
     Edge(int, int);
     int getFrom();
     int getDest();
+    void setFrom(int);
+    void setDest(int);
 };
 
 #endif

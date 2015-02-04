@@ -5,7 +5,11 @@
 #include "../types/EdgeSet.h"
 #include "../types/PermutationGroupCoset.h"
 
-PermutationGroupCoset* boundedValenceGraphCanonization(ElementSet*, EdgeSet*);
+PermutationGroupCoset* boundedValenceGraphCanonization(
+    ElementSet*,
+    EdgeSet*,
+    int
+);
 
 #endif
 

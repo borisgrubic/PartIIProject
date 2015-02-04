@@ -18,6 +18,7 @@ class TestBipartiteGraphCanonization {
         ElementSet*,
         EdgeSet*,
         PermutationGroupCoset*,
+        PermutationGroupCoset*,
         bool
     );
 };

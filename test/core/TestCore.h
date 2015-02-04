@@ -9,6 +9,7 @@ class TestCore {
     bool testStringCanonization();
     bool testBipartiteGraphCanonization();
     bool testGraphCanonization();
+    bool testBoundedValenceGraphCanonization();
 };
 
 #endif

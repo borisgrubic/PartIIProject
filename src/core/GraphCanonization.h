@@ -10,6 +10,7 @@ PermutationGroupCoset* graphCanonization(
     EdgeSet*,
     PermutationGroupCoset*
 );
-ElementSet* graphInducedAction(ElementSet*, Permutation*);
+ElementSet* graphInducedAction(ElementSet*, Permutation*, ElementSet*);
+ElementSet* getGraphRestrictedString(ElementSet*, ElementSet*, ElementSet*);
 
 #endif

@@ -202,9 +202,9 @@ PermutationGroup* findBlockSystemStabilizer(
 ) {
     vector< vector<Permutation*> > cosetRep(n, vector<Permutation*>());
     vector<Permutation*> permList;
+    permList.push_back(new Permutation(n));
     for (int i = 0; i < n; ++i) {
         cosetRep[i].push_back(new Permutation(n));
-        permList.push_back(new Permutation(n));
     }
     int gensSize = group->getGenSize();
     Permutation** generators = group->getGenerators();
@@ -245,14 +245,15 @@ PermutationGroup* findBlockSystemStabilizer(
         for (int i = 0; i < (int)newPermList.size(); ++i)
             permList.push_back(newPermList[i]);
     } 
-    int stabGenSize = 0;
+    int stabGenSize = 1;
     for (int i = 1; i < n; ++i) {
-        stabGenSize += cosetRep[i].size();
+        stabGenSize += cosetRep[i].size() - 1;
     }
     int p = 0;
     Permutation** stabGen = new Permutation*[stabGenSize]; 
+    stabGen[p++] = new Permutation(n);
     for (int i = 1; i < n; ++i)
-        for (int j = 0; j < (int)cosetRep[i].size(); ++j) {
+        for (int j = 1; j < (int)cosetRep[i].size(); ++j) {
             stabGen[p++] = new Permutation(cosetRep[i][j]);
         }
     *size = cosetRep[0].size();

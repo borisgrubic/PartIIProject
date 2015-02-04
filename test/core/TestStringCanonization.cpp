@@ -8,9 +8,10 @@ bool TestStringCanonization::checkValidityOfResult(
     ElementSet* str,
     ElementSet* elems,
     PermutationGroupCoset* coset,
-    ElementSet* (*inducedAction)(ElementSet*, Permutation*)
+    ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*)
 ) {
-    ElementSet* resultStr = (*inducedAction)(str, result->getPermutation());
+    ElementSet* resultStr = 
+        (*inducedAction)(str, result->getPermutation(), elems);
 
     PermutationGroup* tmpGroup = 
         TestUtils::generateGroup(
@@ -34,7 +35,7 @@ bool TestStringCanonization::checkValidityOfResult(
     for (int i = 0; i < allTmpGroup->getGenSize(); ++i) {
         Permutation* curPerm =
             coset->getPermutation()->compose(allTmpGroup->getGenerators()[i]);
-        ElementSet* curStr = (*inducedAction)(str, curPerm);
+        ElementSet* curStr = (*inducedAction)(str, curPerm, elems);
 
         bool ok = true;
         for (int j = 0; j < elems->getN(); ++j)
@@ -62,20 +63,23 @@ bool TestStringCanonization::testStringCanonization(
     ElementSet* str2,
     ElementSet* elems,
     PermutationGroupCoset* coset,
-    ElementSet* (*inducedAction)(ElementSet*, Permutation*),
+    ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*),
+    ElementSet* (*getRestrictedString)(ElementSet*, ElementSet*, ElementSet*),
     bool resultsAreSame
 ) {
     PermutationGroupCoset* result1 = 
-        stringCanonization(str1, elems, coset, inducedAction);
+        stringCanonization(str1, elems, coset, inducedAction, getRestrictedString, elems);
     PermutationGroupCoset* result2 = 
-        stringCanonization(str2, elems, coset, inducedAction);
+        stringCanonization(str2, elems, coset, inducedAction, getRestrictedString, elems);
 
     bool ret = true;
     ret &= checkValidityOfResult(result1, str1, elems, coset, inducedAction);
     ret &= checkValidityOfResult(result2, str2, elems, coset, inducedAction);
 
-    ElementSet* image1 = (*inducedAction)(str1, result1->getPermutation());
-    ElementSet* image2 = (*inducedAction)(str2, result2->getPermutation());
+    ElementSet* image1 = 
+        (*inducedAction)(str1, result1->getPermutation(), elems);
+    ElementSet* image2 = 
+        (*inducedAction)(str2, result2->getPermutation(), elems);
     bool same = true;
     for (int i = 0; i < elems->getN(); ++i)
         if ((*image1)[(*elems)[i]] != (*image2)[(*elems)[i]])
@@ -110,6 +114,7 @@ bool TestStringCanonization::test() {
             )
         ),
         &(TestStringCanonization::normalAction),
+        &(TestStringCanonization::getRestrictedString),
         true
     );
     ok &= testStringCanonization(
@@ -127,6 +132,7 @@ bool TestStringCanonization::test() {
             )
         ),
         &(TestStringCanonization::normalAction),
+        &(TestStringCanonization::getRestrictedString),
         true
     );
     ok &= testStringCanonization(
@@ -144,6 +150,7 @@ bool TestStringCanonization::test() {
             )
         ),
         &(TestStringCanonization::normalAction),
+        &(TestStringCanonization::getRestrictedString),
         true
     );
     ok &= testStringCanonization(
@@ -161,6 +168,7 @@ bool TestStringCanonization::test() {
             )
         ),
         &(TestStringCanonization::normalAction),
+        &(TestStringCanonization::getRestrictedString),
         true
     );
     ok &= testStringCanonization(
@@ -178,15 +186,34 @@ bool TestStringCanonization::test() {
             )
         ),
         &(TestStringCanonization::normalAction),
+        &(TestStringCanonization::getRestrictedString),
         false
     );
 
     return ok;
 }
 
-ElementSet* TestStringCanonization::normalAction(ElementSet* str, Permutation* perm) {
+ElementSet* TestStringCanonization::normalAction(
+    ElementSet* str, 
+    Permutation* perm,
+    ElementSet* startElems
+) {
+    (void)startElems;
     ElementSet* ret = new ElementSet(str);
     for (int i = 0; i < perm->getSize(); ++i)
         (*ret)[(*perm)[i]] = (*str)[i];
+    return ret;
+}
+
+ElementSet* TestStringCanonization::getRestrictedString(
+    ElementSet* str,
+    ElementSet* elems,
+    ElementSet* startElems
+) {
+    (void)startElems;
+    ElementSet* ret = new ElementSet(elems->getN());
+    for (int i = 0; i < elems->getN(); ++i) {
+        (*ret)[i] = (*str)[(*elems)[i]];
+    }
     return ret;
 }

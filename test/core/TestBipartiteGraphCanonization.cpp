@@ -11,7 +11,8 @@ bool TestBipartiteGraphCanonization::testBipartiteGraphCanonization(
     ElementSet* leftNodes2,
     ElementSet* rightNodes2,
     EdgeSet* edgeSet2,
-    PermutationGroupCoset* leftGroupCoset,
+    PermutationGroupCoset* leftGroupCoset1,
+    PermutationGroupCoset* leftGroupCoset2,
     bool resultsAreSame
 ) {
     PermutationGroupCoset* result1 =
@@ -19,14 +20,14 @@ bool TestBipartiteGraphCanonization::testBipartiteGraphCanonization(
             leftNodes1, 
             rightNodes1, 
             edgeSet1, 
-            leftGroupCoset
+            leftGroupCoset1
         );
     PermutationGroupCoset* result2 =
         bipartiteGraphCanonization(
             leftNodes2, 
             rightNodes2, 
             edgeSet2, 
-            leftGroupCoset
+            leftGroupCoset2
         );
 
     bool ret = true;
@@ -83,7 +84,8 @@ bool TestBipartiteGraphCanonization::testBipartiteGraphCanonization(
     delete leftNodes2;
     delete rightNodes2;
     delete edgeSet2;
-    delete leftGroupCoset;
+    delete leftGroupCoset1;
+    delete leftGroupCoset2;
     delete result1;
     delete result2;
     return ret;
@@ -108,12 +110,22 @@ bool TestBipartiteGraphCanonization::test() {
             new Edge(1, 3)
         }),
         new PermutationGroupCoset(
-            new Permutation(2),
+            new Permutation(4),
             new PermutationGroup(
                 2,
                 new Permutation*[2]{
-                    new Permutation(2),
-                    new Permutation(2, new int[2]{1, 0})
+                    new Permutation(4),
+                    new Permutation(4, new int[4]{2, 1, 0, 3})
+                }
+            )
+        ),
+        new PermutationGroupCoset(
+            new Permutation(4),
+            new PermutationGroup(
+                2,
+                new Permutation*[2]{
+                    new Permutation(4),
+                    new Permutation(4, new int[4]{1, 0, 2, 3})
                 }
             )
         ),
@@ -135,12 +147,22 @@ bool TestBipartiteGraphCanonization::test() {
             new Edge(0, 3)
         }),
         new PermutationGroupCoset(
-            new Permutation(2),
+            new Permutation(4),
             new PermutationGroup(
                 2,
                 new Permutation*[2]{
-                    new Permutation(2),
-                    new Permutation(2, new int[2]{1, 0})
+                    new Permutation(4),
+                    new Permutation(4, new int[4]{2, 1, 0, 3})
+                }
+            )
+        ),
+        new PermutationGroupCoset(
+            new Permutation(4),
+            new PermutationGroup(
+                2,
+                new Permutation*[2]{
+                    new Permutation(4),
+                    new Permutation(4, new int[4]{1, 0, 2, 3})
                 }
             )
         ),
@@ -162,12 +184,22 @@ bool TestBipartiteGraphCanonization::test() {
             new Edge(1, 4)
         }),
         new PermutationGroupCoset(
-            new Permutation(2),
+            new Permutation(5),
             new PermutationGroup(
                 2,
                 new Permutation*[2]{
-                    new Permutation(2),
-                    new Permutation(2, new int[2]{1, 0})
+                    new Permutation(5),
+                    new Permutation(5, new int[5]{1, 0, 2, 3, 4})
+                }
+            )
+        ),
+        new PermutationGroupCoset(
+            new Permutation(5),
+            new PermutationGroup(
+                2,
+                new Permutation*[2]{
+                    new Permutation(5),
+                    new Permutation(5, new int[5]{1, 0, 2, 3, 4})
                 }
             )
         ),

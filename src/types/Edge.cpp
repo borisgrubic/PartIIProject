@@ -17,3 +17,11 @@ int Edge::getFrom() {
 int Edge::getDest() {
     return dest;
 }
+
+void Edge::setFrom(int nfrom) {
+    from = nfrom;
+}
+
+void Edge::setDest(int ndest) {
+    dest = ndest;
+}

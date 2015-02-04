@@ -8,7 +8,9 @@ PermutationGroupCoset* stringCanonization(
     ElementSet* str,
     ElementSet* elems,
     PermutationGroupCoset* coset,
-    ElementSet* (*inducedAction)(ElementSet*, Permutation*)
+    ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*),
+    ElementSet* (*getRestrictedString)(ElementSet*, ElementSet*, ElementSet*),
+    ElementSet* startElems
 ) {
     if (elems->getN() == 1) {
         return new PermutationGroupCoset(coset);
@@ -23,13 +25,17 @@ PermutationGroupCoset* stringCanonization(
             str,
             orbit,
             coset,
-            inducedAction
+            inducedAction,
+            getRestrictedString,
+            startElems
         );
         PermutationGroupCoset* result = stringCanonization(
             str,
             rest,
             tmpResult,
-            inducedAction
+            inducedAction,
+            getRestrictedString,
+            startElems
         );
 
         delete tmpResult;
@@ -62,13 +68,22 @@ PermutationGroupCoset* stringCanonization(
         PermutationGroupCoset** tmpResults = new PermutationGroupCoset*[size];
         for (int i = 0; i < size; ++i) {
             tmpResults[i] = 
-                stringCanonization(str, elems, cosets[i], inducedAction);
+                stringCanonization(
+                    str, 
+                    elems, 
+                    cosets[i], 
+                    inducedAction,
+                    getRestrictedString,
+                    startElems
+                );
         }
 
         ElementSet** tmpStrings = new ElementSet*[size];
         for (int i = 0; i < size; ++i) {
-            tmpStrings[i] =
-                (*inducedAction)(str, tmpResults[i]->getPermutation());
+            ElementSet* tmpNonResticted = 
+                (*inducedAction)(str, tmpResults[i]->getPermutation(), startElems);
+            tmpStrings[i] = getRestrictedString(tmpNonResticted, elems, startElems);
+            delete tmpNonResticted;
         }
 
         int idx = 0;

@@ -9,7 +9,9 @@ PermutationGroupCoset* stringCanonization(
     ElementSet* str,
     ElementSet* elems,
     PermutationGroupCoset* coset,
-    ElementSet* (*inducedAction)(ElementSet*, Permutation*)
+    ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*),
+    ElementSet* (*getRestrictedString)(ElementSet*, ElementSet*, ElementSet*),
+    ElementSet*
 );
 
 #endif

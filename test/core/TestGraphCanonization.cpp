@@ -41,13 +41,14 @@ bool TestGraphCanonization::checkValidityOfResult(
 
     vector<Permutation*> allSamePerms;
     ElementSet* str = getAdjacencyList(nodes, edges);
-    ElementSet* resultStr = graphInducedAction(str, result->getPermutation());
+    ElementSet* resultStr = 
+        graphInducedAction(str, result->getPermutation(), nodes);
     int n = nodes->getN();
     int* curPermArray = new int[n];
     for (int i = 0; i < n; ++i) curPermArray[i] = i;
     Permutation* curPerm = new Permutation(n, curPermArray);
     do {
-        ElementSet* curStr = graphInducedAction(str, curPerm);
+        ElementSet* curStr = graphInducedAction(str, curPerm, nodes);
 
         bool ok = (*curStr) == (*resultStr);
 
@@ -83,9 +84,9 @@ bool TestGraphCanonization::testGraphCanonization(
     ElementSet* adjacencyList1 = getAdjacencyList(nodes1, edges1);
     ElementSet* adjacencyList2 = getAdjacencyList(nodes2, edges2);
     ElementSet* finalGraph1 = 
-        graphInducedAction(adjacencyList1, result1->getPermutation());
+        graphInducedAction(adjacencyList1, result1->getPermutation(), nodes1);
     ElementSet* finalGraph2 = 
-        graphInducedAction(adjacencyList2, result2->getPermutation());
+        graphInducedAction(adjacencyList2, result2->getPermutation(), nodes2);
 
     ret &= (resultsAreSame == ((*finalGraph1) == (*finalGraph2)));
 

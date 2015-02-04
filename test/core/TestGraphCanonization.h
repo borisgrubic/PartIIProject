@@ -9,6 +9,10 @@ class TestGraphCanonization {
     public:
     bool test();
 
+    static ElementSet* getAdjacencyList(
+        ElementSet*,
+        EdgeSet*
+    );
     private:
     bool testGraphCanonization(
         ElementSet*,
@@ -20,10 +24,6 @@ class TestGraphCanonization {
     );
     bool checkValidityOfResult(
         PermutationGroupCoset*,
-        ElementSet*,
-        EdgeSet*
-    );
-    ElementSet* getAdjacencyList(
         ElementSet*,
         EdgeSet*
     );

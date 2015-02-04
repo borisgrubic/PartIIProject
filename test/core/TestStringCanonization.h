@@ -9,7 +9,12 @@ class TestStringCanonization {
     public:
     bool test();
 
-    static ElementSet* normalAction(ElementSet*, Permutation*);
+    static ElementSet* normalAction(ElementSet*, Permutation*, ElementSet*);
+    static ElementSet* getRestrictedString(
+        ElementSet*, 
+        ElementSet*, 
+        ElementSet*
+    );
 
     private:
     bool testStringCanonization(
@@ -17,7 +22,8 @@ class TestStringCanonization {
         ElementSet*, 
         ElementSet*, 
         PermutationGroupCoset*,
-        ElementSet* (*inducedAction)(ElementSet*, Permutation*),
+        ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*),
+        ElementSet* (*getRestrictedString)(ElementSet*, ElementSet*, ElementSet*),
         bool
     );
     bool checkValidityOfResult(
@@ -25,7 +31,7 @@ class TestStringCanonization {
         ElementSet*,
         ElementSet*,
         PermutationGroupCoset*,
-        ElementSet* (*inducedAction)(ElementSet*, Permutation*)
+        ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*)
     );
 };
 
