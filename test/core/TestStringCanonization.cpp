@@ -65,12 +65,13 @@ bool TestStringCanonization::testStringCanonization(
     PermutationGroupCoset* coset,
     ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*),
     ElementSet* (*getRestrictedString)(ElementSet*, ElementSet*, ElementSet*),
+    int (*getImage)(int, Permutation*, ElementSet*),
     bool resultsAreSame
 ) {
     PermutationGroupCoset* result1 = 
-        stringCanonization(str1, elems, coset, inducedAction, getRestrictedString, elems);
+        stringCanonization(str1, elems, coset, inducedAction, getRestrictedString, getImage, elems);
     PermutationGroupCoset* result2 = 
-        stringCanonization(str2, elems, coset, inducedAction, getRestrictedString, elems);
+        stringCanonization(str2, elems, coset, inducedAction, getRestrictedString, getImage, elems);
 
     bool ret = true;
     ret &= checkValidityOfResult(result1, str1, elems, coset, inducedAction);
@@ -115,6 +116,7 @@ bool TestStringCanonization::test() {
         ),
         &(TestStringCanonization::normalAction),
         &(TestStringCanonization::getRestrictedString),
+        &(TestStringCanonization::getImage),
         true
     );
     ok &= testStringCanonization(
@@ -133,6 +135,7 @@ bool TestStringCanonization::test() {
         ),
         &(TestStringCanonization::normalAction),
         &(TestStringCanonization::getRestrictedString),
+        &(TestStringCanonization::getImage),
         true
     );
     ok &= testStringCanonization(
@@ -151,6 +154,7 @@ bool TestStringCanonization::test() {
         ),
         &(TestStringCanonization::normalAction),
         &(TestStringCanonization::getRestrictedString),
+        &(TestStringCanonization::getImage),
         true
     );
     ok &= testStringCanonization(
@@ -169,6 +173,7 @@ bool TestStringCanonization::test() {
         ),
         &(TestStringCanonization::normalAction),
         &(TestStringCanonization::getRestrictedString),
+        &(TestStringCanonization::getImage),
         true
     );
     ok &= testStringCanonization(
@@ -187,6 +192,7 @@ bool TestStringCanonization::test() {
         ),
         &(TestStringCanonization::normalAction),
         &(TestStringCanonization::getRestrictedString),
+        &(TestStringCanonization::getImage),
         false
     );
 
@@ -216,4 +222,14 @@ ElementSet* TestStringCanonization::getRestrictedString(
         (*ret)[i] = (*str)[(*elems)[i]];
     }
     return ret;
+}
+
+
+int TestStringCanonization::getImage(
+    int element,
+    Permutation* perm,
+    ElementSet* startElems
+) {
+    (void)startElems;
+    return (*perm)[element];
 }

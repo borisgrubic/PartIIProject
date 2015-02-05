@@ -17,13 +17,13 @@ class TestUtils {
 
     private:
     bool testFindOrbit();
-    bool testFindOrbit(int, int, PermutationGroup*, int, int*);
+    bool testFindOrbit(int, int, PermutationGroup*, int (*getImage)(int, Permutation*, ElementSet*), ElementSet*, int, int*);
     bool testFindBlockSystem();
-    bool testFindBlockSystem(int, int, ElementSet*, PermutationGroup*, int*);
+    bool testFindBlockSystem(int, int, ElementSet*, PermutationGroup*, int (*getImage)(int, Permutation*, ElementSet*), ElementSet*, int*);
     bool testFindMinimalBlockSystem();
-    bool testFindMinimalBlockSystem(int, ElementSet*, PermutationGroup*, int*);
+    bool testFindMinimalBlockSystem(int, ElementSet*, PermutationGroup*, int (*getImage)(int, Permutation*, ElementSet*), ElementSet*, int*);
     bool testFindBlockSystemStabilizer();
-    bool testFindBlockSystemStabilizer(int, ElementSet*, PermutationGroup*);
+    bool testFindBlockSystemStabilizer(int, ElementSet*, PermutationGroup*, int (*getImage)(int, Permutation*, ElementSet*), ElementSet*);
     bool testBinom();
     bool testFindSubset(int, int, ElementSet*);
     bool testFindSubset();

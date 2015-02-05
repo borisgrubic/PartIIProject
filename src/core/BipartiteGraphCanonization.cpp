@@ -12,24 +12,29 @@ ElementSet* bipartiteGetRestrictedStr(
     ElementSet* elems,
     ElementSet* startElems
 ) {
-    int n = startElems->getN();
-    std::vector<int> res;
-    for (int i = 0; i < str->getN(); ++i) {
-        ElementSet* subset = findSubset(i + 1, n);
-        bool ok = true;
-        for (int j = 0; j < subset->getN(); ++j)
-            if (elems->find((*startElems)[(*subset)[j]]) == -1) {
-                ok = false;
-            }
-        if (ok) {
-            res.push_back((*str)[i]);
-        }
-        delete subset;
-    }
-    ElementSet* retSet = new ElementSet(res.size());
-    for (int i = 0; i < (int)res.size(); ++i)
-        (*retSet)[i] = res[i];
-    return retSet;
+    (void)startElems;
+    ElementSet* ret = new ElementSet(elems->getN());
+    for (int i = 0; i < elems->getN(); ++i)
+        (*ret)[i] = (*str)[(*elems)[i]];
+    return ret;
+    // int n = startElems->getN();
+    // std::vector<int> res;
+    // for (int i = 0; i < str->getN(); ++i) {
+    //     ElementSet* subset = findSubset(i + 1, n);
+    //     bool ok = true;
+    //     for (int j = 0; j < subset->getN(); ++j)
+    //         if (elems->find((*startElems)[(*subset)[j]]) == -1) {
+    //             ok = false;
+    //         }
+    //     if (ok) {
+    //         res.push_back((*str)[i]);
+    //     }
+    //     delete subset;
+    // }
+    // ElementSet* retSet = new ElementSet(res.size());
+    // for (int i = 0; i < (int)res.size(); ++i)
+    //     (*retSet)[i] = res[i];
+    // return retSet;
 }
 
 ElementSet* bipartiteGraphInducedAction(
@@ -53,6 +58,24 @@ ElementSet* bipartiteGraphInducedAction(
     }
     delete[] nsubset;
     return new ElementSet(str->getN(), resElems);
+}
+
+int bipartiteGetImage(
+    int element,
+    Permutation* perm,
+    ElementSet* startElems
+) {
+    int n = startElems->getN();
+    ElementSet* subset = findSubset(element + 1, n);
+    int* nsubset = new int[subset->getN()];
+    for (int j = 0; j < subset->getN(); ++j) {
+        nsubset[j] = startElems->find((*perm)[(*startElems)[(*subset)[j]]]);
+    }
+
+    int ret = findSubsetIdx(nsubset, subset->getN(), n);
+    delete subset;
+    delete[] nsubset;
+    return ret;
 }
 
 PermutationGroupCoset* bipartiteGraphCanonization(
@@ -126,13 +149,15 @@ PermutationGroupCoset* bipartiteGraphCanonization(
     }
 
     ElementSet* str = new ElementSet(cnt, elems);
+    ElementSet* elemsSet = new ElementSet(cnt);
     PermutationGroupCoset* tmpResult =
         stringCanonization(
             str,
-            leftNodes,
+            elemsSet,
             leftGroupCoset,
             &bipartiteGraphInducedAction,
             &bipartiteGetRestrictedStr,
+            &bipartiteGetImage,
             leftNodes
         );
 
@@ -179,6 +204,7 @@ PermutationGroupCoset* bipartiteGraphCanonization(
             )
         );
 
+    delete elemsSet;
     delete tmpResult;
     delete str;
     delete[] lastId;

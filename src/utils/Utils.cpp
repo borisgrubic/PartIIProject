@@ -8,7 +8,13 @@
 
 using namespace std;
 
-ElementSet* findOrbit(int n, int element, PermutationGroup* group) {
+ElementSet* findOrbit(
+    int n, 
+    int element, 
+    PermutationGroup* group,
+    int (*getImage)(int, Permutation*, ElementSet*),
+    ElementSet* startElems
+) {
     bool* visited = new bool[n];
     for (int i = 0; i < n; ++i) {
         visited[i] = false;
@@ -24,7 +30,7 @@ ElementSet* findOrbit(int n, int element, PermutationGroup* group) {
         stack.pop();
         ++size;
         for (int i = 0; i < gensSize; ++i) {
-            int newElement = (*gens[i])[currentElement];
+            int newElement = getImage(currentElement, gens[i], startElems);
             if (!visited[newElement]) {
                 visited[newElement] = true;
                 stack.push(newElement);
@@ -45,13 +51,15 @@ ElementSet* findOrbit(int n, int element, PermutationGroup* group) {
 ElementSet* findMinimalBlockSystem(
     int n, 
     ElementSet* elems, 
-    PermutationGroup* group
+    PermutationGroup* group,
+    int (*getImage)(int, Permutation*, ElementSet*),
+    ElementSet* startElems
 ) {
     int m = elems->getN();
     ElementSet* minimalBlockSystem = NULL;
     for (int i = 1; i < m; ++i) {
         ElementSet* blockSystem = 
-            findBlockSystem(n, i, elems, group);
+            findBlockSystem(n, i, elems, group, getImage, startElems);
         if (blockSystem) {
             minimalBlockSystem = blockSystem;
             break;
@@ -79,7 +87,7 @@ ElementSet* findMinimalBlockSystem(
                 nelems[p++] = (*elems)[i];
             }
         ElementSet* blocks = new ElementSet(cnt, nelems);
-        ElementSet* finalBlocks = findMinimalBlockSystem(n, blocks, group);
+        ElementSet* finalBlocks = findMinimalBlockSystem(n, blocks, group, getImage, startElems);
         for (int i = 0; i < cnt; ++i) {
             for (int j = 0; j < m; ++j) {
                 if ((*minimalBlockSystem)[(*elems)[j]] == (*blocks)[i]) {
@@ -102,7 +110,9 @@ ElementSet* findBlockSystem(
     int n, 
     int idx, 
     ElementSet* elems, 
-    PermutationGroup* group
+    PermutationGroup* group,
+    int (*getImage)(int, Permutation*, ElementSet*),
+    ElementSet* startElems
 ) {
     int gensSize = group->getGenSize();
     Permutation** gens = group->getGenerators();
@@ -118,8 +128,8 @@ ElementSet* findBlockSystem(
         S.pop();
         int Y = blockId[X];
         for (int i = 0; i < gensSize; ++i) {
-            int nX = (*gens[i])[X];
-            int nY = (*gens[i])[Y];
+            int nX = getImage(X, gens[i], startElems);
+            int nY = getImage(Y, gens[i], startElems);
             if (blockId[nX] == blockId[nY]) continue;
             else if (blockId[nX] > blockId[nY]) {
                 swap(nX, nY);
@@ -149,7 +159,9 @@ Permutation* filter(
     vector< vector<Permutation*> >& cosetRep,
     ElementSet* elems,
     ElementSet* blockSystem,
-    Permutation* filterPerm
+    Permutation* filterPerm,
+    int (*getImage)(int, Permutation*, ElementSet*),
+    ElementSet* startElems
 ) {
     Permutation* perm = new Permutation(filterPerm);
     for (int i = 0; i < (int)cosetRep.size(); ++i) {
@@ -162,7 +174,7 @@ Permutation* filter(
             if (i == 0) {
                 int m = elems->getN();
                 for (int k = 0; k < m; ++k) {
-                    int x = (*checkPerm)[(*elems)[k]];
+                    int x = getImage((*elems)[k], checkPerm, startElems);
                     int idx = elems->find(x);
                     if (idx == -1 || (*blockSystem)[idx] != (*blockSystem)[k]) {
                         found = false;
@@ -198,7 +210,9 @@ PermutationGroup* findBlockSystemStabilizer(
     ElementSet* blockSystem, 
     PermutationGroup* group, 
     Permutation*** cosetRepresentatives, 
-    int* size
+    int* size,
+    int (*getImage)(int, Permutation*, ElementSet*),
+    ElementSet* startElems
 ) {
     vector< vector<Permutation*> > cosetRep(n, vector<Permutation*>());
     vector<Permutation*> permList;
@@ -211,7 +225,7 @@ PermutationGroup* findBlockSystemStabilizer(
     queue<Permutation*> queue;
     for (int i = 0; i < gensSize; ++i) {
         Permutation* newCoset = 
-            filter(cosetRep, elems, blockSystem, generators[i]);
+            filter(cosetRep, elems, blockSystem, generators[i], getImage, startElems);
         if (newCoset) {
             queue.push(newCoset);
             permList.push_back(newCoset);
@@ -226,7 +240,7 @@ PermutationGroup* findBlockSystemStabilizer(
             Permutation* filterPerm = 
                 permList[i]->compose(curCoset);
             Permutation* newCoset =
-                filter(cosetRep, elems, blockSystem, filterPerm);
+                filter(cosetRep, elems, blockSystem, filterPerm, getImage, startElems);
             if (newCoset) {
                 queue.push(newCoset);
                 newPermList.push_back(newCoset);
@@ -235,7 +249,7 @@ PermutationGroup* findBlockSystemStabilizer(
             filterPerm = 
                 curCoset->compose(permList[i]);
             newCoset =
-                filter(cosetRep, elems, blockSystem, filterPerm);
+                filter(cosetRep, elems, blockSystem, filterPerm, getImage, startElems);
             if (newCoset) {
                 queue.push(newCoset);
                 newPermList.push_back(newCoset);

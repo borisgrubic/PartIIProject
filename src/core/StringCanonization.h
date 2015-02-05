@@ -11,6 +11,7 @@ PermutationGroupCoset* stringCanonization(
     PermutationGroupCoset* coset,
     ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*),
     ElementSet* (*getRestrictedString)(ElementSet*, ElementSet*, ElementSet*),
+    int (*getImage)(int, Permutation*, ElementSet*),
     ElementSet*
 );
 

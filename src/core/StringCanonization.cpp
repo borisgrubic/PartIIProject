@@ -10,14 +10,15 @@ PermutationGroupCoset* stringCanonization(
     PermutationGroupCoset* coset,
     ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*),
     ElementSet* (*getRestrictedString)(ElementSet*, ElementSet*, ElementSet*),
+    int (*getImage)(int, Permutation*, ElementSet*),
     ElementSet* startElems
 ) {
     if (elems->getN() == 1) {
         return new PermutationGroupCoset(coset);
     }
 
-    int n = coset->getPermutation()->getSize();
-    ElementSet* orbit = findOrbit(n, (*elems)[0], coset->getGroup());
+    int n = str->getN();
+    ElementSet* orbit = findOrbit(n, (*elems)[0], coset->getGroup(), getImage, startElems);
     bool isTransitive = orbit->getN() == elems->getN();
     if (!isTransitive) {
         ElementSet* rest = elems->substract(orbit);
@@ -27,6 +28,7 @@ PermutationGroupCoset* stringCanonization(
             coset,
             inducedAction,
             getRestrictedString,
+            getImage,
             startElems
         );
         PermutationGroupCoset* result = stringCanonization(
@@ -35,6 +37,7 @@ PermutationGroupCoset* stringCanonization(
             tmpResult,
             inducedAction,
             getRestrictedString,
+            getImage,
             startElems
         );
 
@@ -45,17 +48,19 @@ PermutationGroupCoset* stringCanonization(
     } else {
         // coset->getGroup is transitive on elems
         ElementSet* minimalBlockSystem = 
-            findMinimalBlockSystem(n, elems, coset->getGroup());
+            findMinimalBlockSystem(n, elems, coset->getGroup(), getImage, startElems);
         Permutation** cosetRepresentatives;
         int size;
         PermutationGroup* stabilizer =
             findBlockSystemStabilizer(
-                n,
+                coset->getPermutation()->getSize(),
                 elems, 
                 minimalBlockSystem, 
                 coset->getGroup(),
                 &cosetRepresentatives,
-                &size
+                &size,
+                getImage,
+                startElems
             );
         PermutationGroupCoset** cosets = 
             new PermutationGroupCoset*[size];
@@ -74,6 +79,7 @@ PermutationGroupCoset* stringCanonization(
                     cosets[i], 
                     inducedAction,
                     getRestrictedString,
+                    getImage,
                     startElems
                 );
         }

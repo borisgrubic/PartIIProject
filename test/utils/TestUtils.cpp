@@ -1,6 +1,7 @@
 #include "TestUtils.h"
 
 #include "../../src/utils/Utils.h"
+#include "../core/TestStringCanonization.h"
 
 #include <iostream>
 #include <vector>
@@ -23,10 +24,12 @@ bool TestUtils::testFindOrbit(
     int n,
     int element,
     PermutationGroup* permGroup,
+    int (*getImage)(int, Permutation*, ElementSet*),
+    ElementSet* startElems,
     int size,
     int* result
 ) {
-    ElementSet* orbit = findOrbit(n, element, permGroup);
+    ElementSet* orbit = findOrbit(n, element, permGroup, getImage, startElems);
 
     bool ret = true;
     if (size != orbit->getN()) ret = false;
@@ -34,6 +37,7 @@ bool TestUtils::testFindOrbit(
         if ((*orbit)[i] != result[i])
             ret = false;
 
+    delete startElems;
     delete orbit;
     delete permGroup;
     delete[] result;
@@ -54,6 +58,8 @@ bool TestUtils::testFindOrbit() {
                 new Permutation(5, new int[5]{1, 0, 2, 3, 4})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(5, new int[5]{0, 1, 2, 3, 4}),
         5,
         new int[5]{0, 1, 2, 3, 4}
     );
@@ -66,6 +72,8 @@ bool TestUtils::testFindOrbit() {
                 new Permutation(5, new int[5]{1, 0, 2, 3, 4})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(5, new int[5]{0, 1, 2, 3, 4}),
         1,
         new int[1]{4}
     );
@@ -78,6 +86,8 @@ bool TestUtils::testFindOrbit() {
                 new Permutation(5, new int[5]{1, 0, 2, 3, 4})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(5, new int[5]{0, 1, 2, 3, 4}),
         2,
         new int[2]{0, 1}
     );
@@ -91,6 +101,8 @@ bool TestUtils::testFindOrbit() {
                 new Permutation(6, new int[6]{1, 0, 2, 3, 4, 5})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(6, new int[6]{0, 1, 2, 3, 4, 5}),
         3,
         new int[3]{0, 1, 3}
     );
@@ -104,6 +116,8 @@ bool TestUtils::testFindOrbit() {
                 new Permutation(6, new int[6]{1, 0, 2, 3, 4, 5})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(6, new int[6]{0, 1, 2, 3, 4, 5}),
         2,
         new int[2]{4, 5}
     );
@@ -117,6 +131,8 @@ bool TestUtils::testFindOrbit() {
                 new Permutation(6, new int[6]{1, 0, 2, 3, 4, 5})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(6, new int[6]{0, 1, 2, 3, 4, 5}),
         1,
         new int[1]{2}
     );
@@ -131,9 +147,11 @@ bool TestUtils::testFindBlockSystem(
     int idx,
     ElementSet* elems,
     PermutationGroup* group,
+    int (*getImage)(int, Permutation*, ElementSet*),
+    ElementSet* startElems,
     int* result
 ) {
-    ElementSet* blockSystem = findBlockSystem(n, idx, elems, group);
+    ElementSet* blockSystem = findBlockSystem(n, idx, elems, group, getImage, startElems);
 
     bool ret = true;
     if (!result && blockSystem) ret = false;
@@ -144,6 +162,7 @@ bool TestUtils::testFindBlockSystem(
                 ret = false;
     }
 
+    delete startElems;
     delete blockSystem;
     delete elems;
     delete group;
@@ -168,6 +187,8 @@ bool TestUtils::testFindBlockSystem() {
                 new Permutation(5, new int[5]{1, 2, 3, 4, 0})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(5, new int[5]{0, 1, 2, 3, 4}),
         NULL
     );
     ok &= testFindBlockSystem(
@@ -180,6 +201,8 @@ bool TestUtils::testFindBlockSystem() {
                 new Permutation(4, new int[4]{1, 2, 3, 0})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(4, new int[4]{0, 1, 2, 3}),
         new int[4]{0, 1, 0, 1}
     );
     ok &= testFindBlockSystem(
@@ -193,6 +216,8 @@ bool TestUtils::testFindBlockSystem() {
                 new Permutation(4, new int[4]{0, 1, 3, 2})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(4, new int[4]{0, 1, 2, 3}),
         new int[4]{0, 0, 2, 2}
     );
     ok &= testFindBlockSystem(
@@ -206,6 +231,8 @@ bool TestUtils::testFindBlockSystem() {
                 new Permutation(7, new int[7]{0, 1, 3, 2, 5, 4, 6})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(7, new int[7]{0, 1, 2, 3, 4, 5, 6}),
         new int[7]{0, 0, 2, 2, 4, 5, 6}
     );
     ok &= testFindBlockSystem(
@@ -219,6 +246,8 @@ bool TestUtils::testFindBlockSystem() {
                 new Permutation(10, new int[10]{1, 0, 3, 2, 5, 4, 7, 6, 9, 8})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(10, new int[10]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}),
         new int[10]{0, 1, 2, 3, 4, 4, 0, 1, 2, 3}
     );
 
@@ -231,9 +260,11 @@ bool TestUtils::testFindMinimalBlockSystem(
     int n,
     ElementSet* elems,
     PermutationGroup* group,
+    int (*getImage)(int, Permutation*, ElementSet*),
+    ElementSet* startElems,
     int* result
 ) {
-    ElementSet* blockSystem = findMinimalBlockSystem(n, elems, group);
+    ElementSet* blockSystem = findMinimalBlockSystem(n, elems, group, getImage, startElems);
 
     bool ret = true;
     int m = elems->getN();
@@ -242,6 +273,7 @@ bool TestUtils::testFindMinimalBlockSystem(
         if ((*blockSystem)[i] != result[i])
             ret = false;
 
+    delete startElems;
     delete elems;
     delete group;
     delete blockSystem;
@@ -263,6 +295,8 @@ bool TestUtils::testFindMinimalBlockSystem() {
                 new Permutation(10, new int[10]{1, 0, 3, 2, 5, 4, 7, 6, 9, 8})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(10, new int[10]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}),
         new int[10]{0, 1, 2, 3, 4, 4, 0, 1, 2, 3}
     );
     ok &= testFindMinimalBlockSystem(
@@ -275,6 +309,8 @@ bool TestUtils::testFindMinimalBlockSystem() {
                 new Permutation(5, new int[5]{1, 2, 3, 4, 0})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(5, new int[5]{0, 1, 2, 3, 4}),
         new int[5]{0, 1, 2, 3, 4}
     );
     ok &= testFindMinimalBlockSystem(
@@ -287,6 +323,8 @@ bool TestUtils::testFindMinimalBlockSystem() {
                 new Permutation(7, new int[7]{0, 1, 4, 3, 2, 5, 6})
             }
         ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(7, new int[7]{0, 1, 2, 3, 4, 5, 6}),
         new int[4]{0, 0, 2, 2}
     );
 
@@ -386,11 +424,13 @@ bool TestUtils::sameGroups(
 bool TestUtils::testFindBlockSystemStabilizer(
     int n,
     ElementSet* elems,
-    PermutationGroup* group
+    PermutationGroup* group,
+    int (*getImage)(int, Permutation*, ElementSet*),
+    ElementSet* startElems
 ) {
     Permutation** cosetRepresentatives;
     int size;
-    ElementSet* blockSystem = findMinimalBlockSystem(n, elems, group);
+    ElementSet* blockSystem = findMinimalBlockSystem(n, elems, group, getImage, startElems);
     PermutationGroup* stabilizer =
         findBlockSystemStabilizer(
             n, 
@@ -398,7 +438,9 @@ bool TestUtils::testFindBlockSystemStabilizer(
             blockSystem,
             group,
             &cosetRepresentatives,
-            &size
+            &size,
+            getImage,
+            startElems
         );
     
     PermutationGroup* group1 = TestUtils::generateGroup(n, group);
@@ -449,6 +491,7 @@ bool TestUtils::testFindBlockSystemStabilizer(
     if (!TestUtils::sameGroups(group1, cosetUnion)) ret = false;
 
     for (int i = 0; i < (int)cosetUnion.size(); ++i) delete cosetUnion[i];
+    delete startElems;
     delete elems;
     delete group;
     delete blockSystem;
@@ -474,7 +517,9 @@ bool TestUtils::testFindBlockSystemStabilizer() {
                 new Permutation(7, new int[7]{2, 4, 1, 3, 0, 6, 5}),
                 new Permutation(7, new int[7]{0, 1, 4, 3, 2, 5, 6})
             }
-        )
+        ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(7, new int[7]{0, 1, 2, 3, 4, 5, 6})
     );
     ok &= testFindBlockSystemStabilizer(
         10,
@@ -485,7 +530,9 @@ bool TestUtils::testFindBlockSystemStabilizer() {
                 new Permutation(10, new int[10]{1, 2, 3, 4, 0, 6, 7, 8, 9, 5}),
                 new Permutation(10, new int[10]{1, 0, 3, 2, 5, 4, 7, 6, 9, 8})
             }
-        )
+        ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(10, new int[10]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9})
     );
     ok &= testFindBlockSystemStabilizer(
         5,
@@ -496,7 +543,9 @@ bool TestUtils::testFindBlockSystemStabilizer() {
                 new Permutation(5, new int[5]{1, 0, 2, 3, 4}),
                 new Permutation(5, new int[5]{1, 2, 3, 4, 0})
             }
-        )
+        ),
+        &(TestStringCanonization::getImage),
+        new ElementSet(5, new int[5]{0, 1, 2, 3, 4})
     );
 
     if (ok) cout << "OK!" << endl;

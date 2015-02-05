@@ -31,16 +31,24 @@ ElementSet* getGraphRestrictedString(
     ElementSet* elem,
     ElementSet* startElems
 ) {
-    int m = elem->getN();
-    int n = startElems->getN();
-    ElementSet* ret = new ElementSet(n * m);
-    for (int i = 0; i < m; ++i)
-        for (int j = 0; j < n; ++j) {
-            int node = (*elem)[i];
-            int pos = startElems->find(node);
-            (*ret)[i * n + j] = (*str)[pos * n + j];
-        }
+    (void)startElems;
+    ElementSet* ret = new ElementSet(elem->getN());
+    for (int i = 0; i < elem->getN(); ++i)
+        (*ret)[i] = (*str)[(*elem)[i]];
     return ret;
+}
+
+int getImage(
+    int edgeId,
+    Permutation* perm,
+    ElementSet* startElems
+) {
+    int n = startElems->getN();
+    int node1 = edgeId / n;
+    int node2 = edgeId % n;
+    int image1 = startElems->find((*perm)[(*startElems)[node1]]);
+    int image2 = startElems->find((*perm)[(*startElems)[node2]]);
+    return image1 * n + image2;
 }
 
 PermutationGroupCoset* graphCanonization(
@@ -58,16 +66,19 @@ PermutationGroupCoset* graphCanonization(
     }
     ElementSet* adjacencyListStr = new ElementSet(n * n, adjacencyList);
 
+    ElementSet* elems = new ElementSet(n * n);
     PermutationGroupCoset* result = 
         stringCanonization(
             adjacencyListStr,
-            nodes,
+            elems,
             coset,
             &graphInducedAction,
             &getGraphRestrictedString,
+            &getImage,
             nodes
         );
 
+    delete elems;
     delete adjacencyListStr;
     return result;
 }

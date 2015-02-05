@@ -15,6 +15,11 @@ class TestStringCanonization {
         ElementSet*, 
         ElementSet*
     );
+    static int getImage(
+        int,
+        Permutation*,
+        ElementSet*
+    );
 
     private:
     bool testStringCanonization(
@@ -24,6 +29,7 @@ class TestStringCanonization {
         PermutationGroupCoset*,
         ElementSet* (*inducedAction)(ElementSet*, Permutation*, ElementSet*),
         ElementSet* (*getRestrictedString)(ElementSet*, ElementSet*, ElementSet*),
+        int (*getImage)(int, Permutation*, ElementSet*),
         bool
     );
     bool checkValidityOfResult(
