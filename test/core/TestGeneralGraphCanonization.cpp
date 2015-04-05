@@ -12,11 +12,15 @@ bool TestGeneralGraphCanonization::testGeneralGraphCanonization(
     EdgeSet* edges2,
     bool resultsAreSame
 ) {
-    ElementSet* result1 = generalGraphCanonization(nodes1, edges1);
-    ElementSet* result2 = generalGraphCanonization(nodes2, edges2);
-    bool ret = (resultsAreSame == (*result1 == *result2));
-    delete result1;
-    delete result2;
+    bool ret =
+        resultsAreSame == 
+        testIsomorphismBetweenGeneralGraphs(
+            nodes1,
+            edges1,
+            nodes2,
+            edges2
+        );
+
     delete nodes1;
     delete edges1;
     delete nodes2;

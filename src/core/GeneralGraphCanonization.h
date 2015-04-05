@@ -10,5 +10,12 @@ ElementSet* generalGraphCanonization(
     EdgeSet*
 );
 
+bool testIsomorphismBetweenGeneralGraphs(
+    ElementSet*,
+    EdgeSet*,
+    ElementSet*,
+    EdgeSet*
+);
+
 #endif
 

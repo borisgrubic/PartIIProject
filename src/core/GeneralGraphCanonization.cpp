@@ -106,3 +106,17 @@ ElementSet* generalGraphCanonization(
     delete[] tmpColors;
     return minAdjacencyList;
 }
+
+bool testIsomorphismBetweenGeneralGraphs(
+    ElementSet* nodes1,
+    EdgeSet* edges1,
+    ElementSet* nodes2,
+    EdgeSet* edges2
+) {
+    ElementSet* result1 = generalGraphCanonization(nodes1, edges1);
+    ElementSet* result2 = generalGraphCanonization(nodes2, edges2);
+    bool ret = *result1 == *result2;
+    delete result1;
+    delete result2;
+    return ret;
+}
