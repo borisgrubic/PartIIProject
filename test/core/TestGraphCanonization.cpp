@@ -221,57 +221,6 @@ bool TestGraphCanonization::test() {
         createCoset(4),
         true
     );
-    // ok &= testGraphCanonization(
-    //     new ElementSet(6, new int[6]{0, 1, 2, 3, 4, 5}),
-    //     new EdgeSet(
-    //         18,
-    //         new Edge*[18]{
-    //             new Edge(0, 3),
-    //             new Edge(0, 4),
-    //             new Edge(0, 5),
-    //             new Edge(1, 3),
-    //             new Edge(1, 4),
-    //             new Edge(1, 5),
-    //             new Edge(2, 3),
-    //             new Edge(2, 4),
-    //             new Edge(2, 5),
-    //             new Edge(3, 0),
-    //             new Edge(4, 0),
-    //             new Edge(5, 0),
-    //             new Edge(3, 1),
-    //             new Edge(4, 1),
-    //             new Edge(5, 1),
-    //             new Edge(3, 2),
-    //             new Edge(4, 2),
-    //             new Edge(5, 2),
-    //         }
-    //     ),
-    //     new ElementSet(6, new int[6]{0, 1, 2, 3, 4, 5}),
-    //     new EdgeSet(
-    //         18,
-    //         new Edge*[18]{
-    //             new Edge(0, 1),
-    //             new Edge(1, 2),
-    //             new Edge(2, 3),
-    //             new Edge(3, 4),
-    //             new Edge(4, 5),
-    //             new Edge(5, 0),
-    //             new Edge(0, 3),
-    //             new Edge(1, 4),
-    //             new Edge(2, 5),
-    //             new Edge(1, 0),
-    //             new Edge(2, 1),
-    //             new Edge(3, 2),
-    //             new Edge(4, 3),
-    //             new Edge(5, 4),
-    //             new Edge(0, 5),
-    //             new Edge(3, 0),
-    //             new Edge(4, 1),
-    //             new Edge(5, 2)
-    //         }
-    //     ),
-    //     true
-    // );
 
     return ok;
 }

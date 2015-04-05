@@ -17,6 +17,8 @@ bool TestUtils::test() {
     if (!testBinom()) return false;
     if (!testFindSubset()) return false;
     if (!testFindSubsetIdx()) return false;
+    if (!testNaiveRefinement()) return false;
+    if (!testNextSubset()) return false;
     return true;
 }
 
@@ -615,6 +617,150 @@ bool TestUtils::testFindSubsetIdx() {
     ok &= testFindSubsetIdx(new int[3]{0, 1, 2}, 3, 3, 6);
     ok &= testFindSubsetIdx(new int[2]{1, 3}, 2, 4, 8);
     ok &= testFindSubsetIdx(new int[3]{0, 2, 3}, 3, 4, 12);
+
+    if (ok) cout << "OK!" << endl;
+    else cout << "Fail!" << endl;
+    return ok;
+}
+
+bool TestUtils::testNaiveRefinement(
+    ElementSet* nodes, 
+    EdgeSet* edges, 
+    int* colors, 
+    int* resColors, 
+    bool resChanged
+) {
+    bool changed = naiveRefinement(nodes, edges, colors);
+
+    bool ret = true;
+    if (changed != resChanged) ret = false;
+    for (int i = 0; i < nodes->getN(); ++i)
+        if (resColors[i] != colors[i])
+            ret = false;
+
+    delete nodes;
+    delete edges;
+    delete[] colors;
+    delete[] resColors;
+    return ret;
+}
+
+bool TestUtils::testNaiveRefinement() {
+    cout << "  Testing naiveRefinement... ";
+
+    bool ok = true;
+    ok &= testNaiveRefinement(
+        new ElementSet(3, new int[3]{0, 1, 2}),
+        new EdgeSet(
+            2,
+            new Edge*[2]{
+                new Edge(0, 1),
+                new Edge(1, 2)
+            }
+        ),
+        new int[3]{0, 0, 0},
+        new int[3]{0, 1, 0},
+        true
+    );
+    ok &= testNaiveRefinement(
+        new ElementSet(4, new int[4]{0, 1, 2, 3}),
+        new EdgeSet(
+            12,
+            new Edge*[12]{
+                new Edge(0, 1),
+                new Edge(0, 2),
+                new Edge(0, 3),
+                new Edge(1, 2),
+                new Edge(1, 3),
+                new Edge(2, 3),
+                new Edge(1, 0),
+                new Edge(2, 0),
+                new Edge(3, 0),
+                new Edge(2, 1),
+                new Edge(3, 1),
+                new Edge(3, 2)
+            }
+        ),
+        new int[4]{0, 0, 0, 0},
+        new int[4]{0, 0, 0, 0},
+        false
+    );
+    ok &= testNaiveRefinement(
+        new ElementSet(4, new int[4]{0, 1, 2, 3}),
+        new EdgeSet(
+            3,
+            new Edge*[3]{
+                new Edge(0, 1),
+                new Edge(1, 2),
+                new Edge(2, 3)
+            }
+        ),
+        new int[4]{1, 0, 1, 0},
+        new int[4]{2, 1, 3, 0},
+        true
+    );
+    
+    if (ok) cout << "OK!" << endl;
+    else cout << "Fail!" << endl;
+    return ok;
+}
+
+bool TestUtils::testNextSubset(
+    int n,
+    int* subset,
+    int subsetSize,
+    int* result
+) {
+    bool hasNext = nextSubset(n, subset, subsetSize);
+    bool ret = true;
+    if (hasNext == false) {
+        if (result != NULL) {
+            ret = false;
+        }
+    } else {
+        if (result == NULL) {
+            ret = false;
+        } else {
+            bool same = true;
+            for (int i = 0; i < subsetSize; ++i)
+                if (subset[i] != result[i]) {
+                    same = false;
+                    break;
+                }
+            if (!same) {
+                ret = false;
+            }
+        }
+    }
+    delete[] subset;
+    if (result != NULL) {
+        delete[] result;
+    }
+    return ret;
+}
+
+bool TestUtils::testNextSubset() {
+    cout << "  Testing nextSubset... ";
+
+    bool ok = true;
+    ok &= testNextSubset(
+        3,
+        new int[2]{0, 1},
+        2,
+        new int[2]{0, 2}
+    );
+    ok &= testNextSubset(
+        3,
+        new int[2]{1, 2},
+        2,
+        new int[2]{2, 0}
+    );
+    ok &= testNextSubset(
+        4,
+        new int[2]{3, 2},
+        2,
+        NULL
+    );
 
     if (ok) cout << "OK!" << endl;
     else cout << "Fail!" << endl;

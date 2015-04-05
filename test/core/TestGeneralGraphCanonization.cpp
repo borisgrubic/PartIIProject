@@ -1,25 +1,22 @@
-#include "TestBoundedValenceGraphCanonization.h"
+#include "TestGeneralGraphCanonization.h"
 
-#include "../../src/core/BoundedValenceGraphCanonization.h"
 #include "../../src/core/GraphCanonization.h"
-#include "TestGraphCanonization.h"
+#include "../../src/core/GeneralGraphCanonization.h"
+#include "../../src/types/PermutationGroupCoset.h"
+#include "../../src/utils/Utils.h"
 
-bool TestBoundedValenceGraphCanonization::testBoundedValenceGraphCanonization(
+bool TestGeneralGraphCanonization::testGeneralGraphCanonization(
     ElementSet* nodes1,
     EdgeSet* edges1,
     ElementSet* nodes2,
     EdgeSet* edges2,
     bool resultsAreSame
 ) {
-    bool ret =
-        resultsAreSame == 
-        testIsomorphismBetweenBoundedValenceGraphs(
-            nodes1,
-            edges1,
-            nodes2,
-            edges2
-        );
-
+    ElementSet* result1 = generalGraphCanonization(nodes1, edges1);
+    ElementSet* result2 = generalGraphCanonization(nodes2, edges2);
+    bool ret = (resultsAreSame == (*result1 == *result2));
+    delete result1;
+    delete result2;
     delete nodes1;
     delete edges1;
     delete nodes2;
@@ -27,9 +24,9 @@ bool TestBoundedValenceGraphCanonization::testBoundedValenceGraphCanonization(
     return ret;
 }
 
-bool TestBoundedValenceGraphCanonization::test() {
+bool TestGeneralGraphCanonization::test() {
     bool ok = true;
-    ok &= testBoundedValenceGraphCanonization(
+    ok &= testGeneralGraphCanonization(
         new ElementSet(3, new int[3]{0, 1, 2}),
         new EdgeSet(
             2,
@@ -48,7 +45,7 @@ bool TestBoundedValenceGraphCanonization::test() {
         ),
         true
     );
-    ok &= testBoundedValenceGraphCanonization(
+    ok &= testGeneralGraphCanonization(
         new ElementSet(4, new int[4]{0, 1, 2, 3}),
         new EdgeSet(
             8,
@@ -79,7 +76,7 @@ bool TestBoundedValenceGraphCanonization::test() {
         ),
         true
     );
-    ok &= testBoundedValenceGraphCanonization(
+    ok &= testGeneralGraphCanonization(
         new ElementSet(3, new int[3]{0, 1, 2}),
         new EdgeSet(
             2,
@@ -98,31 +95,7 @@ bool TestBoundedValenceGraphCanonization::test() {
         ),
         false
     );
-    ok &= testBoundedValenceGraphCanonization(
-        new ElementSet(6, new int[6]{0, 1, 2, 3, 4, 5}),
-        new EdgeSet(
-            18,
-            new Edge*[18]{
-                new Edge(0, 3),
-                new Edge(0, 4),
-                new Edge(0, 5),
-                new Edge(1, 3),
-                new Edge(1, 4),
-                new Edge(1, 5),
-                new Edge(2, 3),
-                new Edge(2, 4),
-                new Edge(2, 5),
-                new Edge(3, 0),
-                new Edge(4, 0),
-                new Edge(5, 0),
-                new Edge(3, 1),
-                new Edge(4, 1),
-                new Edge(5, 1),
-                new Edge(3, 2),
-                new Edge(4, 2),
-                new Edge(5, 2),
-            }
-        ),
+    ok &= testGeneralGraphCanonization(
         new ElementSet(6, new int[6]{0, 1, 2, 3, 4, 5}),
         new EdgeSet(
             18,
@@ -147,9 +120,33 @@ bool TestBoundedValenceGraphCanonization::test() {
                 new Edge(5, 2)
             }
         ),
+        new ElementSet(6, new int[6]{0, 1, 2, 3, 4, 5}),
+        new EdgeSet(
+            18,
+            new Edge*[18]{
+                new Edge(0, 3),
+                new Edge(0, 4),
+                new Edge(0, 5),
+                new Edge(1, 3),
+                new Edge(1, 4),
+                new Edge(1, 5),
+                new Edge(2, 3),
+                new Edge(2, 4),
+                new Edge(2, 5),
+                new Edge(3, 0),
+                new Edge(4, 0),
+                new Edge(5, 0),
+                new Edge(3, 1),
+                new Edge(4, 1),
+                new Edge(5, 1),
+                new Edge(3, 2),
+                new Edge(4, 2),
+                new Edge(5, 2),
+            }
+        ),
         true
     );
-    ok &= testBoundedValenceGraphCanonization(
+    ok &= testGeneralGraphCanonization(
         new ElementSet(8, new int[8]{0, 1, 2, 3, 4, 5, 6, 7}),
         new EdgeSet(
             24,
@@ -184,7 +181,6 @@ bool TestBoundedValenceGraphCanonization::test() {
         new EdgeSet(
             24,
             new Edge*[24]{
-                new Edge(0, 4),
                 new Edge(0, 1),
                 new Edge(1, 2),
                 new Edge(2, 3),
@@ -193,6 +189,7 @@ bool TestBoundedValenceGraphCanonization::test() {
                 new Edge(5, 6),
                 new Edge(6, 7),
                 new Edge(7, 4),
+                new Edge(0, 4),
                 new Edge(1, 5),
                 new Edge(2, 6),
                 new Edge(3, 7),
@@ -212,7 +209,7 @@ bool TestBoundedValenceGraphCanonization::test() {
         ),
         true
     );
-    ok &= testBoundedValenceGraphCanonization(
+    ok &= testGeneralGraphCanonization(
         new ElementSet(6, new int[8]{0, 1, 2, 3, 4, 5}),
         new EdgeSet(
             11,
@@ -252,3 +249,4 @@ bool TestBoundedValenceGraphCanonization::test() {
 
     return ok;
 }
+

@@ -10,6 +10,8 @@ class TestCore {
     bool testBipartiteGraphCanonization();
     bool testGraphCanonization();
     bool testBoundedValenceGraphCanonization();
+    bool testGeneralGraphCanonization();
+    bool testGeneralGraphCanonizationBrute();
 };
 
 #endif

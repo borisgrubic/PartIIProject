@@ -3,6 +3,7 @@
 
 #include "../../src/types/PermutationGroup.h"
 #include "../../src/types/ElementSet.h"
+#include "../../src/types/EdgeSet.h"
 
 #include <vector>
 
@@ -29,6 +30,10 @@ class TestUtils {
     bool testFindSubset();
     bool testFindSubsetIdx();
     bool testFindSubsetIdx(int*, int, int, int);
+    bool testNaiveRefinement();
+    bool testNaiveRefinement(ElementSet*, EdgeSet*, int*, int*, bool);
+    bool testNextSubset();
+    bool testNextSubset(int, int*, int, int*);
 };
 
 #endif

@@ -1,6 +1,7 @@
 #include "Utils.h"
 
 #include <iostream>
+#include <algorithm>
 #include <stack>
 #include <queue>
 #include <vector>
@@ -332,5 +333,97 @@ int findSubsetIdx(int* array, int size, int n) {
         }
         last = array[i];
     }
+    return ret;
+}
+
+bool naiveRefinement(ElementSet* nodes, EdgeSet* edges, int* colors) {
+    vector< vector<int> > adjCol;
+    vector<int> idx;
+    adjCol.clear();
+    idx.clear();
+    int n = nodes->getN();
+    int m = edges->getN();
+    for (int i = 0; i < n; ++i) {
+        idx.push_back(i);
+        adjCol.push_back(vector<int>());
+        adjCol[i].push_back(colors[(*nodes)[i]]);
+    }
+    for (int i = 0; i < n; ++i) {
+        int node = (*nodes)[i];
+        for (int j = 0; j < m; ++j) {
+            if ((*edges)[j]->getFrom() == node ||
+                (*edges)[j]->getDest() == node) {
+                int nnode = 
+                    (*edges)[j]->getFrom() +
+                    (*edges)[j]->getDest() - node;
+                adjCol[i].push_back(colors[nnode]);
+            }
+        }
+        sort(adjCol[i].begin() + 1, adjCol[i].end());
+    }
+
+    for (int i = 0; i < n; ++i)
+        for (int j = i + 1; j < n; ++j) {
+            if (adjCol[idx[i]] > adjCol[idx[j]]) {
+                swap(idx[i], idx[j]);
+            }
+        }
+    int nxt = 0;
+    bool changed = false;
+    for (int i = 0; i < n; ++i) {
+        if (i > 0 && adjCol[idx[i]] != adjCol[idx[i - 1]]) ++nxt;
+        if (colors[(*nodes)[idx[i]]] != nxt) changed = true;
+        colors[(*nodes)[idx[i]]] = nxt;
+    }
+    return changed;
+}
+
+ElementSet* getAdjacencyList(
+    ElementSet* nodes,
+    EdgeSet* edges
+) {
+    int n = nodes->getN();
+    int* adjacencyList = new int[n * n];
+    for (int i = 0; i < n * n; ++i) adjacencyList[i] = 0;
+    for (int i = 0; i < edges->getN(); ++i) {
+        int from = (*edges)[i]->getFrom();
+        int dest = (*edges)[i]->getDest();
+        adjacencyList[from * n + dest] = 1;
+    }
+    return new ElementSet(n * n, adjacencyList);
+}
+
+bool nextSubset(int n, int* subset, int subsetSize) {
+    bool* used = new bool[n];
+    for (int i = 0; i < n; ++i) used[i] = false;
+    for (int i = 0; i < subsetSize; ++i) used[subset[i]] = true;
+    int pos = subsetSize;
+    bool canFind = false;
+    while (!canFind && pos > 0) {
+        --pos;
+        used[subset[pos]] = false;
+        for (int i = subset[pos] + 1; i < n; ++i) {
+            if (!used[i]) {
+                canFind = true;
+                subset[pos] = i;
+                used[i] = true;
+                break;
+            }
+        }
+    }
+    bool ret = true;
+    if (!canFind) ret = false;
+    else {
+        for (int i = pos + 1; i < subsetSize; ++i) {
+            for (int j = 0; j < n; ++j)
+                if (!used[j]) {
+                    subset[i] = j;
+                    used[j] = true;
+                    break;
+                }
+        }
+    }
+
+    delete[] used;
     return ret;
 }

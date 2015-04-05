@@ -4,6 +4,8 @@
 #include "TestBipartiteGraphCanonization.h"
 #include "TestGraphCanonization.h"
 #include "TestBoundedValenceGraphCanonization.h"
+#include "TestGeneralGraphCanonization.h"
+#include "TestGeneralGraphCanonizationBrute.h"
 
 #include <iostream>
 
@@ -15,6 +17,8 @@ bool TestCore::test() {
     if (!testBipartiteGraphCanonization()) return false;
     if (!testGraphCanonization()) return false;
     if (!testBoundedValenceGraphCanonization()) return false;
+    if (!testGeneralGraphCanonization()) return false;
+    /* if (!testGeneralGraphCanonizationBrute()) return false; */
     return true;
 }
 
@@ -49,6 +53,24 @@ bool TestCore::testBoundedValenceGraphCanonization() {
     cout << "  Testing boundedGraphCanonization... ";
     TestBoundedValenceGraphCanonization testBoundedValenceGraphCanonization;
     bool ok = testBoundedValenceGraphCanonization.test();
+    if (ok) cout << "OK!" << endl;
+    else cout << "Fail!" << endl;
+    return ok;
+}
+
+bool TestCore::testGeneralGraphCanonization() {
+    cout << "  Testing generalGraphCanonization... ";
+    TestGeneralGraphCanonization testGeneralGraphCanonization;
+    bool ok = testGeneralGraphCanonization.test();
+    if (ok) cout << "OK!" << endl;
+    else cout << "Fail!" << endl;
+    return ok;
+}
+
+bool TestCore::testGeneralGraphCanonizationBrute() {
+    cout << "  Testing generalGraphCanonizationBrute... ";
+    TestGeneralGraphCanonizationBrute testGeneralGraphCanonizationBrute;
+    bool ok = testGeneralGraphCanonizationBrute.test();
     if (ok) cout << "OK!" << endl;
     else cout << "Fail!" << endl;
     return ok;
