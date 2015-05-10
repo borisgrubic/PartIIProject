@@ -8,14 +8,14 @@
 using namespace std;
 
 bool TestTypes::testPermutation() {
-    cout << "Testing Permutation..." << endl;
+    cout << "Testing Permutation" << endl;
     TestPermutation testPerm;
     bool ok = testPerm.test();
     return ok;
 }
 
 bool TestTypes::testElementSet() {
-    cout << "Testing ElementSet..." << endl;
+    cout << "Testing ElementSet" << endl;
     TestElementSet testElemSet;
     bool ok = testElemSet.test();
     return ok;

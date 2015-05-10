@@ -72,6 +72,7 @@ int bipartiteGetImage(
         nsubset[j] = startElems->find((*perm)[(*startElems)[(*subset)[j]]]);
     }
 
+    std::sort(nsubset, nsubset + subset->getN());
     int ret = findSubsetIdx(nsubset, subset->getN(), n);
     delete subset;
     delete[] nsubset;
@@ -161,14 +162,67 @@ PermutationGroupCoset* bipartiteGraphCanonization(
             leftNodes
         );
 
+    std::vector<int> idx;
+    std::vector<int> adjVec[m];
+    Permutation* perm = tmpResult->getPermutation();
+    for (int i = 0; i < m; ++i) idx.push_back(i);
+    for (int i = 0; i < edgeSet->getN(); ++i) {
+        Edge* edge = (*edgeSet)[i];
+        int from = edge->getFrom();
+        int dest = edge->getDest();
+        if (leftNodes->find(from) == -1) {
+            std::swap(from, dest);
+        }
+        int destIdx = rightNodes->find(dest);
+        adjVec[destIdx].push_back((*perm)[from]);
+    }
+    for (int i = 0; i < m; ++i)
+        std::sort(adjVec[i].begin(), adjVec[i].end());
+    for (int ii = 0; ii < m; ++ii)
+        for (int jj = ii + 1; jj < m; ++jj) {
+            int i = idx[ii];
+            int j = idx[jj];
+            int t = std::min(adjVec[i].size(), adjVec[j].size());
+            int smaller = -1;
+            for (int k = 0; k < t && smaller == -1; ++k)
+                if (adjVec[j][k] != adjVec[i][k])
+                    smaller = (adjVec[j][k] > adjVec[i][k]);
+            if (smaller == -1) smaller = (adjVec[j].size() < adjVec[i].size());
+            if (smaller == 1) {
+                std::swap(idx[ii], idx[jj]);
+            }
+        }
+
+    int additional = 0;
+    int curCnt = 1;
+    for (int i = 1; i < m; ++i) {
+        if (adjVec[idx[i]] == adjVec[idx[i - 1]]) {
+            ++curCnt;
+        } else {
+            if (curCnt >= 2) {
+                ++additional;
+            }
+            if (curCnt > 2) {
+                ++additional;
+            }
+            curCnt = 1;
+        }
+    }
+    if (curCnt >= 2) ++additional;
+    if (curCnt > 2) ++additional;
+
     int nodeCnt = tmpResult->getPermutation()->getSize();
     Permutation* cosetPerm = new Permutation(nodeCnt);
     for (int i = 0; i < n; ++i) {
         (*cosetPerm)[(*leftNodes)[i]] = 
             (*tmpResult->getPermutation())[(*leftNodes)[i]];
     }
+    for (int i = 0; i < m; ++i) {
+        (*cosetPerm)[(*rightNodes)[idx[i]]] =
+            (*rightNodes)[i];
+    }
     Permutation** groupPerms = 
-        new Permutation*[tmpResult->getGroup()->getGenSize() + 2];
+        new Permutation*[tmpResult->getGroup()->getGenSize() + additional];
     for (int i = 0; i < tmpResult->getGroup()->getGenSize(); ++i) {
         Permutation* curPerm = tmpResult->getGroup()->getGenerators()[i];
         Permutation* newPerm = new Permutation(nodeCnt);
@@ -178,28 +232,56 @@ PermutationGroupCoset* bipartiteGraphCanonization(
         }
         groupPerms[i] = newPerm;
     }
-    int* perm1Array = new int[nodeCnt];
-    Permutation* perm2 = new Permutation(nodeCnt);
-    for (int i = 0; i < nodeCnt; ++i) {
-        perm1Array[i] = i;
+
+    curCnt = 1;
+    int nxt = tmpResult->getGroup()->getGenSize();
+    for (int i = 1; i < m + 1; ++i) {
+        if (i < m && adjVec[idx[i]] == adjVec[idx[i - 1]]) {
+            ++curCnt;
+        } else {
+            if (curCnt > 1) {
+                Permutation* perm1 = new Permutation(nodeCnt);
+                for (int j = i - curCnt; j < i; ++j) {
+                    int k = j + 1;
+                    if (j == i - 1) k = i - curCnt;
+                    (*perm1)[(*rightNodes)[j]] = (*rightNodes)[k];
+                }
+                groupPerms[nxt++] = perm1;
+
+                if (curCnt > 2) {
+                    Permutation* perm2 = new Permutation(nodeCnt);
+                    (*perm2)[(*rightNodes)[i - 1]] = (*rightNodes)[i - 2];
+                    (*perm2)[(*rightNodes)[i - 2]] = (*rightNodes)[i - 1];
+                    groupPerms[nxt++] = perm2;
+                }
+            }
+
+            curCnt = 1;
+        }
     }
-    for (int i = 0; i < m; ++i) {
-        perm1Array[(*rightNodes)[i]] = (*rightNodes)[(i + 1) % m];
-    }
-    if (m > 1) {
-        int tmp = (*perm2)[(*rightNodes)[0]];
-        (*perm2)[(*rightNodes)[0]] = (*perm2)[(*rightNodes)[1]];
-        (*perm2)[(*rightNodes)[1]] = tmp;
-    }
-    groupPerms[tmpResult->getGroup()->getGenSize()] = 
-        new Permutation(nodeCnt, perm1Array);
-    groupPerms[tmpResult->getGroup()->getGenSize() + 1] = perm2;
+
+    // int* perm1Array = new int[nodeCnt];
+    // Permutation* perm2 = new Permutation(nodeCnt);
+    // for (int i = 0; i < nodeCnt; ++i) {
+    //     perm1Array[i] = i;
+    // }
+    // for (int i = 0; i < m; ++i) {
+    //     perm1Array[(*rightNodes)[i]] = (*rightNodes)[(i + 1) % m];
+    // }
+    // if (m > 1) {
+    //     int tmp = (*perm2)[(*rightNodes)[0]];
+    //     (*perm2)[(*rightNodes)[0]] = (*perm2)[(*rightNodes)[1]];
+    //     (*perm2)[(*rightNodes)[1]] = tmp;
+    // }
+    // groupPerms[tmpResult->getGroup()->getGenSize()] = 
+    //     new Permutation(nodeCnt, perm1Array);
+    // groupPerms[tmpResult->getGroup()->getGenSize() + 1] = perm2;
 
     PermutationGroupCoset* result = 
         new PermutationGroupCoset(
             cosetPerm,
             new PermutationGroup(
-                tmpResult->getGroup()->getGenSize() + 2,
+                tmpResult->getGroup()->getGenSize() + additional,
                 groupPerms
             )
         );

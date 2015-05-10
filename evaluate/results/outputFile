@@ -1,0 +1,864 @@
+Runtime for test 1: n = 5, d = 3 is 21ms
+Runtime for test 2: n = 5, d = 3 is 11ms
+Runtime for test 3: n = 5, d = 3 is 6ms
+Runtime for test 4: n = 5, d = 3 is 5ms
+Runtime for test 5: n = 5, d = 3 is 4ms
+Runtime for test 6: n = 5, d = 3 is 4ms
+Runtime for test 7: n = 5, d = 3 is 5ms
+Runtime for test 8: n = 5, d = 3 is 9ms
+Runtime for test 9: n = 5, d = 3 is 9ms
+Runtime for test 10: n = 5, d = 3 is 8ms
+Average time for n = 5, d = 3 is 8.2ms
+
+Runtime for test 1: n = 5, d = 5 is 11ms
+Runtime for test 2: n = 5, d = 5 is 18ms
+Runtime for test 3: n = 5, d = 5 is 9ms
+Runtime for test 4: n = 5, d = 5 is 9ms
+Runtime for test 5: n = 5, d = 5 is 4ms
+Runtime for test 6: n = 5, d = 5 is 4ms
+Runtime for test 7: n = 5, d = 5 is 4ms
+Runtime for test 8: n = 5, d = 5 is 8ms
+Runtime for test 9: n = 5, d = 5 is 6ms
+Runtime for test 10: n = 5, d = 5 is 6ms
+Average time for n = 5, d = 5 is 7.9ms
+
+Runtime for test 1: n = 5, d = 7 is 15ms
+Runtime for test 2: n = 5, d = 7 is 4ms
+Runtime for test 3: n = 5, d = 7 is 16ms
+Runtime for test 4: n = 5, d = 7 is 15ms
+Runtime for test 5: n = 5, d = 7 is 13ms
+Runtime for test 6: n = 5, d = 7 is 4ms
+Runtime for test 7: n = 5, d = 7 is 4ms
+Runtime for test 8: n = 5, d = 7 is 5ms
+Runtime for test 9: n = 5, d = 7 is 9ms
+Runtime for test 10: n = 5, d = 7 is 13ms
+Average time for n = 5, d = 7 is 9.8ms
+
+Runtime for test 1: n = 5, d = 9 is 4ms
+Runtime for test 2: n = 5, d = 9 is 22ms
+Runtime for test 3: n = 5, d = 9 is 5ms
+Runtime for test 4: n = 5, d = 9 is 38ms
+Runtime for test 5: n = 5, d = 9 is 4ms
+Runtime for test 6: n = 5, d = 9 is 4ms
+Runtime for test 7: n = 5, d = 9 is 5ms
+Runtime for test 8: n = 5, d = 9 is 18ms
+Runtime for test 9: n = 5, d = 9 is 8ms
+Runtime for test 10: n = 5, d = 9 is 4ms
+Average time for n = 5, d = 9 is 11.2ms
+
+Runtime for test 1: n = 5, d = 3 is 8ms
+Runtime for test 2: n = 5, d = 3 is 4ms
+Runtime for test 3: n = 5, d = 3 is 4ms
+Runtime for test 4: n = 5, d = 3 is 4ms
+Runtime for test 5: n = 5, d = 3 is 9ms
+Runtime for test 6: n = 5, d = 3 is 11ms
+Runtime for test 7: n = 5, d = 3 is 4ms
+Runtime for test 8: n = 5, d = 3 is 8ms
+Runtime for test 9: n = 5, d = 3 is 4ms
+Runtime for test 10: n = 5, d = 3 is 4ms
+Average time for n = 5, d = 3 is 6.0ms
+
+Runtime for test 1: n = 5, d = 5 is 8ms
+Runtime for test 2: n = 5, d = 5 is 9ms
+Runtime for test 3: n = 5, d = 5 is 8ms
+Runtime for test 4: n = 5, d = 5 is 5ms
+Runtime for test 5: n = 5, d = 5 is 8ms
+Runtime for test 6: n = 5, d = 5 is 4ms
+Runtime for test 7: n = 5, d = 5 is 5ms
+Runtime for test 8: n = 5, d = 5 is 16ms
+Runtime for test 9: n = 5, d = 5 is 5ms
+Runtime for test 10: n = 5, d = 5 is 8ms
+Average time for n = 5, d = 5 is 7.6ms
+
+Runtime for test 1: n = 10, d = 3 is 32ms
+Runtime for test 2: n = 10, d = 3 is 6ms
+Runtime for test 3: n = 10, d = 3 is 4ms
+Runtime for test 4: n = 10, d = 3 is 34ms
+Runtime for test 5: n = 10, d = 3 is 32ms
+Runtime for test 6: n = 10, d = 3 is 4ms
+Runtime for test 7: n = 10, d = 3 is 32ms
+Runtime for test 8: n = 10, d = 3 is 32ms
+Runtime for test 9: n = 10, d = 3 is 32ms
+Runtime for test 10: n = 10, d = 3 is 32ms
+Average time for n = 10, d = 3 is 24.0ms
+
+Runtime for test 1: n = 10, d = 5 is 32ms
+Runtime for test 2: n = 10, d = 5 is 65ms
+Runtime for test 3: n = 10, d = 5 is 32ms
+Runtime for test 4: n = 10, d = 5 is 2ms
+Runtime for test 5: n = 10, d = 5 is 33ms
+Runtime for test 6: n = 10, d = 5 is 33ms
+Runtime for test 7: n = 10, d = 5 is 32ms
+Runtime for test 8: n = 10, d = 5 is 66ms
+Runtime for test 9: n = 10, d = 5 is 65ms
+Runtime for test 10: n = 10, d = 5 is 65ms
+Average time for n = 10, d = 5 is 42.5ms
+
+Runtime for test 1: n = 10, d = 7 is 124ms
+Runtime for test 2: n = 10, d = 7 is 67ms
+Runtime for test 3: n = 10, d = 7 is 32ms
+Runtime for test 4: n = 10, d = 7 is 117ms
+Runtime for test 5: n = 10, d = 7 is 33ms
+Runtime for test 6: n = 10, d = 7 is 119ms
+Runtime for test 7: n = 10, d = 7 is 6ms
+Runtime for test 8: n = 10, d = 7 is 67ms
+Runtime for test 9: n = 10, d = 7 is 67ms
+Runtime for test 10: n = 10, d = 7 is 8ms
+Average time for n = 10, d = 7 is 64.0ms
+
+Runtime for test 1: n = 10, d = 9 is 11ms
+Runtime for test 2: n = 10, d = 9 is 65ms
+Runtime for test 3: n = 10, d = 9 is 5ms
+Runtime for test 4: n = 10, d = 9 is 66ms
+Runtime for test 5: n = 10, d = 9 is 65ms
+Runtime for test 6: n = 10, d = 9 is 114ms
+Runtime for test 7: n = 10, d = 9 is 34ms
+Runtime for test 8: n = 10, d = 9 is 64ms
+Runtime for test 9: n = 10, d = 9 is 120001ms
+Runtime for test 10: n = 10, d = 9 is 72ms
+Average time for n = 10, d = 9 is 12049.7ms
+
+Runtime for test 1: n = 10, d = 4 is 38ms
+Runtime for test 2: n = 10, d = 4 is 33ms
+Runtime for test 3: n = 10, d = 4 is 41ms
+Runtime for test 4: n = 10, d = 4 is 33ms
+Runtime for test 5: n = 10, d = 4 is 33ms
+Runtime for test 6: n = 10, d = 4 is 3ms
+Runtime for test 7: n = 10, d = 4 is 5ms
+Runtime for test 8: n = 10, d = 4 is 36ms
+Runtime for test 9: n = 10, d = 4 is 70ms
+Runtime for test 10: n = 10, d = 4 is 9ms
+Average time for n = 10, d = 4 is 30.1ms
+
+Runtime for test 1: n = 10, d = 10 is 68ms
+Runtime for test 2: n = 10, d = 10 is 67ms
+Runtime for test 3: n = 10, d = 10 is 116ms
+Runtime for test 4: n = 10, d = 10 is 65ms
+Runtime for test 5: n = 10, d = 10 is 66ms
+Runtime for test 6: n = 10, d = 10 is 33ms
+Runtime for test 7: n = 10, d = 10 is 120002ms
+Runtime for test 8: n = 10, d = 10 is 10ms
+Runtime for test 9: n = 10, d = 10 is 115ms
+Runtime for test 10: n = 10, d = 10 is 115ms
+Average time for n = 10, d = 10 is 12065.7ms
+
+Runtime for test 1: n = 15, d = 3 is 165ms
+Runtime for test 2: n = 15, d = 3 is 116ms
+Runtime for test 3: n = 15, d = 3 is 165ms
+Runtime for test 4: n = 15, d = 3 is 4ms
+Runtime for test 5: n = 15, d = 3 is 415ms
+Runtime for test 6: n = 15, d = 3 is 167ms
+Runtime for test 7: n = 15, d = 3 is 167ms
+Runtime for test 8: n = 15, d = 3 is 10ms
+Runtime for test 9: n = 15, d = 3 is 169ms
+Runtime for test 10: n = 15, d = 3 is 216ms
+Average time for n = 15, d = 3 is 159.4ms
+
+Runtime for test 1: n = 15, d = 5 is 18ms
+Runtime for test 2: n = 15, d = 5 is 68ms
+Runtime for test 3: n = 15, d = 5 is 16ms
+Runtime for test 4: n = 15, d = 5 is 8ms
+Runtime for test 5: n = 15, d = 5 is 118ms
+Runtime for test 6: n = 15, d = 5 is 115ms
+Runtime for test 7: n = 15, d = 5 is 6ms
+Runtime for test 8: n = 15, d = 5 is 266ms
+Runtime for test 9: n = 15, d = 5 is 166ms
+Runtime for test 10: n = 15, d = 5 is 166ms
+Average time for n = 15, d = 5 is 94.7ms
+
+Runtime for test 1: n = 15, d = 7 is 166ms
+Runtime for test 2: n = 15, d = 7 is 315ms
+Runtime for test 3: n = 15, d = 7 is 16ms
+Runtime for test 4: n = 15, d = 7 is 267ms
+Runtime for test 5: n = 15, d = 7 is 366ms
+Runtime for test 6: n = 15, d = 7 is 366ms
+Runtime for test 7: n = 15, d = 7 is 165ms
+Runtime for test 8: n = 15, d = 7 is 165ms
+Runtime for test 9: n = 15, d = 7 is 366ms
+Runtime for test 10: n = 15, d = 7 is 34ms
+Average time for n = 15, d = 7 is 222.6ms
+
+Runtime for test 1: n = 15, d = 9 is 168ms
+Runtime for test 2: n = 15, d = 9 is 423ms
+Runtime for test 3: n = 15, d = 9 is 165ms
+Runtime for test 4: n = 15, d = 9 is 118ms
+Runtime for test 5: n = 15, d = 9 is 5ms
+Runtime for test 6: n = 15, d = 9 is 367ms
+Runtime for test 7: n = 15, d = 9 is 121ms
+Runtime for test 8: n = 15, d = 9 is 516ms
+Runtime for test 9: n = 15, d = 9 is 215ms
+Runtime for test 10: n = 15, d = 9 is 315ms
+Average time for n = 15, d = 9 is 241.3ms
+
+Runtime for test 1: n = 15, d = 4 is 216ms
+Runtime for test 2: n = 15, d = 4 is 121ms
+Runtime for test 3: n = 15, d = 4 is 116ms
+Runtime for test 4: n = 15, d = 4 is 221ms
+Runtime for test 5: n = 15, d = 4 is 215ms
+Runtime for test 6: n = 15, d = 4 is 217ms
+Runtime for test 7: n = 15, d = 4 is 166ms
+Runtime for test 8: n = 15, d = 4 is 34ms
+Runtime for test 9: n = 15, d = 4 is 216ms
+Runtime for test 10: n = 15, d = 4 is 169ms
+Average time for n = 15, d = 4 is 169.1ms
+
+Runtime for test 1: n = 15, d = 15 is 367ms
+Runtime for test 2: n = 15, d = 15 is 571ms
+Runtime for test 3: n = 15, d = 15 is 369ms
+Runtime for test 4: n = 15, d = 15 is 766ms
+Runtime for test 5: n = 15, d = 15 is 265ms
+Runtime for test 6: n = 15, d = 15 is 515ms
+Runtime for test 7: n = 15, d = 15 is 616ms
+Runtime for test 8: n = 15, d = 15 is 716ms
+Runtime for test 9: n = 15, d = 15 is 520ms
+Runtime for test 10: n = 15, d = 15 is 767ms
+Average time for n = 15, d = 15 is 547.2ms
+
+Runtime for test 1: n = 20, d = 3 is 466ms
+Runtime for test 2: n = 20, d = 3 is 571ms
+Runtime for test 3: n = 20, d = 3 is 6ms
+Runtime for test 4: n = 20, d = 3 is 767ms
+Runtime for test 5: n = 20, d = 3 is 766ms
+Runtime for test 6: n = 20, d = 3 is 516ms
+Runtime for test 7: n = 20, d = 3 is 515ms
+Runtime for test 8: n = 20, d = 3 is 10ms
+Runtime for test 9: n = 20, d = 3 is 569ms
+Runtime for test 10: n = 20, d = 3 is 970ms
+Average time for n = 20, d = 3 is 515.6ms
+
+Runtime for test 1: n = 20, d = 5 is 319ms
+Runtime for test 2: n = 20, d = 5 is 9ms
+Runtime for test 3: n = 20, d = 5 is 1321ms
+Runtime for test 4: n = 20, d = 5 is 64ms
+Runtime for test 5: n = 20, d = 5 is 917ms
+Runtime for test 6: n = 20, d = 5 is 867ms
+Runtime for test 7: n = 20, d = 5 is 817ms
+Runtime for test 8: n = 20, d = 5 is 666ms
+Runtime for test 9: n = 20, d = 5 is 4ms
+Runtime for test 10: n = 20, d = 5 is 9ms
+Average time for n = 20, d = 5 is 499.3ms
+
+Runtime for test 1: n = 20, d = 7 is 33ms
+Runtime for test 2: n = 20, d = 7 is 1277ms
+Runtime for test 3: n = 20, d = 7 is 668ms
+Runtime for test 4: n = 20, d = 7 is 1218ms
+Runtime for test 5: n = 20, d = 7 is 1167ms
+Runtime for test 6: n = 20, d = 7 is 1267ms
+Runtime for test 7: n = 20, d = 7 is 817ms
+Runtime for test 8: n = 20, d = 7 is 69ms
+Runtime for test 9: n = 20, d = 7 is 475ms
+Runtime for test 10: n = 20, d = 7 is 966ms
+Average time for n = 20, d = 7 is 795.7ms
+
+Runtime for test 1: n = 20, d = 9 is 867ms
+Runtime for test 2: n = 20, d = 9 is 1218ms
+Runtime for test 3: n = 20, d = 9 is 920ms
+Runtime for test 4: n = 20, d = 9 is 516ms
+Runtime for test 5: n = 20, d = 9 is 1677ms
+Runtime for test 6: n = 20, d = 9 is 4ms
+Runtime for test 7: n = 20, d = 9 is 1411ms
+Runtime for test 8: n = 20, d = 9 is 1672ms
+Runtime for test 9: n = 20, d = 9 is 1270ms
+Runtime for test 10: n = 20, d = 9 is 269ms
+Average time for n = 20, d = 9 is 982.4ms
+
+Runtime for test 1: n = 20, d = 5 is 34ms
+Runtime for test 2: n = 20, d = 5 is 820ms
+Runtime for test 3: n = 20, d = 5 is 417ms
+Runtime for test 4: n = 20, d = 5 is 916ms
+Runtime for test 5: n = 20, d = 5 is 667ms
+Runtime for test 6: n = 20, d = 5 is 42ms
+Runtime for test 7: n = 20, d = 5 is 823ms
+Runtime for test 8: n = 20, d = 5 is 372ms
+Runtime for test 9: n = 20, d = 5 is 728ms
+Runtime for test 10: n = 20, d = 5 is 1022ms
+Average time for n = 20, d = 5 is 584.1ms
+
+Runtime for test 1: n = 20, d = 20 is 2620ms
+Runtime for test 2: n = 20, d = 20 is 667ms
+Runtime for test 3: n = 20, d = 20 is 2373ms
+Runtime for test 4: n = 20, d = 20 is 2072ms
+Runtime for test 5: n = 20, d = 20 is 2728ms
+Runtime for test 6: n = 20, d = 20 is 867ms
+Runtime for test 7: n = 20, d = 20 is 3528ms
+Runtime for test 8: n = 20, d = 20 is 3025ms
+Runtime for test 9: n = 20, d = 20 is 3126ms
+Runtime for test 10: n = 20, d = 20 is 120017ms
+Average time for n = 20, d = 20 is 14102.3ms
+
+Runtime for test 1: n = 25, d = 3 is 1220ms
+Runtime for test 2: n = 25, d = 3 is 65ms
+Runtime for test 3: n = 25, d = 3 is 365ms
+Runtime for test 4: n = 25, d = 3 is 1768ms
+Runtime for test 5: n = 25, d = 3 is 1669ms
+Runtime for test 6: n = 25, d = 3 is 2123ms
+Runtime for test 7: n = 25, d = 3 is 165ms
+Runtime for test 8: n = 25, d = 3 is 1568ms
+Runtime for test 9: n = 25, d = 3 is 5ms
+Runtime for test 10: n = 25, d = 3 is 1621ms
+Average time for n = 25, d = 3 is 1056.9ms
+
+Runtime for test 1: n = 25, d = 5 is 2218ms
+Runtime for test 2: n = 25, d = 5 is 2219ms
+Runtime for test 3: n = 25, d = 5 is 1571ms
+Runtime for test 4: n = 25, d = 5 is 1824ms
+Runtime for test 5: n = 25, d = 5 is 1722ms
+Runtime for test 6: n = 25, d = 5 is 1568ms
+Runtime for test 7: n = 25, d = 5 is 818ms
+Runtime for test 8: n = 25, d = 5 is 1772ms
+Runtime for test 9: n = 25, d = 5 is 6ms
+Runtime for test 10: n = 25, d = 5 is 2325ms
+Average time for n = 25, d = 5 is 1604.3ms
+
+Runtime for test 1: n = 25, d = 7 is 2227ms
+Runtime for test 2: n = 25, d = 7 is 668ms
+Runtime for test 3: n = 25, d = 7 is 2671ms
+Runtime for test 4: n = 25, d = 7 is 2722ms
+Runtime for test 5: n = 25, d = 7 is 1122ms
+Runtime for test 6: n = 25, d = 7 is 869ms
+Runtime for test 7: n = 25, d = 7 is 3628ms
+Runtime for test 8: n = 25, d = 7 is 5677ms
+Runtime for test 9: n = 25, d = 7 is 1971ms
+Runtime for test 10: n = 25, d = 7 is 3479ms
+Average time for n = 25, d = 7 is 2503.4ms
+
+Runtime for test 1: n = 25, d = 9 is 2724ms
+Runtime for test 2: n = 25, d = 9 is 2731ms
+Runtime for test 3: n = 25, d = 9 is 3579ms
+Runtime for test 4: n = 25, d = 9 is 1919ms
+Runtime for test 5: n = 25, d = 9 is 2922ms
+Runtime for test 6: n = 25, d = 9 is 2471ms
+Runtime for test 7: n = 25, d = 9 is 3074ms
+Runtime for test 8: n = 25, d = 9 is 3823ms
+Runtime for test 9: n = 25, d = 9 is 4683ms
+Runtime for test 10: n = 25, d = 9 is 2022ms
+Average time for n = 25, d = 9 is 2994.8ms
+
+Runtime for test 1: n = 25, d = 5 is 24ms
+Runtime for test 2: n = 25, d = 5 is 19549ms
+Runtime for test 3: n = 25, d = 5 is 2421ms
+Runtime for test 4: n = 25, d = 5 is 3023ms
+Runtime for test 5: n = 25, d = 5 is 2420ms
+Runtime for test 6: n = 25, d = 5 is 2146ms
+Runtime for test 7: n = 25, d = 5 is 1970ms
+Runtime for test 8: n = 25, d = 5 is 2738ms
+Runtime for test 9: n = 25, d = 5 is 1937ms
+Runtime for test 10: n = 25, d = 5 is 2783ms
+Average time for n = 25, d = 5 is 3901.1ms
+
+Runtime for test 1: n = 25, d = 25 is 7745ms
+Runtime for test 2: n = 25, d = 25 is 11798ms
+Runtime for test 3: n = 25, d = 25 is 3927ms
+Runtime for test 4: n = 25, d = 25 is 2921ms
+Runtime for test 5: n = 25, d = 25 is 122ms
+Runtime for test 6: n = 25, d = 25 is 10240ms
+Runtime for test 7: n = 25, d = 25 is 2026ms
+Runtime for test 8: n = 25, d = 25 is 1874ms
+Runtime for test 9: n = 25, d = 25 is 8966ms
+Runtime for test 10: n = 25, d = 25 is 9187ms
+Average time for n = 25, d = 25 is 5880.6ms
+
+Runtime for test 1: n = 30, d = 3 is 4ms
+Runtime for test 2: n = 30, d = 3 is 5078ms
+Runtime for test 3: n = 30, d = 3 is 7032ms
+Runtime for test 4: n = 30, d = 3 is 4174ms
+Runtime for test 5: n = 30, d = 3 is 5ms
+Runtime for test 6: n = 30, d = 3 is 4073ms
+Runtime for test 7: n = 30, d = 3 is 21414ms
+Runtime for test 8: n = 30, d = 3 is 4379ms
+Runtime for test 9: n = 30, d = 3 is 3862ms
+Runtime for test 10: n = 30, d = 3 is 6ms
+Average time for n = 30, d = 3 is 5002.7ms
+
+Runtime for test 1: n = 30, d = 5 is 3876ms
+Runtime for test 2: n = 30, d = 5 is 9ms
+Runtime for test 3: n = 30, d = 5 is 4731ms
+Runtime for test 4: n = 30, d = 5 is 3726ms
+Runtime for test 5: n = 30, d = 5 is 24ms
+Runtime for test 6: n = 30, d = 5 is 4ms
+Runtime for test 7: n = 30, d = 5 is 6736ms
+Runtime for test 8: n = 30, d = 5 is 5634ms
+Runtime for test 9: n = 30, d = 5 is 3673ms
+Runtime for test 10: n = 30, d = 5 is 4876ms
+Average time for n = 30, d = 5 is 3328.9ms
+
+Runtime for test 1: n = 30, d = 7 is 6981ms
+Runtime for test 2: n = 30, d = 7 is 8691ms
+Runtime for test 3: n = 30, d = 7 is 8392ms
+Runtime for test 4: n = 30, d = 7 is 5368ms
+Runtime for test 5: n = 30, d = 7 is 4680ms
+Runtime for test 6: n = 30, d = 7 is 6985ms
+Runtime for test 7: n = 30, d = 7 is 6580ms
+Runtime for test 8: n = 30, d = 7 is 6631ms
+Runtime for test 9: n = 30, d = 7 is 7733ms
+Runtime for test 10: n = 30, d = 7 is 6185ms
+Average time for n = 30, d = 7 is 6822.6ms
+
+Runtime for test 1: n = 30, d = 9 is 4877ms
+Runtime for test 2: n = 30, d = 9 is 10141ms
+Runtime for test 3: n = 30, d = 9 is 2723ms
+Runtime for test 4: n = 30, d = 9 is 4ms
+Runtime for test 5: n = 30, d = 9 is 7124ms
+Runtime for test 6: n = 30, d = 9 is 5829ms
+Runtime for test 7: n = 30, d = 9 is 4625ms
+Runtime for test 8: n = 30, d = 9 is 9905ms
+Runtime for test 9: n = 30, d = 9 is 8338ms
+Runtime for test 10: n = 30, d = 9 is 4979ms
+Average time for n = 30, d = 9 is 5854.5ms
+
+Runtime for test 1: n = 30, d = 6 is 3924ms
+Runtime for test 2: n = 30, d = 6 is 8288ms
+Runtime for test 3: n = 30, d = 6 is 2169ms
+Runtime for test 4: n = 30, d = 6 is 3624ms
+Runtime for test 5: n = 30, d = 6 is 4626ms
+Runtime for test 6: n = 30, d = 6 is 6425ms
+Runtime for test 7: n = 30, d = 6 is 14805ms
+Runtime for test 8: n = 30, d = 6 is 5027ms
+Runtime for test 9: n = 30, d = 6 is 6028ms
+Runtime for test 10: n = 30, d = 6 is 6279ms
+Average time for n = 30, d = 6 is 6119.5ms
+
+Runtime for test 1: n = 30, d = 30 is 40977ms
+Runtime for test 2: n = 30, d = 30 is 47331ms
+Runtime for test 3: n = 30, d = 30 is 12564ms
+Runtime for test 4: n = 30, d = 30 is 25932ms
+Runtime for test 5: n = 30, d = 30 is 36250ms
+Runtime for test 6: n = 30, d = 30 is 10041ms
+Runtime for test 7: n = 30, d = 30 is 5137ms
+Runtime for test 8: n = 30, d = 30 is 120006ms
+Runtime for test 9: n = 30, d = 30 is 42069ms
+Runtime for test 10: n = 30, d = 30 is 12045ms
+Average time for n = 30, d = 30 is 35235.2ms
+
+Runtime for test 1: n = 35, d = 3 is 10891ms
+Runtime for test 2: n = 35, d = 3 is 23269ms
+Runtime for test 3: n = 35, d = 3 is 21ms
+Runtime for test 4: n = 35, d = 3 is 11195ms
+Runtime for test 5: n = 35, d = 3 is 10005ms
+Runtime for test 6: n = 35, d = 3 is 6283ms
+Runtime for test 7: n = 35, d = 3 is 8085ms
+Runtime for test 8: n = 35, d = 3 is 115ms
+Runtime for test 9: n = 35, d = 3 is 114ms
+Runtime for test 10: n = 35, d = 3 is 4ms
+Average time for n = 35, d = 3 is 6998.2ms
+
+Runtime for test 1: n = 35, d = 5 is 9387ms
+Runtime for test 2: n = 35, d = 5 is 8538ms
+Runtime for test 3: n = 35, d = 5 is 11995ms
+Runtime for test 4: n = 35, d = 5 is 1819ms
+Runtime for test 5: n = 35, d = 5 is 9437ms
+Runtime for test 6: n = 35, d = 5 is 4ms
+Runtime for test 7: n = 35, d = 5 is 9411ms
+Runtime for test 8: n = 35, d = 5 is 14350ms
+Runtime for test 9: n = 35, d = 5 is 15201ms
+Runtime for test 10: n = 35, d = 5 is 6936ms
+Average time for n = 35, d = 5 is 8707.8ms
+
+Runtime for test 1: n = 35, d = 7 is 17514ms
+Runtime for test 2: n = 35, d = 7 is 17ms
+Runtime for test 3: n = 35, d = 7 is 521ms
+Runtime for test 4: n = 35, d = 7 is 19765ms
+Runtime for test 5: n = 35, d = 7 is 8838ms
+Runtime for test 6: n = 35, d = 7 is 17613ms
+Runtime for test 7: n = 35, d = 7 is 12049ms
+Runtime for test 8: n = 35, d = 7 is 116ms
+Runtime for test 9: n = 35, d = 7 is 16490ms
+Runtime for test 10: n = 35, d = 7 is 13708ms
+Average time for n = 35, d = 7 is 10663.1ms
+
+Runtime for test 1: n = 35, d = 9 is 9ms
+Runtime for test 2: n = 35, d = 9 is 17661ms
+Runtime for test 3: n = 35, d = 9 is 20864ms
+Runtime for test 4: n = 35, d = 9 is 20261ms
+Runtime for test 5: n = 35, d = 9 is 22975ms
+Runtime for test 6: n = 35, d = 9 is 20817ms
+Runtime for test 7: n = 35, d = 9 is 11697ms
+Runtime for test 8: n = 35, d = 9 is 18913ms
+Runtime for test 9: n = 35, d = 9 is 17612ms
+Runtime for test 10: n = 35, d = 9 is 21544ms
+Average time for n = 35, d = 9 is 17235.3ms
+
+Runtime for test 1: n = 35, d = 6 is 12897ms
+Runtime for test 2: n = 35, d = 6 is 12495ms
+Runtime for test 3: n = 35, d = 6 is 17910ms
+Runtime for test 4: n = 35, d = 6 is 11350ms
+Runtime for test 5: n = 35, d = 6 is 9794ms
+Runtime for test 6: n = 35, d = 6 is 12047ms
+Runtime for test 7: n = 35, d = 6 is 15455ms
+Runtime for test 8: n = 35, d = 6 is 12201ms
+Runtime for test 9: n = 35, d = 6 is 8134ms
+Runtime for test 10: n = 35, d = 6 is 7082ms
+Average time for n = 35, d = 6 is 11936.5ms
+
+Runtime for test 1: n = 35, d = 35 is 77103ms
+Runtime for test 2: n = 35, d = 35 is 15706ms
+Runtime for test 3: n = 35, d = 35 is 7731ms
+Runtime for test 4: n = 35, d = 35 is 120002ms
+Runtime for test 5: n = 35, d = 35 is 105226ms
+Runtime for test 6: n = 35, d = 35 is 38815ms
+Runtime for test 7: n = 35, d = 35 is 59188ms
+Runtime for test 8: n = 35, d = 35 is 120006ms
+Runtime for test 9: n = 35, d = 35 is 69431ms
+Runtime for test 10: n = 35, d = 35 is 20588ms
+Average time for n = 35, d = 35 is 63379.6ms
+
+Runtime for test 1: n = 40, d = 3 is 4ms
+Runtime for test 2: n = 40, d = 3 is 18159ms
+Runtime for test 3: n = 40, d = 3 is 21730ms
+Runtime for test 4: n = 40, d = 3 is 22244ms
+Runtime for test 5: n = 40, d = 3 is 7337ms
+Runtime for test 6: n = 40, d = 3 is 10891ms
+Runtime for test 7: n = 40, d = 3 is 13352ms
+Runtime for test 8: n = 40, d = 3 is 15352ms
+Runtime for test 9: n = 40, d = 3 is 68221ms
+Runtime for test 10: n = 40, d = 3 is 17ms
+Average time for n = 40, d = 3 is 17730.7ms
+
+Runtime for test 1: n = 40, d = 5 is 20388ms
+Runtime for test 2: n = 40, d = 5 is 4ms
+Runtime for test 3: n = 40, d = 5 is 32551ms
+Runtime for test 4: n = 40, d = 5 is 17ms
+Runtime for test 5: n = 40, d = 5 is 33ms
+Runtime for test 6: n = 40, d = 5 is 4ms
+Runtime for test 7: n = 40, d = 5 is 17056ms
+Runtime for test 8: n = 40, d = 5 is 321ms
+Runtime for test 9: n = 40, d = 5 is 25982ms
+Runtime for test 10: n = 40, d = 5 is 29896ms
+Average time for n = 40, d = 5 is 12625.2ms
+
+Runtime for test 1: n = 40, d = 7 is 35959ms
+Runtime for test 2: n = 40, d = 7 is 15106ms
+Runtime for test 3: n = 40, d = 7 is 39866ms
+Runtime for test 4: n = 40, d = 7 is 2824ms
+Runtime for test 5: n = 40, d = 7 is 39915ms
+Runtime for test 6: n = 40, d = 7 is 24714ms
+Runtime for test 7: n = 40, d = 7 is 39268ms
+Runtime for test 8: n = 40, d = 7 is 40864ms
+Runtime for test 9: n = 40, d = 7 is 29309ms
+Runtime for test 10: n = 40, d = 7 is 166ms
+Average time for n = 40, d = 7 is 26799.1ms
+
+Runtime for test 1: n = 40, d = 9 is 40160ms
+Runtime for test 2: n = 40, d = 9 is 36995ms
+Runtime for test 3: n = 40, d = 9 is 16208ms
+Runtime for test 4: n = 40, d = 9 is 28099ms
+Runtime for test 5: n = 40, d = 9 is 1419ms
+Runtime for test 6: n = 40, d = 9 is 120002ms
+Runtime for test 7: n = 40, d = 9 is 34251ms
+Runtime for test 8: n = 40, d = 9 is 13ms
+Runtime for test 9: n = 40, d = 9 is 36751ms
+Runtime for test 10: n = 40, d = 9 is 15558ms
+Average time for n = 40, d = 9 is 32945.6ms
+
+Runtime for test 1: n = 40, d = 7 is 27985ms
+Runtime for test 2: n = 40, d = 7 is 33829ms
+Runtime for test 3: n = 40, d = 7 is 22784ms
+Runtime for test 4: n = 40, d = 7 is 34044ms
+Runtime for test 5: n = 40, d = 7 is 13651ms
+Runtime for test 6: n = 40, d = 7 is 27932ms
+Runtime for test 7: n = 40, d = 7 is 33302ms
+Runtime for test 8: n = 40, d = 7 is 22778ms
+Runtime for test 9: n = 40, d = 7 is 23312ms
+Runtime for test 10: n = 40, d = 7 is 28839ms
+Average time for n = 40, d = 7 is 26845.6ms
+
+Runtime for test 1: n = 40, d = 40 is 120001ms
+Runtime for test 2: n = 40, d = 40 is 13609ms
+Runtime for test 3: n = 40, d = 40 is 87126ms
+Runtime for test 4: n = 40, d = 40 is 56311ms
+Runtime for test 5: n = 40, d = 40 is 72859ms
+Runtime for test 6: n = 40, d = 40 is 64441ms
+Runtime for test 7: n = 40, d = 40 is 62378ms
+Runtime for test 8: n = 40, d = 40 is 119887ms
+Runtime for test 9: n = 40, d = 40 is 38260ms
+Runtime for test 10: n = 40, d = 40 is 120002ms
+Average time for n = 40, d = 40 is 75487.4ms
+
+Runtime for test 1: n = 45, d = 3 is 43575ms
+Runtime for test 2: n = 45, d = 3 is 35655ms
+Runtime for test 3: n = 45, d = 3 is 54211ms
+Runtime for test 4: n = 45, d = 3 is 48267ms
+Runtime for test 5: n = 45, d = 3 is 65ms
+Runtime for test 6: n = 45, d = 3 is 18313ms
+Runtime for test 7: n = 45, d = 3 is 120002ms
+Runtime for test 8: n = 45, d = 3 is 34105ms
+Runtime for test 9: n = 45, d = 3 is 97680ms
+Runtime for test 10: n = 45, d = 3 is 1720ms
+Average time for n = 45, d = 3 is 45359.3ms
+
+Runtime for test 1: n = 45, d = 5 is 35867ms
+Runtime for test 2: n = 45, d = 5 is 42049ms
+Runtime for test 3: n = 45, d = 5 is 42176ms
+Runtime for test 4: n = 45, d = 5 is 36447ms
+Runtime for test 5: n = 45, d = 5 is 27538ms
+Runtime for test 6: n = 45, d = 5 is 41629ms
+Runtime for test 7: n = 45, d = 5 is 67ms
+Runtime for test 8: n = 45, d = 5 is 35861ms
+Runtime for test 9: n = 45, d = 5 is 50676ms
+Runtime for test 10: n = 45, d = 5 is 37424ms
+Average time for n = 45, d = 5 is 34973.4ms
+
+Runtime for test 1: n = 45, d = 7 is 38513ms
+Runtime for test 2: n = 45, d = 7 is 53721ms
+Runtime for test 3: n = 45, d = 7 is 17ms
+Runtime for test 4: n = 45, d = 7 is 43926ms
+Runtime for test 5: n = 45, d = 7 is 65944ms
+Runtime for test 6: n = 45, d = 7 is 42988ms
+Runtime for test 7: n = 45, d = 7 is 67654ms
+Runtime for test 8: n = 45, d = 7 is 47067ms
+Runtime for test 9: n = 45, d = 7 is 28340ms
+Runtime for test 10: n = 45, d = 7 is 38370ms
+Average time for n = 45, d = 7 is 42654.0ms
+
+Runtime for test 1: n = 45, d = 9 is 99419ms
+Runtime for test 2: n = 45, d = 9 is 57945ms
+Runtime for test 3: n = 45, d = 9 is 55924ms
+Runtime for test 4: n = 45, d = 9 is 32107ms
+Runtime for test 5: n = 45, d = 9 is 75875ms
+Runtime for test 6: n = 45, d = 9 is 40818ms
+Runtime for test 7: n = 45, d = 9 is 52546ms
+Runtime for test 8: n = 45, d = 9 is 45526ms
+Runtime for test 9: n = 45, d = 9 is 41921ms
+Runtime for test 10: n = 45, d = 9 is 36ms
+Average time for n = 45, d = 9 is 50211.7ms
+
+Runtime for test 1: n = 45, d = 7 is 6ms
+Runtime for test 2: n = 45, d = 7 is 3675ms
+Runtime for test 3: n = 45, d = 7 is 61593ms
+Runtime for test 4: n = 45, d = 7 is 42125ms
+Runtime for test 5: n = 45, d = 7 is 61812ms
+Runtime for test 6: n = 45, d = 7 is 35816ms
+Runtime for test 7: n = 45, d = 7 is 64552ms
+Runtime for test 8: n = 45, d = 7 is 11092ms
+Runtime for test 9: n = 45, d = 7 is 9ms
+Runtime for test 10: n = 45, d = 7 is 46480ms
+Average time for n = 45, d = 7 is 32716.0ms
+
+Runtime for test 1: n = 45, d = 45 is 120002ms
+Runtime for test 2: n = 45, d = 45 is 120001ms
+Runtime for test 3: n = 45, d = 45 is 42721ms
+Runtime for test 4: n = 45, d = 45 is 120002ms
+Runtime for test 5: n = 45, d = 45 is 120002ms
+Runtime for test 6: n = 45, d = 45 is 120002ms
+Runtime for test 7: n = 45, d = 45 is 120001ms
+Runtime for test 8: n = 45, d = 45 is 120002ms
+Runtime for test 9: n = 45, d = 45 is 112670ms
+Runtime for test 10: n = 45, d = 45 is 120002ms
+Average time for n = 45, d = 45 is 111540.5ms
+
+Runtime for test 1: n = 50, d = 3 is 4637ms
+Runtime for test 2: n = 50, d = 3 is 4926ms
+Runtime for test 3: n = 50, d = 3 is 61958ms
+Runtime for test 4: n = 50, d = 3 is 12ms
+Runtime for test 5: n = 50, d = 3 is 63499ms
+Runtime for test 6: n = 50, d = 3 is 5ms
+Runtime for test 7: n = 50, d = 3 is 81032ms
+Runtime for test 8: n = 50, d = 3 is 9ms
+Runtime for test 9: n = 50, d = 3 is 67298ms
+Runtime for test 10: n = 50, d = 3 is 60993ms
+Average time for n = 50, d = 3 is 34436.9ms
+
+Runtime for test 1: n = 50, d = 5 is 70052ms
+Runtime for test 2: n = 50, d = 5 is 9ms
+Runtime for test 3: n = 50, d = 5 is 77185ms
+Runtime for test 4: n = 50, d = 5 is 76224ms
+Runtime for test 5: n = 50, d = 5 is 61698ms
+Runtime for test 6: n = 50, d = 5 is 85004ms
+Runtime for test 7: n = 50, d = 5 is 68954ms
+Runtime for test 8: n = 50, d = 5 is 80288ms
+Runtime for test 9: n = 50, d = 5 is 53419ms
+Runtime for test 10: n = 50, d = 5 is 35028ms
+Average time for n = 50, d = 5 is 60786.1ms
+
+Runtime for test 1: n = 50, d = 7 is 120005ms
+Runtime for test 2: n = 50, d = 7 is 89688ms
+Runtime for test 3: n = 50, d = 7 is 120003ms
+Runtime for test 4: n = 50, d = 7 is 120003ms
+Runtime for test 5: n = 50, d = 7 is 270ms
+Runtime for test 6: n = 50, d = 7 is 119116ms
+Runtime for test 7: n = 50, d = 7 is 100425ms
+Runtime for test 8: n = 50, d = 7 is 12ms
+Runtime for test 9: n = 50, d = 7 is 33ms
+Runtime for test 10: n = 50, d = 7 is 94173ms
+Average time for n = 50, d = 7 is 76372.8ms
+
+Runtime for test 1: n = 50, d = 9 is 110001ms
+Runtime for test 2: n = 50, d = 9 is 78993ms
+Runtime for test 3: n = 50, d = 9 is 75110ms
+Runtime for test 4: n = 50, d = 9 is 93439ms
+Runtime for test 5: n = 50, d = 9 is 11ms
+Runtime for test 6: n = 50, d = 9 is 106472ms
+Runtime for test 7: n = 50, d = 9 is 90757ms
+Runtime for test 8: n = 50, d = 9 is 105955ms
+Runtime for test 9: n = 50, d = 9 is 120004ms
+Runtime for test 10: n = 50, d = 9 is 101813ms
+Average time for n = 50, d = 9 is 88255.5ms
+
+Runtime for test 1: n = 50, d = 8 is 79880ms
+Runtime for test 2: n = 50, d = 8 is 120003ms
+Runtime for test 3: n = 50, d = 8 is 84939ms
+Runtime for test 4: n = 50, d = 8 is 111287ms
+Runtime for test 5: n = 50, d = 8 is 120002ms
+Runtime for test 6: n = 50, d = 8 is 91769ms
+Runtime for test 7: n = 50, d = 8 is 78565ms
+Runtime for test 8: n = 50, d = 8 is 20368ms
+Runtime for test 9: n = 50, d = 8 is 85339ms
+Runtime for test 10: n = 50, d = 8 is 4826ms
+Average time for n = 50, d = 8 is 79697.8ms
+
+Runtime for test 1: n = 50, d = 50 is 120003ms
+Runtime for test 2: n = 50, d = 50 is 120004ms
+Runtime for test 3: n = 50, d = 50 is 120002ms
+Runtime for test 4: n = 50, d = 50 is 120003ms
+Runtime for test 5: n = 50, d = 50 is 120003ms
+Runtime for test 6: n = 50, d = 50 is 120002ms
+Runtime for test 7: n = 50, d = 50 is 120014ms
+Runtime for test 8: n = 50, d = 50 is 120005ms
+Runtime for test 9: n = 50, d = 50 is 120002ms
+Runtime for test 10: n = 50, d = 50 is 120003ms
+Average time for n = 50, d = 50 is 120004.1ms
+
+Runtime for test 1: n = 55, d = 3 is 55800ms
+Runtime for test 2: n = 55, d = 3 is 11ms
+Runtime for test 3: n = 55, d = 3 is 17ms
+Runtime for test 4: n = 55, d = 3 is 108219ms
+Runtime for test 5: n = 55, d = 3 is 120003ms
+Runtime for test 6: n = 55, d = 3 is 100602ms
+Runtime for test 7: n = 55, d = 3 is 65ms
+Runtime for test 8: n = 55, d = 3 is 40566ms
+Runtime for test 9: n = 55, d = 3 is 92638ms
+Runtime for test 10: n = 55, d = 3 is 109611ms
+Average time for n = 55, d = 3 is 62753.2ms
+
+Runtime for test 1: n = 55, d = 5 is 120004ms
+Runtime for test 2: n = 55, d = 5 is 32ms
+Runtime for test 3: n = 55, d = 5 is 120001ms
+Runtime for test 4: n = 55, d = 5 is 37905ms
+Runtime for test 5: n = 55, d = 5 is 120004ms
+Runtime for test 6: n = 55, d = 5 is 120001ms
+Runtime for test 7: n = 55, d = 5 is 120001ms
+Runtime for test 8: n = 55, d = 5 is 120002ms
+Runtime for test 9: n = 55, d = 5 is 120002ms
+Runtime for test 10: n = 55, d = 5 is 120003ms
+Average time for n = 55, d = 5 is 99795.5ms
+
+Runtime for test 1: n = 55, d = 7 is 120002ms
+Runtime for test 2: n = 55, d = 7 is 120002ms
+Runtime for test 3: n = 55, d = 7 is 111516ms
+Runtime for test 4: n = 55, d = 7 is 120009ms
+Runtime for test 5: n = 55, d = 7 is 120003ms
+Runtime for test 6: n = 55, d = 7 is 102089ms
+Runtime for test 7: n = 55, d = 7 is 120003ms
+Runtime for test 8: n = 55, d = 7 is 120003ms
+Runtime for test 9: n = 55, d = 7 is 120004ms
+Runtime for test 10: n = 55, d = 7 is 21ms
+Average time for n = 55, d = 7 is 105365.2ms
+
+Runtime for test 1: n = 55, d = 9 is 120001ms
+Runtime for test 2: n = 55, d = 9 is 120003ms
+Runtime for test 3: n = 55, d = 9 is 120002ms
+Runtime for test 4: n = 55, d = 9 is 120003ms
+Runtime for test 5: n = 55, d = 9 is 105177ms
+Runtime for test 6: n = 55, d = 9 is 120003ms
+Runtime for test 7: n = 55, d = 9 is 120002ms
+Runtime for test 8: n = 55, d = 9 is 120002ms
+Runtime for test 9: n = 55, d = 9 is 120001ms
+Runtime for test 10: n = 55, d = 9 is 120003ms
+Average time for n = 55, d = 9 is 118519.7ms
+
+Runtime for test 1: n = 55, d = 8 is 120002ms
+Runtime for test 2: n = 55, d = 8 is 120003ms
+Runtime for test 3: n = 55, d = 8 is 120002ms
+Runtime for test 4: n = 55, d = 8 is 120006ms
+Runtime for test 5: n = 55, d = 8 is 120002ms
+Runtime for test 6: n = 55, d = 8 is 114509ms
+Runtime for test 7: n = 55, d = 8 is 120003ms
+Runtime for test 8: n = 55, d = 8 is 120002ms
+Runtime for test 9: n = 55, d = 8 is 120004ms
+Runtime for test 10: n = 55, d = 8 is 120002ms
+Average time for n = 55, d = 8 is 119453.5ms
+
+Runtime for test 1: n = 55, d = 55 is 120004ms
+Runtime for test 2: n = 55, d = 55 is 120002ms
+Runtime for test 3: n = 55, d = 55 is 120002ms
+Runtime for test 4: n = 55, d = 55 is 120003ms
+Runtime for test 5: n = 55, d = 55 is 120002ms
+Runtime for test 6: n = 55, d = 55 is 120003ms
+Runtime for test 7: n = 55, d = 55 is 120002ms
+Runtime for test 8: n = 55, d = 55 is 120005ms
+Runtime for test 9: n = 55, d = 55 is 120003ms
+Runtime for test 10: n = 55, d = 55 is 120002ms
+Average time for n = 55, d = 55 is 120002.8ms
+
+Runtime for test 1: n = 60, d = 3 is 4ms
+Runtime for test 2: n = 60, d = 3 is 120010ms
+Runtime for test 3: n = 60, d = 3 is 120007ms
+Runtime for test 4: n = 60, d = 3 is 120002ms
+Runtime for test 5: n = 60, d = 3 is 115ms
+Runtime for test 6: n = 60, d = 3 is 4ms
+Runtime for test 7: n = 60, d = 3 is 120003ms
+Runtime for test 8: n = 60, d = 3 is 120004ms
+Runtime for test 9: n = 60, d = 3 is 12717ms
+Runtime for test 10: n = 60, d = 3 is 120004ms
+Average time for n = 60, d = 3 is 73287.0ms
+
+Runtime for test 1: n = 60, d = 5 is 11ms
+Runtime for test 2: n = 60, d = 5 is 120002ms
+Runtime for test 3: n = 60, d = 5 is 120002ms
+Runtime for test 4: n = 60, d = 5 is 120003ms
+Runtime for test 5: n = 60, d = 5 is 6ms
+Runtime for test 6: n = 60, d = 5 is 120003ms
+Runtime for test 7: n = 60, d = 5 is 116422ms
+Runtime for test 8: n = 60, d = 5 is 22376ms
+Runtime for test 9: n = 60, d = 5 is 120008ms
+Runtime for test 10: n = 60, d = 5 is 120003ms
+Average time for n = 60, d = 5 is 85883.6ms
+
+Runtime for test 1: n = 60, d = 7 is 120003ms
+Runtime for test 2: n = 60, d = 7 is 120002ms
+Runtime for test 3: n = 60, d = 7 is 120007ms
+Runtime for test 4: n = 60, d = 7 is 120004ms
+Runtime for test 5: n = 60, d = 7 is 120004ms
+Runtime for test 6: n = 60, d = 7 is 120005ms
+Runtime for test 7: n = 60, d = 7 is 120002ms
+Runtime for test 8: n = 60, d = 7 is 120002ms
+Runtime for test 9: n = 60, d = 7 is 120004ms
+Runtime for test 10: n = 60, d = 7 is 120001ms
+Average time for n = 60, d = 7 is 120003.4ms
+
+Runtime for test 1: n = 60, d = 9 is 120003ms
+Runtime for test 2: n = 60, d = 9 is 120004ms
+Runtime for test 3: n = 60, d = 9 is 120004ms
+Runtime for test 4: n = 60, d = 9 is 120002ms
+Runtime for test 5: n = 60, d = 9 is 120004ms
+Runtime for test 6: n = 60, d = 9 is 120003ms
+Runtime for test 7: n = 60, d = 9 is 59399ms
+Runtime for test 8: n = 60, d = 9 is 39ms
+Runtime for test 9: n = 60, d = 9 is 120002ms
+Runtime for test 10: n = 60, d = 9 is 120004ms
+Average time for n = 60, d = 9 is 101946.4ms
+
+Runtime for test 1: n = 60, d = 8 is 120004ms
+Runtime for test 2: n = 60, d = 8 is 420ms
+Runtime for test 3: n = 60, d = 8 is 89100ms
+Runtime for test 4: n = 60, d = 8 is 120006ms
+Runtime for test 5: n = 60, d = 8 is 120021ms
+Runtime for test 6: n = 60, d = 8 is 120008ms
+Runtime for test 7: n = 60, d = 8 is 120001ms
+Runtime for test 8: n = 60, d = 8 is 120007ms
+Runtime for test 9: n = 60, d = 8 is 120002ms
+Runtime for test 10: n = 60, d = 8 is 120004ms
+Average time for n = 60, d = 8 is 104957.3ms
+
+Runtime for test 1: n = 60, d = 60 is 120003ms
+Runtime for test 2: n = 60, d = 60 is 120003ms
+Runtime for test 3: n = 60, d = 60 is 120004ms
+Runtime for test 4: n = 60, d = 60 is 120004ms
+Runtime for test 5: n = 60, d = 60 is 120002ms
+Runtime for test 6: n = 60, d = 60 is 120004ms
+Runtime for test 7: n = 60, d = 60 is 120003ms
+Runtime for test 8: n = 60, d = 60 is 120009ms
+Runtime for test 9: n = 60, d = 60 is 120004ms
+Runtime for test 10: n = 60, d = 60 is 120006ms
+Average time for n = 60, d = 60 is 120004.2ms
+

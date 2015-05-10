@@ -37,7 +37,9 @@ bool TestElementSet::testSubstract(
 }
 
 bool TestElementSet::testSubstract() {
-    cout << "  Testing ElementSet.substract... ";
+    string msg = "  Testing ElementSet.substract";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testSubstract(3, new int[3]{0, 1, 2}, 2, new int[2]{0, 2}, new int[1]{1});

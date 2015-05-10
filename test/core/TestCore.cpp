@@ -12,18 +12,21 @@
 using namespace std;
 
 bool TestCore::test() {
-    cout << "Testing core..." << endl;
+    cout << "Testing core" << endl;
     if (!testStringCanonization()) return false;
     if (!testBipartiteGraphCanonization()) return false;
     if (!testGraphCanonization()) return false;
     if (!testBoundedValenceGraphCanonization()) return false;
     if (!testGeneralGraphCanonization()) return false;
-    /* if (!testGeneralGraphCanonizationBrute()) return false; */
+    if (!testGeneralGraphCanonizationBrute()) return false;
     return true;
 }
 
 bool TestCore::testStringCanonization() {
-    cout << "  Testing stringCanonization... ";
+    string msg = "  Testing stringCanonization ";
+    msg.resize(41, ' ');
+    cout << msg;
+
     TestStringCanonization testStringCanonization;
     bool ok = testStringCanonization.test();
     if (ok) cout << "OK!" << endl;
@@ -32,7 +35,10 @@ bool TestCore::testStringCanonization() {
 }
 
 bool TestCore::testBipartiteGraphCanonization() {
-    cout << "  Testing bipartiteGraphCanonization... ";
+    string msg = "  Testing bipartiteGraphCanonization ";
+    msg.resize(41, ' ');
+    cout << msg;
+
     TestBipartiteGraphCanonization testBipartiteGraphCanonization;
     bool ok = testBipartiteGraphCanonization.test();
     if (ok) cout << "OK!" << endl;
@@ -41,7 +47,10 @@ bool TestCore::testBipartiteGraphCanonization() {
 }
 
 bool TestCore::testGraphCanonization() {
-    cout << "  Testing graphCanonization... ";
+    string msg = "  Testing graphCanonization ";
+    msg.resize(41, ' ');
+    cout << msg;
+
     TestGraphCanonization testGraphCanonization;
     bool ok = testGraphCanonization.test();
     if (ok) cout << "OK!" << endl;
@@ -50,7 +59,10 @@ bool TestCore::testGraphCanonization() {
 }
 
 bool TestCore::testBoundedValenceGraphCanonization() {
-    cout << "  Testing boundedGraphCanonization... ";
+    string msg = "  Testing boundedGraphCanonization ";
+    msg.resize(41, ' ');
+    cout << msg;
+
     TestBoundedValenceGraphCanonization testBoundedValenceGraphCanonization;
     bool ok = testBoundedValenceGraphCanonization.test();
     if (ok) cout << "OK!" << endl;
@@ -59,7 +71,10 @@ bool TestCore::testBoundedValenceGraphCanonization() {
 }
 
 bool TestCore::testGeneralGraphCanonization() {
-    cout << "  Testing generalGraphCanonization... ";
+    string msg = "  Testing generalGraphCanonization ";
+    msg.resize(41, ' ');
+    cout << msg;
+
     TestGeneralGraphCanonization testGeneralGraphCanonization;
     bool ok = testGeneralGraphCanonization.test();
     if (ok) cout << "OK!" << endl;
@@ -68,7 +83,10 @@ bool TestCore::testGeneralGraphCanonization() {
 }
 
 bool TestCore::testGeneralGraphCanonizationBrute() {
-    cout << "  Testing generalGraphCanonizationBrute... ";
+    string msg = "  Testing generalGraphCanonizationBrute ";
+    msg.resize(41, ' ');
+    cout << msg;
+
     TestGeneralGraphCanonizationBrute testGeneralGraphCanonizationBrute;
     bool ok = testGeneralGraphCanonizationBrute.test();
     if (ok) cout << "OK!" << endl;

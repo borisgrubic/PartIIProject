@@ -7,6 +7,10 @@
 using namespace std;
 
 int main() {
+    string msg = "------------ Running unit tests ------------";
+    cout << msg << endl;
+    cout << endl;
+
     TestTypes testTypes;
     testTypes.test();
 
@@ -15,4 +19,8 @@ int main() {
 
     TestCore testCore;
     testCore.test();
+
+    cout << endl;
+    msg = "---- All unit tests passed successfully ----";
+    cout << msg << endl;
 }

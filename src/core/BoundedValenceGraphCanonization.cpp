@@ -201,64 +201,64 @@ bool testIsomorphismBetweenBoundedValenceGraphs(
     return ret;
 }
 
-// bool testIsomorphismBetweenBoundedValenceGraphs(
-//     ElementSet* nodes1,
-//     EdgeSet* edges1,
-//     ElementSet* nodes2,
-//     EdgeSet* edges2
-// ) {
-//     int n = nodes1->getN();
-//     int m = nodes2->getN();
-//     int edges1Cnt = edges1->getN();
-//     int edges2Cnt = edges2->getN();
-//     ElementSet* nodes = new ElementSet(n + m + 2);
-//     Edge** edges = new Edge*[edges1Cnt + edges2Cnt + 4];
-//     for (int i = 0; i < edges1Cnt; ++i)
-//         edges[i] = new Edge((*edges1)[i]);
-//     for (int i = 0; i < edges2Cnt; ++i) {
-//         edges[i + edges1Cnt] = 
-//             new Edge(
-//                 (*edges2)[i]->getFrom() + n,
-//                 (*edges2)[i]->getDest() + n
-//             );
-//     }
-//     edges[edges1Cnt + edges2Cnt] = new Edge(n + m, edges[0]->getDest());
-//     edges[0]->setDest(n + m);
-//     edges[edges1Cnt + edges2Cnt + 1] = new Edge(n + m, n + m + 1);
-//     edges[edges1Cnt + edges2Cnt + 2] = new Edge(n + m + 1, n + m);
-//     edges[edges1Cnt + edges2Cnt + 3] = new Edge(n + m + 1, 0);
-//     EdgeSet* edgeSet = new EdgeSet(edges1Cnt + edges2Cnt + 4, edges);
-//     bool same = false;
-//     for (int i = 0; !same && i < edges2Cnt; ++i) {
-//         edges[edges1Cnt + edges2Cnt + 3]->setDest(
-//             edges[edges1Cnt + i]->getDest()
-//         );
-//         edges[edges1Cnt + i]->setDest(n + m + 1);
-// 
-//         PermutationGroupCoset* result =
-//             boundedValenceGraphCanonization(
-//                 nodes,
-//                 edgeSet,
-//                 edges1Cnt + edges2Cnt + 1
-//             );
-// 
-//         for (int j = 0; j < result->getGroup()->getGenSize(); ++j) {
-//             Permutation* perm = result->getGroup()->getGenerators()[j];
-//             if ((*perm)[n + m] == n + m + 1 && (*perm)[n + m + 1] == n + m) {
-//                 same = true;
-//             }
-//         }
-//         delete result;
-// 
-//         edges[edges1Cnt + i]->setDest(
-//             edges[edges1Cnt + edges2Cnt + 3]->getDest()
-//         );
-//     }
-// 
-//     delete edgeSet;
-//     delete nodes;
-//     return same;
-// }
+bool testIsomorphismBetweenBoundedValenceGraphsSlow(
+    ElementSet* nodes1,
+    EdgeSet* edges1,
+    ElementSet* nodes2,
+    EdgeSet* edges2
+) {
+    int n = nodes1->getN();
+    int m = nodes2->getN();
+    int edges1Cnt = edges1->getN();
+    int edges2Cnt = edges2->getN();
+    ElementSet* nodes = new ElementSet(n + m + 2);
+    Edge** edges = new Edge*[edges1Cnt + edges2Cnt + 4];
+    for (int i = 0; i < edges1Cnt; ++i)
+        edges[i] = new Edge((*edges1)[i]);
+    for (int i = 0; i < edges2Cnt; ++i) {
+        edges[i + edges1Cnt] = 
+            new Edge(
+                (*edges2)[i]->getFrom() + n,
+                (*edges2)[i]->getDest() + n
+            );
+    }
+    edges[edges1Cnt + edges2Cnt] = new Edge(n + m, edges[0]->getDest());
+    edges[0]->setDest(n + m);
+    edges[edges1Cnt + edges2Cnt + 1] = new Edge(n + m, n + m + 1);
+    edges[edges1Cnt + edges2Cnt + 2] = new Edge(n + m + 1, n + m);
+    edges[edges1Cnt + edges2Cnt + 3] = new Edge(n + m + 1, 0);
+    EdgeSet* edgeSet = new EdgeSet(edges1Cnt + edges2Cnt + 4, edges);
+    bool same = false;
+    for (int i = 0; !same && i < edges2Cnt; ++i) {
+        edges[edges1Cnt + edges2Cnt + 3]->setDest(
+            edges[edges1Cnt + i]->getDest()
+        );
+        edges[edges1Cnt + i]->setDest(n + m + 1);
+
+        PermutationGroupCoset* result =
+            boundedValenceGraphCanonization(
+                nodes,
+                edgeSet,
+                edges1Cnt + edges2Cnt + 1
+            );
+
+        for (int j = 0; j < result->getGroup()->getGenSize(); ++j) {
+            Permutation* perm = result->getGroup()->getGenerators()[j];
+            if ((*perm)[n + m] == n + m + 1 && (*perm)[n + m + 1] == n + m) {
+                same = true;
+            }
+        }
+        delete result;
+
+        edges[edges1Cnt + i]->setDest(
+            edges[edges1Cnt + edges2Cnt + 3]->getDest()
+        );
+    }
+
+    delete edgeSet;
+    delete nodes;
+    return same;
+}
 
 void renumberNodes(
     ElementSet* nodes, 

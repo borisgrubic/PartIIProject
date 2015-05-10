@@ -6,13 +6,16 @@
 
 #include <iostream>
 #include <algorithm>
+#include <ctime>
 
 using namespace std;
 
 bool TestGeneralGraphCanonizationBrute::test() {
+    srand(time(0));
     bool over = false;
+    cout << endl;
     while (!over) {
-        int n = rand() % 7 + 5;
+        int n = rand() % 20 + 5;
         int* f = new int[n];
         ElementSet* nodes = new ElementSet(n);
         vector<pair<int, int>> possedges;
@@ -23,7 +26,8 @@ bool TestGeneralGraphCanonizationBrute::test() {
                     possedges.push_back(make_pair(i, j));
         int cnt = rand() % possedges.size();
         Edge** edges = new Edge*[cnt];
-        cout << endl << "n = " << n << " " << "m = " << cnt;
+        cout << "nodes = " << (n < 10 ? " " : "") << n << " ";
+        cout << "edges = " << (cnt < 100 ? cnt < 10 ? "  " : " " : "") << cnt;
         for (int i = 0; i < cnt; ++i) {
             int t = rand() % possedges.size();
             edges[i] = new Edge(possedges[t].first, possedges[t].second);
@@ -40,6 +44,7 @@ bool TestGeneralGraphCanonizationBrute::test() {
             edges2[i] = 
                 new Edge(f[edges[i]->getFrom()], f[edges[i]->getDest()]);
 
+        int start = clock();
         EdgeSet* edgeSet2 = new EdgeSet(cnt, edges2);
         bool ok = true;
         ElementSet* result1 = generalGraphCanonization(nodes, edgeSet);
@@ -47,8 +52,9 @@ bool TestGeneralGraphCanonizationBrute::test() {
         ok &= *result1 == *result2;
         delete result1;
         delete result2;
+        int end = clock();
 
-        if (ok) cout << "... OK!" << endl;
+        if (ok) cout << "... OK!  Finished in: " << (end - start) * 1000 / CLOCKS_PER_SEC << "ms" << endl;
         else {
             cout << endl;
             cout << "Wrong!" << endl;

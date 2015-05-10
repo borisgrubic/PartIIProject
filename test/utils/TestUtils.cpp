@@ -9,7 +9,7 @@
 using namespace std;
 
 bool TestUtils::test() {
-    cout << "Testing utils..." << endl;
+    cout << "Testing utils" << endl;
     if (!testFindOrbit()) return false;
     if (!testFindBlockSystem()) return false;
     if (!testFindMinimalBlockSystem()) return false;
@@ -47,7 +47,9 @@ bool TestUtils::testFindOrbit(
 }    
 
 bool TestUtils::testFindOrbit() {
-    cout << "  Testing findOrbit... ";
+    string msg = "  Testing findOrbit ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testFindOrbit(
@@ -175,7 +177,9 @@ bool TestUtils::testFindBlockSystem(
 }
 
 bool TestUtils::testFindBlockSystem() {
-    cout << "  Testing findBlockSystem... ";
+    string msg = "  Testing findBlockSystem ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testFindBlockSystem(
@@ -284,7 +288,9 @@ bool TestUtils::testFindMinimalBlockSystem(
 }
 
 bool TestUtils::testFindMinimalBlockSystem() {
-    cout << "  Testing findMinimalBlockSystem... ";
+    string msg = "  Testing findMinimalBlockSystem ";
+    msg.resize(41, ' ');
+    cout << msg;
     
     bool ok = true;
     ok &= testFindMinimalBlockSystem(
@@ -507,7 +513,9 @@ bool TestUtils::testFindBlockSystemStabilizer(
      
 
 bool TestUtils::testFindBlockSystemStabilizer() {
-    cout << "  Testing findBlockSystemStabilizer... ";
+    string msg = "  Testing findBlockSystemStabilizer ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testFindBlockSystemStabilizer(
@@ -556,7 +564,9 @@ bool TestUtils::testFindBlockSystemStabilizer() {
 }
 
 bool TestUtils::testBinom() {
-    cout << "  Testing binom... ";
+    string msg = "  Testing binom ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= binom(25, 50) == 0;
@@ -585,7 +595,9 @@ bool TestUtils::testFindSubset(int idx, int n, ElementSet* result) {
 }
 
 bool TestUtils::testFindSubset() {
-    cout << "  Testing findSubset... ";
+    string msg = "  Testing findSubset ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testFindSubset(1, 100, new ElementSet(1, new int[1]{0}));
@@ -609,7 +621,9 @@ bool TestUtils::testFindSubsetIdx(int* array, int size, int n, int result) {
 }
 
 bool TestUtils::testFindSubsetIdx() {
-    cout << "  Testing findSubsetIdx... ";
+    string msg = "  Testing findSubsetIdx ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testFindSubsetIdx(new int[1]{0}, 1, 100, 0);
@@ -646,7 +660,9 @@ bool TestUtils::testNaiveRefinement(
 }
 
 bool TestUtils::testNaiveRefinement() {
-    cout << "  Testing naiveRefinement... ";
+    string msg = "  Testing naiveRefinement ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testNaiveRefinement(
@@ -740,7 +756,9 @@ bool TestUtils::testNextSubset(
 }
 
 bool TestUtils::testNextSubset() {
-    cout << "  Testing nextSubset... ";
+    string msg = "  Testing nextSubset ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testNextSubset(

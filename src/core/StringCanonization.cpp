@@ -62,6 +62,7 @@ PermutationGroupCoset* stringCanonization(
                 getImage,
                 startElems
             );
+
         PermutationGroupCoset** cosets = 
             new PermutationGroupCoset*[size];
         for (int i = 0; i < size; ++i) {

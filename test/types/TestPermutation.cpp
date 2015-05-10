@@ -29,7 +29,9 @@ bool TestPermutation::testGetInverse(int n, int* permArray, int* result) {
 }
 
 bool TestPermutation::testGetInverse() {
-    cout << "  Testing Permutation.getInverse... ";
+    string msg = "  Testing Permutation.getInverse ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testGetInverse(5, new int[5]{4, 0, 2, 1, 3}, new int[5]{1, 3, 2, 4, 0});
@@ -60,7 +62,9 @@ bool TestPermutation::testCompose(int n, int* perm1Array, int* perm2Array, int* 
 }
 
 bool TestPermutation::testCompose() {
-    cout << "  Testing Permutation.compose... ";
+    string msg = "  Testing Permutation.compose ";
+    msg.resize(41, ' ');
+    cout << msg;
 
     bool ok = true;
     ok &= testCompose(1, new int[1]{0}, new int[1]{0}, new int[1]{0});

@@ -1,0 +1,1670 @@
+Evaluation started
+Evaluating for n = 5 and cnt = 10
+Graph with n = 5, m = 15, d = 3 has been created
+Canonization algorithm finished in 21ms
+Graph with n = 5, m = 9, d = 3 has been created
+Canonization algorithm finished in 11ms
+Graph with n = 5, m = 2, d = 3 has been created
+Canonization algorithm finished in 6ms
+Graph with n = 5, m = 8, d = 3 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 5, m = 5, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 7, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 0, d = 3 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 5, m = 14, d = 3 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 5, m = 13, d = 3 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 5, m = 15, d = 3 has been created
+Canonization algorithm finished in 8ms
+Finished evaluating for n = 5, d = 3 with average time: 8.2ms
+
+
+Graph with n = 5, m = 14, d = 5 has been created
+Canonization algorithm finished in 11ms
+Graph with n = 5, m = 19, d = 5 has been created
+Canonization algorithm finished in 18ms
+Graph with n = 5, m = 8, d = 5 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 5, m = 11, d = 5 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 5, m = 4, d = 5 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 20, d = 5 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 1, d = 5 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 11, d = 5 has been created
+Canonization algorithm finished in 8ms
+Graph with n = 5, m = 7, d = 5 has been created
+Canonization algorithm finished in 6ms
+Graph with n = 5, m = 4, d = 5 has been created
+Canonization algorithm finished in 6ms
+Finished evaluating for n = 5, d = 5 with average time: 7.9ms
+
+
+Graph with n = 5, m = 7, d = 7 has been created
+Canonization algorithm finished in 15ms
+Graph with n = 5, m = 6, d = 7 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 17, d = 7 has been created
+Canonization algorithm finished in 16ms
+Graph with n = 5, m = 15, d = 7 has been created
+Canonization algorithm finished in 15ms
+Graph with n = 5, m = 11, d = 7 has been created
+Canonization algorithm finished in 13ms
+Graph with n = 5, m = 6, d = 7 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 5, d = 7 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 4, d = 7 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 5, m = 2, d = 7 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 5, m = 8, d = 7 has been created
+Canonization algorithm finished in 13ms
+Finished evaluating for n = 5, d = 7 with average time: 9.8ms
+
+
+Graph with n = 5, m = 3, d = 9 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 14, d = 9 has been created
+Canonization algorithm finished in 22ms
+Graph with n = 5, m = 3, d = 9 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 5, m = 19, d = 9 has been created
+Canonization algorithm finished in 38ms
+Graph with n = 5, m = 5, d = 9 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 0, d = 9 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 6, d = 9 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 5, m = 16, d = 9 has been created
+Canonization algorithm finished in 18ms
+Graph with n = 5, m = 8, d = 9 has been created
+Canonization algorithm finished in 8ms
+Graph with n = 5, m = 0, d = 9 has been created
+Canonization algorithm finished in 4ms
+Finished evaluating for n = 5, d = 9 with average time: 11.2ms
+
+
+Graph with n = 5, m = 14, d = 3 has been created
+Canonization algorithm finished in 8ms
+Graph with n = 5, m = 3, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 6, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 5, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 10, d = 3 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 5, m = 12, d = 3 has been created
+Canonization algorithm finished in 11ms
+Graph with n = 5, m = 0, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 9, d = 3 has been created
+Canonization algorithm finished in 8ms
+Graph with n = 5, m = 1, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 1, d = 3 has been created
+Canonization algorithm finished in 4ms
+Finished evaluating for n = 5, d = 3 with average time: 6.0ms
+
+
+Graph with n = 5, m = 13, d = 5 has been created
+Canonization algorithm finished in 8ms
+Graph with n = 5, m = 13, d = 5 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 5, m = 12, d = 5 has been created
+Canonization algorithm finished in 8ms
+Graph with n = 5, m = 10, d = 5 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 5, m = 10, d = 5 has been created
+Canonization algorithm finished in 8ms
+Graph with n = 5, m = 9, d = 5 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 5, m = 20, d = 5 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 5, m = 18, d = 5 has been created
+Canonization algorithm finished in 16ms
+Graph with n = 5, m = 1, d = 5 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 5, m = 8, d = 5 has been created
+Canonization algorithm finished in 8ms
+Finished evaluating for n = 5, d = 5 with average time: 7.6ms
+
+
+Evaluating for n = 10 and cnt = 10
+Graph with n = 10, m = 16, d = 3 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 10, m = 3, d = 3 has been created
+Canonization algorithm finished in 6ms
+Graph with n = 10, m = 2, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 10, m = 27, d = 3 has been created
+Canonization algorithm finished in 34ms
+Graph with n = 10, m = 30, d = 3 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 10, m = 5, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 10, m = 21, d = 3 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 10, m = 22, d = 3 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 10, m = 20, d = 3 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 10, m = 15, d = 3 has been created
+Canonization algorithm finished in 32ms
+Finished evaluating for n = 10, d = 3 with average time: 24.0ms
+
+
+Graph with n = 10, m = 25, d = 5 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 10, m = 38, d = 5 has been created
+Canonization algorithm finished in 65ms
+Graph with n = 10, m = 26, d = 5 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 10, m = 0, d = 5 has been created
+Canonization algorithm finished in 2ms
+Graph with n = 10, m = 26, d = 5 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 10, m = 27, d = 5 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 10, m = 13, d = 5 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 10, m = 26, d = 5 has been created
+Canonization algorithm finished in 66ms
+Graph with n = 10, m = 33, d = 5 has been created
+Canonization algorithm finished in 65ms
+Graph with n = 10, m = 44, d = 5 has been created
+Canonization algorithm finished in 65ms
+Finished evaluating for n = 10, d = 5 with average time: 42.5ms
+
+
+Graph with n = 10, m = 65, d = 7 has been created
+Canonization algorithm finished in 124ms
+Graph with n = 10, m = 34, d = 7 has been created
+Canonization algorithm finished in 67ms
+Graph with n = 10, m = 21, d = 7 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 10, m = 64, d = 7 has been created
+Canonization algorithm finished in 117ms
+Graph with n = 10, m = 15, d = 7 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 10, m = 67, d = 7 has been created
+Canonization algorithm finished in 119ms
+Graph with n = 10, m = 1, d = 7 has been created
+Canonization algorithm finished in 6ms
+Graph with n = 10, m = 41, d = 7 has been created
+Canonization algorithm finished in 67ms
+Graph with n = 10, m = 50, d = 7 has been created
+Canonization algorithm finished in 67ms
+Graph with n = 10, m = 10, d = 7 has been created
+Canonization algorithm finished in 8ms
+Finished evaluating for n = 10, d = 7 with average time: 64.0ms
+
+
+Graph with n = 10, m = 9, d = 9 has been created
+Canonization algorithm finished in 11ms
+Graph with n = 10, m = 61, d = 9 has been created
+Canonization algorithm finished in 65ms
+Graph with n = 10, m = 0, d = 9 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 10, m = 39, d = 9 has been created
+Canonization algorithm finished in 66ms
+Graph with n = 10, m = 30, d = 9 has been created
+Canonization algorithm finished in 65ms
+Graph with n = 10, m = 70, d = 9 has been created
+Canonization algorithm finished in 114ms
+Graph with n = 10, m = 12, d = 9 has been created
+Canonization algorithm finished in 34ms
+Graph with n = 10, m = 59, d = 9 has been created
+Canonization algorithm finished in 64ms
+Graph with n = 10, m = 88, d = 9 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 10, m = 61, d = 9 has been created
+Canonization algorithm finished in 72ms
+Finished evaluating for n = 10, d = 9 with average time: 12049.7ms
+
+
+Graph with n = 10, m = 19, d = 4 has been created
+Canonization algorithm finished in 38ms
+Graph with n = 10, m = 21, d = 4 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 10, m = 36, d = 4 has been created
+Canonization algorithm finished in 41ms
+Graph with n = 10, m = 23, d = 4 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 10, m = 27, d = 4 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 10, m = 1, d = 4 has been created
+Canonization algorithm finished in 3ms
+Graph with n = 10, m = 1, d = 4 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 10, m = 18, d = 4 has been created
+Canonization algorithm finished in 36ms
+Graph with n = 10, m = 27, d = 4 has been created
+Canonization algorithm finished in 70ms
+Graph with n = 10, m = 5, d = 4 has been created
+Canonization algorithm finished in 9ms
+Finished evaluating for n = 10, d = 4 with average time: 30.1ms
+
+
+Graph with n = 10, m = 47, d = 10 has been created
+Canonization algorithm finished in 68ms
+Graph with n = 10, m = 57, d = 10 has been created
+Canonization algorithm finished in 67ms
+Graph with n = 10, m = 75, d = 10 has been created
+Canonization algorithm finished in 116ms
+Graph with n = 10, m = 41, d = 10 has been created
+Canonization algorithm finished in 65ms
+Graph with n = 10, m = 29, d = 10 has been created
+Canonization algorithm finished in 66ms
+Graph with n = 10, m = 15, d = 10 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 10, m = 88, d = 10 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 10, m = 2, d = 10 has been created
+Canonization algorithm finished in 10ms
+Graph with n = 10, m = 61, d = 10 has been created
+Canonization algorithm finished in 115ms
+Graph with n = 10, m = 78, d = 10 has been created
+Canonization algorithm finished in 115ms
+Finished evaluating for n = 10, d = 10 with average time: 12065.7ms
+
+
+Evaluating for n = 15 and cnt = 10
+Graph with n = 15, m = 35, d = 3 has been created
+Canonization algorithm finished in 165ms
+Graph with n = 15, m = 17, d = 3 has been created
+Canonization algorithm finished in 116ms
+Graph with n = 15, m = 37, d = 3 has been created
+Canonization algorithm finished in 165ms
+Graph with n = 15, m = 8, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 15, m = 19, d = 3 has been created
+Canonization algorithm finished in 415ms
+Graph with n = 15, m = 36, d = 3 has been created
+Canonization algorithm finished in 167ms
+Graph with n = 15, m = 39, d = 3 has been created
+Canonization algorithm finished in 167ms
+Graph with n = 15, m = 6, d = 3 has been created
+Canonization algorithm finished in 10ms
+Graph with n = 15, m = 37, d = 3 has been created
+Canonization algorithm finished in 169ms
+Graph with n = 15, m = 30, d = 3 has been created
+Canonization algorithm finished in 216ms
+Finished evaluating for n = 15, d = 3 with average time: 159.4ms
+
+
+Graph with n = 15, m = 8, d = 5 has been created
+Canonization algorithm finished in 18ms
+Graph with n = 15, m = 16, d = 5 has been created
+Canonization algorithm finished in 68ms
+Graph with n = 15, m = 9, d = 5 has been created
+Canonization algorithm finished in 16ms
+Graph with n = 15, m = 8, d = 5 has been created
+Canonization algorithm finished in 8ms
+Graph with n = 15, m = 23, d = 5 has been created
+Canonization algorithm finished in 118ms
+Graph with n = 15, m = 31, d = 5 has been created
+Canonization algorithm finished in 115ms
+Graph with n = 15, m = 1, d = 5 has been created
+Canonization algorithm finished in 6ms
+Graph with n = 15, m = 68, d = 5 has been created
+Canonization algorithm finished in 266ms
+Graph with n = 15, m = 26, d = 5 has been created
+Canonization algorithm finished in 166ms
+Graph with n = 15, m = 43, d = 5 has been created
+Canonization algorithm finished in 166ms
+Finished evaluating for n = 15, d = 5 with average time: 94.7ms
+
+
+Graph with n = 15, m = 51, d = 7 has been created
+Canonization algorithm finished in 166ms
+Graph with n = 15, m = 86, d = 7 has been created
+Canonization algorithm finished in 315ms
+Graph with n = 15, m = 7, d = 7 has been created
+Canonization algorithm finished in 16ms
+Graph with n = 15, m = 75, d = 7 has been created
+Canonization algorithm finished in 267ms
+Graph with n = 15, m = 103, d = 7 has been created
+Canonization algorithm finished in 366ms
+Graph with n = 15, m = 103, d = 7 has been created
+Canonization algorithm finished in 366ms
+Graph with n = 15, m = 33, d = 7 has been created
+Canonization algorithm finished in 165ms
+Graph with n = 15, m = 44, d = 7 has been created
+Canonization algorithm finished in 165ms
+Graph with n = 15, m = 96, d = 7 has been created
+Canonization algorithm finished in 366ms
+Graph with n = 15, m = 12, d = 7 has been created
+Canonization algorithm finished in 34ms
+Finished evaluating for n = 15, d = 7 with average time: 222.6ms
+
+
+Graph with n = 15, m = 46, d = 9 has been created
+Canonization algorithm finished in 168ms
+Graph with n = 15, m = 116, d = 9 has been created
+Canonization algorithm finished in 423ms
+Graph with n = 15, m = 29, d = 9 has been created
+Canonization algorithm finished in 165ms
+Graph with n = 15, m = 23, d = 9 has been created
+Canonization algorithm finished in 118ms
+Graph with n = 15, m = 4, d = 9 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 15, m = 108, d = 9 has been created
+Canonization algorithm finished in 367ms
+Graph with n = 15, m = 26, d = 9 has been created
+Canonization algorithm finished in 121ms
+Graph with n = 15, m = 133, d = 9 has been created
+Canonization algorithm finished in 516ms
+Graph with n = 15, m = 58, d = 9 has been created
+Canonization algorithm finished in 215ms
+Graph with n = 15, m = 87, d = 9 has been created
+Canonization algorithm finished in 315ms
+Finished evaluating for n = 15, d = 9 with average time: 241.3ms
+
+
+Graph with n = 15, m = 54, d = 4 has been created
+Canonization algorithm finished in 216ms
+Graph with n = 15, m = 22, d = 4 has been created
+Canonization algorithm finished in 121ms
+Graph with n = 15, m = 16, d = 4 has been created
+Canonization algorithm finished in 116ms
+Graph with n = 15, m = 50, d = 4 has been created
+Canonization algorithm finished in 221ms
+Graph with n = 15, m = 60, d = 4 has been created
+Canonization algorithm finished in 215ms
+Graph with n = 15, m = 55, d = 4 has been created
+Canonization algorithm finished in 217ms
+Graph with n = 15, m = 43, d = 4 has been created
+Canonization algorithm finished in 166ms
+Graph with n = 15, m = 13, d = 4 has been created
+Canonization algorithm finished in 34ms
+Graph with n = 15, m = 54, d = 4 has been created
+Canonization algorithm finished in 216ms
+Graph with n = 15, m = 27, d = 4 has been created
+Canonization algorithm finished in 169ms
+Finished evaluating for n = 15, d = 4 with average time: 169.1ms
+
+
+Graph with n = 15, m = 101, d = 15 has been created
+Canonization algorithm finished in 367ms
+Graph with n = 15, m = 146, d = 15 has been created
+Canonization algorithm finished in 571ms
+Graph with n = 15, m = 93, d = 15 has been created
+Canonization algorithm finished in 369ms
+Graph with n = 15, m = 188, d = 15 has been created
+Canonization algorithm finished in 766ms
+Graph with n = 15, m = 74, d = 15 has been created
+Canonization algorithm finished in 265ms
+Graph with n = 15, m = 136, d = 15 has been created
+Canonization algorithm finished in 515ms
+Graph with n = 15, m = 153, d = 15 has been created
+Canonization algorithm finished in 616ms
+Graph with n = 15, m = 174, d = 15 has been created
+Canonization algorithm finished in 716ms
+Graph with n = 15, m = 139, d = 15 has been created
+Canonization algorithm finished in 520ms
+Graph with n = 15, m = 182, d = 15 has been created
+Canonization algorithm finished in 767ms
+Finished evaluating for n = 15, d = 15 with average time: 547.2ms
+
+
+Evaluating for n = 20 and cnt = 10
+Graph with n = 20, m = 25, d = 3 has been created
+Canonization algorithm finished in 466ms
+Graph with n = 20, m = 31, d = 3 has been created
+Canonization algorithm finished in 571ms
+Graph with n = 20, m = 5, d = 3 has been created
+Canonization algorithm finished in 6ms
+Graph with n = 20, m = 60, d = 3 has been created
+Canonization algorithm finished in 767ms
+Graph with n = 20, m = 48, d = 3 has been created
+Canonization algorithm finished in 766ms
+Graph with n = 20, m = 49, d = 3 has been created
+Canonization algorithm finished in 516ms
+Graph with n = 20, m = 27, d = 3 has been created
+Canonization algorithm finished in 515ms
+Graph with n = 20, m = 6, d = 3 has been created
+Canonization algorithm finished in 10ms
+Graph with n = 20, m = 28, d = 3 has been created
+Canonization algorithm finished in 569ms
+Graph with n = 20, m = 22, d = 3 has been created
+Canonization algorithm finished in 970ms
+Finished evaluating for n = 20, d = 3 with average time: 515.6ms
+
+
+Graph with n = 20, m = 21, d = 5 has been created
+Canonization algorithm finished in 319ms
+Graph with n = 20, m = 7, d = 5 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 20, m = 21, d = 5 has been created
+Canonization algorithm finished in 1321ms
+Graph with n = 20, m = 18, d = 5 has been created
+Canonization algorithm finished in 64ms
+Graph with n = 20, m = 95, d = 5 has been created
+Canonization algorithm finished in 917ms
+Graph with n = 20, m = 83, d = 5 has been created
+Canonization algorithm finished in 867ms
+Graph with n = 20, m = 74, d = 5 has been created
+Canonization algorithm finished in 817ms
+Graph with n = 20, m = 51, d = 5 has been created
+Canonization algorithm finished in 666ms
+Graph with n = 20, m = 1, d = 5 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 20, m = 9, d = 5 has been created
+Canonization algorithm finished in 9ms
+Finished evaluating for n = 20, d = 5 with average time: 499.3ms
+
+
+Graph with n = 20, m = 12, d = 7 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 20, m = 131, d = 7 has been created
+Canonization algorithm finished in 1277ms
+Graph with n = 20, m = 59, d = 7 has been created
+Canonization algorithm finished in 668ms
+Graph with n = 20, m = 49, d = 7 has been created
+Canonization algorithm finished in 1218ms
+Graph with n = 20, m = 26, d = 7 has been created
+Canonization algorithm finished in 1167ms
+Graph with n = 20, m = 124, d = 7 has been created
+Canonization algorithm finished in 1267ms
+Graph with n = 20, m = 68, d = 7 has been created
+Canonization algorithm finished in 817ms
+Graph with n = 20, m = 12, d = 7 has been created
+Canonization algorithm finished in 69ms
+Graph with n = 20, m = 34, d = 7 has been created
+Canonization algorithm finished in 475ms
+Graph with n = 20, m = 88, d = 7 has been created
+Canonization algorithm finished in 966ms
+Finished evaluating for n = 20, d = 7 with average time: 795.7ms
+
+
+Graph with n = 20, m = 92, d = 9 has been created
+Canonization algorithm finished in 867ms
+Graph with n = 20, m = 110, d = 9 has been created
+Canonization algorithm finished in 1218ms
+Graph with n = 20, m = 88, d = 9 has been created
+Canonization algorithm finished in 920ms
+Graph with n = 20, m = 32, d = 9 has been created
+Canonization algorithm finished in 516ms
+Graph with n = 20, m = 168, d = 9 has been created
+Canonization algorithm finished in 1677ms
+Graph with n = 20, m = 1, d = 9 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 20, m = 126, d = 9 has been created
+Canonization algorithm finished in 1411ms
+Graph with n = 20, m = 172, d = 9 has been created
+Canonization algorithm finished in 1672ms
+Graph with n = 20, m = 133, d = 9 has been created
+Canonization algorithm finished in 1270ms
+Graph with n = 20, m = 30, d = 9 has been created
+Canonization algorithm finished in 269ms
+Finished evaluating for n = 20, d = 9 with average time: 982.4ms
+
+
+Graph with n = 20, m = 13, d = 5 has been created
+Canonization algorithm finished in 34ms
+Graph with n = 20, m = 77, d = 5 has been created
+Canonization algorithm finished in 820ms
+Graph with n = 20, m = 26, d = 5 has been created
+Canonization algorithm finished in 417ms
+Graph with n = 20, m = 76, d = 5 has been created
+Canonization algorithm finished in 916ms
+Graph with n = 20, m = 27, d = 5 has been created
+Canonization algorithm finished in 667ms
+Graph with n = 20, m = 10, d = 5 has been created
+Canonization algorithm finished in 42ms
+Graph with n = 20, m = 59, d = 5 has been created
+Canonization algorithm finished in 823ms
+Graph with n = 20, m = 28, d = 5 has been created
+Canonization algorithm finished in 372ms
+Graph with n = 20, m = 62, d = 5 has been created
+Canonization algorithm finished in 728ms
+Graph with n = 20, m = 98, d = 5 has been created
+Canonization algorithm finished in 1022ms
+Finished evaluating for n = 20, d = 5 with average time: 584.1ms
+
+
+Graph with n = 20, m = 243, d = 20 has been created
+Canonization algorithm finished in 2620ms
+Graph with n = 20, m = 50, d = 20 has been created
+Canonization algorithm finished in 667ms
+Graph with n = 20, m = 228, d = 20 has been created
+Canonization algorithm finished in 2373ms
+Graph with n = 20, m = 197, d = 20 has been created
+Canonization algorithm finished in 2072ms
+Graph with n = 20, m = 255, d = 20 has been created
+Canonization algorithm finished in 2728ms
+Graph with n = 20, m = 82, d = 20 has been created
+Canonization algorithm finished in 867ms
+Graph with n = 20, m = 309, d = 20 has been created
+Canonization algorithm finished in 3528ms
+Graph with n = 20, m = 273, d = 20 has been created
+Canonization algorithm finished in 3025ms
+Graph with n = 20, m = 280, d = 20 has been created
+Canonization algorithm finished in 3126ms
+Graph with n = 20, m = 364, d = 20 has been created
+Canonization algorithm finished in 120017ms
+Finished evaluating for n = 20, d = 20 with average time: 14102.3ms
+
+
+Evaluating for n = 25 and cnt = 10
+Graph with n = 25, m = 20, d = 3 has been created
+Canonization algorithm finished in 1220ms
+Graph with n = 25, m = 18, d = 3 has been created
+Canonization algorithm finished in 65ms
+Graph with n = 25, m = 23, d = 3 has been created
+Canonization algorithm finished in 365ms
+Graph with n = 25, m = 49, d = 3 has been created
+Canonization algorithm finished in 1768ms
+Graph with n = 25, m = 68, d = 3 has been created
+Canonization algorithm finished in 1669ms
+Graph with n = 25, m = 73, d = 3 has been created
+Canonization algorithm finished in 2123ms
+Graph with n = 25, m = 17, d = 3 has been created
+Canonization algorithm finished in 165ms
+Graph with n = 25, m = 62, d = 3 has been created
+Canonization algorithm finished in 1568ms
+Graph with n = 25, m = 0, d = 3 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 25, m = 52, d = 3 has been created
+Canonization algorithm finished in 1621ms
+Finished evaluating for n = 25, d = 3 with average time: 1056.9ms
+
+
+Graph with n = 25, m = 84, d = 5 has been created
+Canonization algorithm finished in 2218ms
+Graph with n = 25, m = 80, d = 5 has been created
+Canonization algorithm finished in 2219ms
+Graph with n = 25, m = 47, d = 5 has been created
+Canonization algorithm finished in 1571ms
+Graph with n = 25, m = 64, d = 5 has been created
+Canonization algorithm finished in 1824ms
+Graph with n = 25, m = 49, d = 5 has been created
+Canonization algorithm finished in 1722ms
+Graph with n = 25, m = 34, d = 5 has been created
+Canonization algorithm finished in 1568ms
+Graph with n = 25, m = 25, d = 5 has been created
+Canonization algorithm finished in 818ms
+Graph with n = 25, m = 70, d = 5 has been created
+Canonization algorithm finished in 1772ms
+Graph with n = 25, m = 10, d = 5 has been created
+Canonization algorithm finished in 6ms
+Graph with n = 25, m = 101, d = 5 has been created
+Canonization algorithm finished in 2325ms
+Finished evaluating for n = 25, d = 5 with average time: 1604.3ms
+
+
+Graph with n = 25, m = 97, d = 7 has been created
+Canonization algorithm finished in 2227ms
+Graph with n = 25, m = 34, d = 7 has been created
+Canonization algorithm finished in 668ms
+Graph with n = 25, m = 124, d = 7 has been created
+Canonization algorithm finished in 2671ms
+Graph with n = 25, m = 50, d = 7 has been created
+Canonization algorithm finished in 2722ms
+Graph with n = 25, m = 23, d = 7 has been created
+Canonization algorithm finished in 1122ms
+Graph with n = 25, m = 24, d = 7 has been created
+Canonization algorithm finished in 869ms
+Graph with n = 25, m = 152, d = 7 has been created
+Canonization algorithm finished in 3628ms
+Graph with n = 25, m = 40, d = 7 has been created
+Canonization algorithm finished in 5677ms
+Graph with n = 25, m = 80, d = 7 has been created
+Canonization algorithm finished in 1971ms
+Graph with n = 25, m = 149, d = 7 has been created
+Canonization algorithm finished in 3479ms
+Finished evaluating for n = 25, d = 7 with average time: 2503.4ms
+
+
+Graph with n = 25, m = 114, d = 9 has been created
+Canonization algorithm finished in 2724ms
+Graph with n = 25, m = 123, d = 9 has been created
+Canonization algorithm finished in 2731ms
+Graph with n = 25, m = 165, d = 9 has been created
+Canonization algorithm finished in 3579ms
+Graph with n = 25, m = 64, d = 9 has been created
+Canonization algorithm finished in 1919ms
+Graph with n = 25, m = 127, d = 9 has been created
+Canonization algorithm finished in 2922ms
+Graph with n = 25, m = 102, d = 9 has been created
+Canonization algorithm finished in 2471ms
+Graph with n = 25, m = 143, d = 9 has been created
+Canonization algorithm finished in 3074ms
+Graph with n = 25, m = 183, d = 9 has been created
+Canonization algorithm finished in 3823ms
+Graph with n = 25, m = 219, d = 9 has been created
+Canonization algorithm finished in 4683ms
+Graph with n = 25, m = 84, d = 9 has been created
+Canonization algorithm finished in 2022ms
+Finished evaluating for n = 25, d = 9 with average time: 2994.8ms
+
+
+Graph with n = 25, m = 16, d = 5 has been created
+Canonization algorithm finished in 24ms
+Graph with n = 25, m = 31, d = 5 has been created
+Canonization algorithm finished in 19549ms
+Graph with n = 25, m = 98, d = 5 has been created
+Canonization algorithm finished in 2421ms
+Graph with n = 25, m = 44, d = 5 has been created
+Canonization algorithm finished in 3023ms
+Graph with n = 25, m = 83, d = 5 has been created
+Canonization algorithm finished in 2420ms
+Graph with n = 25, m = 91, d = 5 has been created
+Canonization algorithm finished in 2146ms
+Graph with n = 25, m = 84, d = 5 has been created
+Canonization algorithm finished in 1970ms
+Graph with n = 25, m = 95, d = 5 has been created
+Canonization algorithm finished in 2738ms
+Graph with n = 25, m = 62, d = 5 has been created
+Canonization algorithm finished in 1937ms
+Graph with n = 25, m = 99, d = 5 has been created
+Canonization algorithm finished in 2783ms
+Finished evaluating for n = 25, d = 5 with average time: 3901.1ms
+
+
+Graph with n = 25, m = 324, d = 25 has been created
+Canonization algorithm finished in 7745ms
+Graph with n = 25, m = 463, d = 25 has been created
+Canonization algorithm finished in 11798ms
+Graph with n = 25, m = 153, d = 25 has been created
+Canonization algorithm finished in 3927ms
+Graph with n = 25, m = 118, d = 25 has been created
+Canonization algorithm finished in 2921ms
+Graph with n = 25, m = 22, d = 25 has been created
+Canonization algorithm finished in 122ms
+Graph with n = 25, m = 418, d = 25 has been created
+Canonization algorithm finished in 10240ms
+Graph with n = 25, m = 83, d = 25 has been created
+Canonization algorithm finished in 2026ms
+Graph with n = 25, m = 68, d = 25 has been created
+Canonization algorithm finished in 1874ms
+Graph with n = 25, m = 372, d = 25 has been created
+Canonization algorithm finished in 8966ms
+Graph with n = 25, m = 386, d = 25 has been created
+Canonization algorithm finished in 9187ms
+Finished evaluating for n = 25, d = 25 with average time: 5880.6ms
+
+
+Evaluating for n = 30 and cnt = 10
+Graph with n = 30, m = 2, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 30, m = 70, d = 3 has been created
+Canonization algorithm finished in 5078ms
+Graph with n = 30, m = 64, d = 3 has been created
+Canonization algorithm finished in 7032ms
+Graph with n = 30, m = 64, d = 3 has been created
+Canonization algorithm finished in 4174ms
+Graph with n = 30, m = 9, d = 3 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 30, m = 40, d = 3 has been created
+Canonization algorithm finished in 4073ms
+Graph with n = 30, m = 40, d = 3 has been created
+Canonization algorithm finished in 21414ms
+Graph with n = 30, m = 60, d = 3 has been created
+Canonization algorithm finished in 4379ms
+Graph with n = 30, m = 32, d = 3 has been created
+Canonization algorithm finished in 3862ms
+Graph with n = 30, m = 0, d = 3 has been created
+Canonization algorithm finished in 6ms
+Finished evaluating for n = 30, d = 3 with average time: 5002.7ms
+
+
+Graph with n = 30, m = 58, d = 5 has been created
+Canonization algorithm finished in 3876ms
+Graph with n = 30, m = 5, d = 5 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 30, m = 103, d = 5 has been created
+Canonization algorithm finished in 4731ms
+Graph with n = 30, m = 68, d = 5 has been created
+Canonization algorithm finished in 3726ms
+Graph with n = 30, m = 14, d = 5 has been created
+Canonization algorithm finished in 24ms
+Graph with n = 30, m = 6, d = 5 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 30, m = 136, d = 5 has been created
+Canonization algorithm finished in 6736ms
+Graph with n = 30, m = 74, d = 5 has been created
+Canonization algorithm finished in 5634ms
+Graph with n = 30, m = 53, d = 5 has been created
+Canonization algorithm finished in 3673ms
+Graph with n = 30, m = 77, d = 5 has been created
+Canonization algorithm finished in 4876ms
+Finished evaluating for n = 30, d = 5 with average time: 3328.9ms
+
+
+Graph with n = 30, m = 138, d = 7 has been created
+Canonization algorithm finished in 6981ms
+Graph with n = 30, m = 186, d = 7 has been created
+Canonization algorithm finished in 8691ms
+Graph with n = 30, m = 193, d = 7 has been created
+Canonization algorithm finished in 8392ms
+Graph with n = 30, m = 56, d = 7 has been created
+Canonization algorithm finished in 5368ms
+Graph with n = 30, m = 66, d = 7 has been created
+Canonization algorithm finished in 4680ms
+Graph with n = 30, m = 42, d = 7 has been created
+Canonization algorithm finished in 6985ms
+Graph with n = 30, m = 148, d = 7 has been created
+Canonization algorithm finished in 6580ms
+Graph with n = 30, m = 127, d = 7 has been created
+Canonization algorithm finished in 6631ms
+Graph with n = 30, m = 161, d = 7 has been created
+Canonization algorithm finished in 7733ms
+Graph with n = 30, m = 34, d = 7 has been created
+Canonization algorithm finished in 6185ms
+Finished evaluating for n = 30, d = 7 with average time: 6822.6ms
+
+
+Graph with n = 30, m = 91, d = 9 has been created
+Canonization algorithm finished in 4877ms
+Graph with n = 30, m = 228, d = 9 has been created
+Canonization algorithm finished in 10141ms
+Graph with n = 30, m = 37, d = 9 has been created
+Canonization algorithm finished in 2723ms
+Graph with n = 30, m = 6, d = 9 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 30, m = 134, d = 9 has been created
+Canonization algorithm finished in 7124ms
+Graph with n = 30, m = 121, d = 9 has been created
+Canonization algorithm finished in 5829ms
+Graph with n = 30, m = 85, d = 9 has been created
+Canonization algorithm finished in 4625ms
+Graph with n = 30, m = 213, d = 9 has been created
+Canonization algorithm finished in 9905ms
+Graph with n = 30, m = 187, d = 9 has been created
+Canonization algorithm finished in 8338ms
+Graph with n = 30, m = 102, d = 9 has been created
+Canonization algorithm finished in 4979ms
+Finished evaluating for n = 30, d = 9 with average time: 5854.5ms
+
+
+Graph with n = 30, m = 58, d = 6 has been created
+Canonization algorithm finished in 3924ms
+Graph with n = 30, m = 152, d = 6 has been created
+Canonization algorithm finished in 8288ms
+Graph with n = 30, m = 35, d = 6 has been created
+Canonization algorithm finished in 2169ms
+Graph with n = 30, m = 59, d = 6 has been created
+Canonization algorithm finished in 3624ms
+Graph with n = 30, m = 83, d = 6 has been created
+Canonization algorithm finished in 4626ms
+Graph with n = 30, m = 122, d = 6 has been created
+Canonization algorithm finished in 6425ms
+Graph with n = 30, m = 48, d = 6 has been created
+Canonization algorithm finished in 14805ms
+Graph with n = 30, m = 49, d = 6 has been created
+Canonization algorithm finished in 5027ms
+Graph with n = 30, m = 110, d = 6 has been created
+Canonization algorithm finished in 6028ms
+Graph with n = 30, m = 130, d = 6 has been created
+Canonization algorithm finished in 6279ms
+Finished evaluating for n = 30, d = 6 with average time: 6119.5ms
+
+
+Graph with n = 30, m = 758, d = 30 has been created
+Canonization algorithm finished in 40977ms
+Graph with n = 30, m = 823, d = 30 has been created
+Canonization algorithm finished in 47331ms
+Graph with n = 30, m = 298, d = 30 has been created
+Canonization algorithm finished in 12564ms
+Graph with n = 30, m = 533, d = 30 has been created
+Canonization algorithm finished in 25932ms
+Graph with n = 30, m = 688, d = 30 has been created
+Canonization algorithm finished in 36250ms
+Graph with n = 30, m = 231, d = 30 has been created
+Canonization algorithm finished in 10041ms
+Graph with n = 30, m = 76, d = 30 has been created
+Canonization algorithm finished in 5137ms
+Graph with n = 30, m = 864, d = 30 has been created
+Canonization algorithm finished in 120006ms
+Graph with n = 30, m = 779, d = 30 has been created
+Canonization algorithm finished in 42069ms
+Graph with n = 30, m = 258, d = 30 has been created
+Canonization algorithm finished in 12045ms
+Finished evaluating for n = 30, d = 30 with average time: 35235.2ms
+
+
+Evaluating for n = 35 and cnt = 10
+Graph with n = 35, m = 92, d = 3 has been created
+Canonization algorithm finished in 10891ms
+Graph with n = 35, m = 57, d = 3 has been created
+Canonization algorithm finished in 23269ms
+Graph with n = 35, m = 19, d = 3 has been created
+Canonization algorithm finished in 21ms
+Graph with n = 35, m = 84, d = 3 has been created
+Canonization algorithm finished in 11195ms
+Graph with n = 35, m = 30, d = 3 has been created
+Canonization algorithm finished in 10005ms
+Graph with n = 35, m = 60, d = 3 has been created
+Canonization algorithm finished in 6283ms
+Graph with n = 35, m = 62, d = 3 has been created
+Canonization algorithm finished in 8085ms
+Graph with n = 35, m = 24, d = 3 has been created
+Canonization algorithm finished in 115ms
+Graph with n = 35, m = 19, d = 3 has been created
+Canonization algorithm finished in 114ms
+Graph with n = 35, m = 8, d = 3 has been created
+Canonization algorithm finished in 4ms
+Finished evaluating for n = 35, d = 3 with average time: 6998.2ms
+
+
+Graph with n = 35, m = 95, d = 5 has been created
+Canonization algorithm finished in 9387ms
+Graph with n = 35, m = 47, d = 5 has been created
+Canonization algorithm finished in 8538ms
+Graph with n = 35, m = 106, d = 5 has been created
+Canonization algorithm finished in 11995ms
+Graph with n = 35, m = 27, d = 5 has been created
+Canonization algorithm finished in 1819ms
+Graph with n = 35, m = 69, d = 5 has been created
+Canonization algorithm finished in 9437ms
+Graph with n = 35, m = 0, d = 5 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 35, m = 117, d = 5 has been created
+Canonization algorithm finished in 9411ms
+Graph with n = 35, m = 114, d = 5 has been created
+Canonization algorithm finished in 14350ms
+Graph with n = 35, m = 157, d = 5 has been created
+Canonization algorithm finished in 15201ms
+Graph with n = 35, m = 63, d = 5 has been created
+Canonization algorithm finished in 6936ms
+Finished evaluating for n = 35, d = 5 with average time: 8707.8ms
+
+
+Graph with n = 35, m = 178, d = 7 has been created
+Canonization algorithm finished in 17514ms
+Graph with n = 35, m = 21, d = 7 has been created
+Canonization algorithm finished in 17ms
+Graph with n = 35, m = 28, d = 7 has been created
+Canonization algorithm finished in 521ms
+Graph with n = 35, m = 223, d = 7 has been created
+Canonization algorithm finished in 19765ms
+Graph with n = 35, m = 46, d = 7 has been created
+Canonization algorithm finished in 8838ms
+Graph with n = 35, m = 206, d = 7 has been created
+Canonization algorithm finished in 17613ms
+Graph with n = 35, m = 99, d = 7 has been created
+Canonization algorithm finished in 12049ms
+Graph with n = 35, m = 21, d = 7 has been created
+Canonization algorithm finished in 116ms
+Graph with n = 35, m = 186, d = 7 has been created
+Canonization algorithm finished in 16490ms
+Graph with n = 35, m = 45, d = 7 has been created
+Canonization algorithm finished in 13708ms
+Finished evaluating for n = 35, d = 7 with average time: 10663.1ms
+
+
+Graph with n = 35, m = 6, d = 9 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 35, m = 202, d = 9 has been created
+Canonization algorithm finished in 17661ms
+Graph with n = 35, m = 272, d = 9 has been created
+Canonization algorithm finished in 20864ms
+Graph with n = 35, m = 245, d = 9 has been created
+Canonization algorithm finished in 20261ms
+Graph with n = 35, m = 296, d = 9 has been created
+Canonization algorithm finished in 22975ms
+Graph with n = 35, m = 280, d = 9 has been created
+Canonization algorithm finished in 20817ms
+Graph with n = 35, m = 134, d = 9 has been created
+Canonization algorithm finished in 11697ms
+Graph with n = 35, m = 234, d = 9 has been created
+Canonization algorithm finished in 18913ms
+Graph with n = 35, m = 193, d = 9 has been created
+Canonization algorithm finished in 17612ms
+Graph with n = 35, m = 270, d = 9 has been created
+Canonization algorithm finished in 21544ms
+Finished evaluating for n = 35, d = 9 with average time: 17235.3ms
+
+
+Graph with n = 35, m = 93, d = 6 has been created
+Canonization algorithm finished in 12897ms
+Graph with n = 35, m = 99, d = 6 has been created
+Canonization algorithm finished in 12495ms
+Graph with n = 35, m = 196, d = 6 has been created
+Canonization algorithm finished in 17910ms
+Graph with n = 35, m = 90, d = 6 has been created
+Canonization algorithm finished in 11350ms
+Graph with n = 35, m = 102, d = 6 has been created
+Canonization algorithm finished in 9794ms
+Graph with n = 35, m = 127, d = 6 has been created
+Canonization algorithm finished in 12047ms
+Graph with n = 35, m = 128, d = 6 has been created
+Canonization algorithm finished in 15455ms
+Graph with n = 35, m = 137, d = 6 has been created
+Canonization algorithm finished in 12201ms
+Graph with n = 35, m = 95, d = 6 has been created
+Canonization algorithm finished in 8134ms
+Graph with n = 35, m = 55, d = 6 has been created
+Canonization algorithm finished in 7082ms
+Finished evaluating for n = 35, d = 6 with average time: 11936.5ms
+
+
+Graph with n = 35, m = 847, d = 35 has been created
+Canonization algorithm finished in 77103ms
+Graph with n = 35, m = 169, d = 35 has been created
+Canonization algorithm finished in 15706ms
+Graph with n = 35, m = 29, d = 35 has been created
+Canonization algorithm finished in 7731ms
+Graph with n = 35, m = 1152, d = 35 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 35, m = 1141, d = 35 has been created
+Canonization algorithm finished in 105226ms
+Graph with n = 35, m = 487, d = 35 has been created
+Canonization algorithm finished in 38815ms
+Graph with n = 35, m = 697, d = 35 has been created
+Canonization algorithm finished in 59188ms
+Graph with n = 35, m = 1137, d = 35 has been created
+Canonization algorithm finished in 120006ms
+Graph with n = 35, m = 770, d = 35 has been created
+Canonization algorithm finished in 69431ms
+Graph with n = 35, m = 252, d = 35 has been created
+Canonization algorithm finished in 20588ms
+Finished evaluating for n = 35, d = 35 with average time: 63379.6ms
+
+
+Evaluating for n = 40 and cnt = 10
+Graph with n = 40, m = 0, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 40, m = 89, d = 3 has been created
+Canonization algorithm finished in 18159ms
+Graph with n = 40, m = 55, d = 3 has been created
+Canonization algorithm finished in 21730ms
+Graph with n = 40, m = 98, d = 3 has been created
+Canonization algorithm finished in 22244ms
+Graph with n = 40, m = 34, d = 3 has been created
+Canonization algorithm finished in 7337ms
+Graph with n = 40, m = 60, d = 3 has been created
+Canonization algorithm finished in 10891ms
+Graph with n = 40, m = 49, d = 3 has been created
+Canonization algorithm finished in 13352ms
+Graph with n = 40, m = 77, d = 3 has been created
+Canonization algorithm finished in 15352ms
+Graph with n = 40, m = 64, d = 3 has been created
+Canonization algorithm finished in 68221ms
+Graph with n = 40, m = 17, d = 3 has been created
+Canonization algorithm finished in 17ms
+Finished evaluating for n = 40, d = 3 with average time: 17730.7ms
+
+
+Graph with n = 40, m = 92, d = 5 has been created
+Canonization algorithm finished in 20388ms
+Graph with n = 40, m = 7, d = 5 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 40, m = 193, d = 5 has been created
+Canonization algorithm finished in 32551ms
+Graph with n = 40, m = 18, d = 5 has been created
+Canonization algorithm finished in 17ms
+Graph with n = 40, m = 22, d = 5 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 40, m = 4, d = 5 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 40, m = 85, d = 5 has been created
+Canonization algorithm finished in 17056ms
+Graph with n = 40, m = 23, d = 5 has been created
+Canonization algorithm finished in 321ms
+Graph with n = 40, m = 177, d = 5 has been created
+Canonization algorithm finished in 25982ms
+Graph with n = 40, m = 200, d = 5 has been created
+Canonization algorithm finished in 29896ms
+Finished evaluating for n = 40, d = 5 with average time: 12625.2ms
+
+
+Graph with n = 40, m = 150, d = 7 has been created
+Canonization algorithm finished in 35959ms
+Graph with n = 40, m = 61, d = 7 has been created
+Canonization algorithm finished in 15106ms
+Graph with n = 40, m = 266, d = 7 has been created
+Canonization algorithm finished in 39866ms
+Graph with n = 40, m = 39, d = 7 has been created
+Canonization algorithm finished in 2824ms
+Graph with n = 40, m = 270, d = 7 has been created
+Canonization algorithm finished in 39915ms
+Graph with n = 40, m = 136, d = 7 has been created
+Canonization algorithm finished in 24714ms
+Graph with n = 40, m = 67, d = 7 has been created
+Canonization algorithm finished in 39268ms
+Graph with n = 40, m = 271, d = 7 has been created
+Canonization algorithm finished in 40864ms
+Graph with n = 40, m = 174, d = 7 has been created
+Canonization algorithm finished in 29309ms
+Graph with n = 40, m = 21, d = 7 has been created
+Canonization algorithm finished in 166ms
+Finished evaluating for n = 40, d = 7 with average time: 26799.1ms
+
+
+Graph with n = 40, m = 296, d = 9 has been created
+Canonization algorithm finished in 40160ms
+Graph with n = 40, m = 265, d = 9 has been created
+Canonization algorithm finished in 36995ms
+Graph with n = 40, m = 44, d = 9 has been created
+Canonization algorithm finished in 16208ms
+Graph with n = 40, m = 158, d = 9 has been created
+Canonization algorithm finished in 28099ms
+Graph with n = 40, m = 28, d = 9 has been created
+Canonization algorithm finished in 1419ms
+Graph with n = 40, m = 38, d = 9 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 40, m = 251, d = 9 has been created
+Canonization algorithm finished in 34251ms
+Graph with n = 40, m = 11, d = 9 has been created
+Canonization algorithm finished in 13ms
+Graph with n = 40, m = 287, d = 9 has been created
+Canonization algorithm finished in 36751ms
+Graph with n = 40, m = 56, d = 9 has been created
+Canonization algorithm finished in 15558ms
+Finished evaluating for n = 40, d = 9 with average time: 32945.6ms
+
+
+Graph with n = 40, m = 178, d = 7 has been created
+Canonization algorithm finished in 27985ms
+Graph with n = 40, m = 254, d = 7 has been created
+Canonization algorithm finished in 33829ms
+Graph with n = 40, m = 71, d = 7 has been created
+Canonization algorithm finished in 22784ms
+Graph with n = 40, m = 261, d = 7 has been created
+Canonization algorithm finished in 34044ms
+Graph with n = 40, m = 73, d = 7 has been created
+Canonization algorithm finished in 13651ms
+Graph with n = 40, m = 161, d = 7 has been created
+Canonization algorithm finished in 27932ms
+Graph with n = 40, m = 226, d = 7 has been created
+Canonization algorithm finished in 33302ms
+Graph with n = 40, m = 128, d = 7 has been created
+Canonization algorithm finished in 22778ms
+Graph with n = 40, m = 109, d = 7 has been created
+Canonization algorithm finished in 23312ms
+Graph with n = 40, m = 221, d = 7 has been created
+Canonization algorithm finished in 28839ms
+Finished evaluating for n = 40, d = 7 with average time: 26845.6ms
+
+
+Graph with n = 40, m = 1401, d = 40 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 40, m = 45, d = 40 has been created
+Canonization algorithm finished in 13609ms
+Graph with n = 40, m = 629, d = 40 has been created
+Canonization algorithm finished in 87126ms
+Graph with n = 40, m = 414, d = 40 has been created
+Canonization algorithm finished in 56311ms
+Graph with n = 40, m = 553, d = 40 has been created
+Canonization algorithm finished in 72859ms
+Graph with n = 40, m = 492, d = 40 has been created
+Canonization algorithm finished in 64441ms
+Graph with n = 40, m = 491, d = 40 has been created
+Canonization algorithm finished in 62378ms
+Graph with n = 40, m = 826, d = 40 has been created
+Canonization algorithm finished in 119887ms
+Graph with n = 40, m = 48, d = 40 has been created
+Canonization algorithm finished in 38260ms
+Graph with n = 40, m = 1554, d = 40 has been created
+Canonization algorithm finished in 120002ms
+Finished evaluating for n = 40, d = 40 with average time: 75487.4ms
+
+
+Evaluating for n = 45 and cnt = 10
+Graph with n = 45, m = 127, d = 3 has been created
+Canonization algorithm finished in 43575ms
+Graph with n = 45, m = 109, d = 3 has been created
+Canonization algorithm finished in 35655ms
+Graph with n = 45, m = 126, d = 3 has been created
+Canonization algorithm finished in 54211ms
+Graph with n = 45, m = 85, d = 3 has been created
+Canonization algorithm finished in 48267ms
+Graph with n = 45, m = 25, d = 3 has been created
+Canonization algorithm finished in 65ms
+Graph with n = 45, m = 41, d = 3 has been created
+Canonization algorithm finished in 18313ms
+Graph with n = 45, m = 68, d = 3 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 45, m = 97, d = 3 has been created
+Canonization algorithm finished in 34105ms
+Graph with n = 45, m = 57, d = 3 has been created
+Canonization algorithm finished in 97680ms
+Graph with n = 45, m = 25, d = 3 has been created
+Canonization algorithm finished in 1720ms
+Finished evaluating for n = 45, d = 3 with average time: 45359.3ms
+
+
+Graph with n = 45, m = 130, d = 5 has been created
+Canonization algorithm finished in 35867ms
+Graph with n = 45, m = 141, d = 5 has been created
+Canonization algorithm finished in 42049ms
+Graph with n = 45, m = 111, d = 5 has been created
+Canonization algorithm finished in 42176ms
+Graph with n = 45, m = 114, d = 5 has been created
+Canonization algorithm finished in 36447ms
+Graph with n = 45, m = 88, d = 5 has been created
+Canonization algorithm finished in 27538ms
+Graph with n = 45, m = 142, d = 5 has been created
+Canonization algorithm finished in 41629ms
+Graph with n = 45, m = 14, d = 5 has been created
+Canonization algorithm finished in 67ms
+Graph with n = 45, m = 137, d = 5 has been created
+Canonization algorithm finished in 35861ms
+Graph with n = 45, m = 190, d = 5 has been created
+Canonization algorithm finished in 50676ms
+Graph with n = 45, m = 75, d = 5 has been created
+Canonization algorithm finished in 37424ms
+Finished evaluating for n = 45, d = 5 with average time: 34973.4ms
+
+
+Graph with n = 45, m = 108, d = 7 has been created
+Canonization algorithm finished in 38513ms
+Graph with n = 45, m = 226, d = 7 has been created
+Canonization algorithm finished in 53721ms
+Graph with n = 45, m = 14, d = 7 has been created
+Canonization algorithm finished in 17ms
+Graph with n = 45, m = 151, d = 7 has been created
+Canonization algorithm finished in 43926ms
+Graph with n = 45, m = 224, d = 7 has been created
+Canonization algorithm finished in 65944ms
+Graph with n = 45, m = 111, d = 7 has been created
+Canonization algorithm finished in 42988ms
+Graph with n = 45, m = 280, d = 7 has been created
+Canonization algorithm finished in 67654ms
+Graph with n = 45, m = 132, d = 7 has been created
+Canonization algorithm finished in 47067ms
+Graph with n = 45, m = 81, d = 7 has been created
+Canonization algorithm finished in 28340ms
+Graph with n = 45, m = 156, d = 7 has been created
+Canonization algorithm finished in 38370ms
+Finished evaluating for n = 45, d = 7 with average time: 42654.0ms
+
+
+Graph with n = 45, m = 403, d = 9 has been created
+Canonization algorithm finished in 99419ms
+Graph with n = 45, m = 59, d = 9 has been created
+Canonization algorithm finished in 57945ms
+Graph with n = 45, m = 227, d = 9 has been created
+Canonization algorithm finished in 55924ms
+Graph with n = 45, m = 92, d = 9 has been created
+Canonization algorithm finished in 32107ms
+Graph with n = 45, m = 334, d = 9 has been created
+Canonization algorithm finished in 75875ms
+Graph with n = 45, m = 148, d = 9 has been created
+Canonization algorithm finished in 40818ms
+Graph with n = 45, m = 80, d = 9 has been created
+Canonization algorithm finished in 52546ms
+Graph with n = 45, m = 174, d = 9 has been created
+Canonization algorithm finished in 45526ms
+Graph with n = 45, m = 172, d = 9 has been created
+Canonization algorithm finished in 41921ms
+Graph with n = 45, m = 20, d = 9 has been created
+Canonization algorithm finished in 36ms
+Finished evaluating for n = 45, d = 9 with average time: 50211.7ms
+
+
+Graph with n = 45, m = 5, d = 7 has been created
+Canonization algorithm finished in 6ms
+Graph with n = 45, m = 33, d = 7 has been created
+Canonization algorithm finished in 3675ms
+Graph with n = 45, m = 254, d = 7 has been created
+Canonization algorithm finished in 61593ms
+Graph with n = 45, m = 138, d = 7 has been created
+Canonization algorithm finished in 42125ms
+Graph with n = 45, m = 212, d = 7 has been created
+Canonization algorithm finished in 61812ms
+Graph with n = 45, m = 151, d = 7 has been created
+Canonization algorithm finished in 35816ms
+Graph with n = 45, m = 245, d = 7 has been created
+Canonization algorithm finished in 64552ms
+Graph with n = 45, m = 52, d = 7 has been created
+Canonization algorithm finished in 11092ms
+Graph with n = 45, m = 22, d = 7 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 45, m = 209, d = 7 has been created
+Canonization algorithm finished in 46480ms
+Finished evaluating for n = 45, d = 7 with average time: 32716.0ms
+
+
+Graph with n = 45, m = 1052, d = 45 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 45, m = 882, d = 45 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 45, m = 182, d = 45 has been created
+Canonization algorithm finished in 42721ms
+Graph with n = 45, m = 1340, d = 45 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 45, m = 1541, d = 45 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 45, m = 1628, d = 45 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 45, m = 616, d = 45 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 45, m = 1894, d = 45 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 45, m = 447, d = 45 has been created
+Canonization algorithm finished in 112670ms
+Graph with n = 45, m = 1317, d = 45 has been created
+Canonization algorithm finished in 120002ms
+Finished evaluating for n = 45, d = 45 with average time: 111540.5ms
+
+
+Evaluating for n = 50 and cnt = 10
+Graph with n = 50, m = 44, d = 3 has been created
+Canonization algorithm finished in 4637ms
+Graph with n = 50, m = 32, d = 3 has been created
+Canonization algorithm finished in 4926ms
+Graph with n = 50, m = 120, d = 3 has been created
+Canonization algorithm finished in 61958ms
+Graph with n = 50, m = 15, d = 3 has been created
+Canonization algorithm finished in 12ms
+Graph with n = 50, m = 120, d = 3 has been created
+Canonization algorithm finished in 63499ms
+Graph with n = 50, m = 3, d = 3 has been created
+Canonization algorithm finished in 5ms
+Graph with n = 50, m = 140, d = 3 has been created
+Canonization algorithm finished in 81032ms
+Graph with n = 50, m = 8, d = 3 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 50, m = 136, d = 3 has been created
+Canonization algorithm finished in 67298ms
+Graph with n = 50, m = 115, d = 3 has been created
+Canonization algorithm finished in 60993ms
+Finished evaluating for n = 50, d = 3 with average time: 34436.9ms
+
+
+Graph with n = 50, m = 151, d = 5 has been created
+Canonization algorithm finished in 70052ms
+Graph with n = 50, m = 13, d = 5 has been created
+Canonization algorithm finished in 9ms
+Graph with n = 50, m = 193, d = 5 has been created
+Canonization algorithm finished in 77185ms
+Graph with n = 50, m = 175, d = 5 has been created
+Canonization algorithm finished in 76224ms
+Graph with n = 50, m = 112, d = 5 has been created
+Canonization algorithm finished in 61698ms
+Graph with n = 50, m = 144, d = 5 has been created
+Canonization algorithm finished in 85004ms
+Graph with n = 50, m = 134, d = 5 has been created
+Canonization algorithm finished in 68954ms
+Graph with n = 50, m = 175, d = 5 has been created
+Canonization algorithm finished in 80288ms
+Graph with n = 50, m = 48, d = 5 has been created
+Canonization algorithm finished in 53419ms
+Graph with n = 50, m = 63, d = 5 has been created
+Canonization algorithm finished in 35028ms
+Finished evaluating for n = 50, d = 5 with average time: 60786.1ms
+
+
+Graph with n = 50, m = 345, d = 7 has been created
+Canonization algorithm finished in 120005ms
+Graph with n = 50, m = 180, d = 7 has been created
+Canonization algorithm finished in 89688ms
+Graph with n = 50, m = 89, d = 7 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 50, m = 325, d = 7 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 50, m = 30, d = 7 has been created
+Canonization algorithm finished in 270ms
+Graph with n = 50, m = 323, d = 7 has been created
+Canonization algorithm finished in 119116ms
+Graph with n = 50, m = 242, d = 7 has been created
+Canonization algorithm finished in 100425ms
+Graph with n = 50, m = 13, d = 7 has been created
+Canonization algorithm finished in 12ms
+Graph with n = 50, m = 19, d = 7 has been created
+Canonization algorithm finished in 33ms
+Graph with n = 50, m = 248, d = 7 has been created
+Canonization algorithm finished in 94173ms
+Finished evaluating for n = 50, d = 7 with average time: 76372.8ms
+
+
+Graph with n = 50, m = 61, d = 9 has been created
+Canonization algorithm finished in 110001ms
+Graph with n = 50, m = 159, d = 9 has been created
+Canonization algorithm finished in 78993ms
+Graph with n = 50, m = 126, d = 9 has been created
+Canonization algorithm finished in 75110ms
+Graph with n = 50, m = 229, d = 9 has been created
+Canonization algorithm finished in 93439ms
+Graph with n = 50, m = 7, d = 9 has been created
+Canonization algorithm finished in 11ms
+Graph with n = 50, m = 262, d = 9 has been created
+Canonization algorithm finished in 106472ms
+Graph with n = 50, m = 222, d = 9 has been created
+Canonization algorithm finished in 90757ms
+Graph with n = 50, m = 297, d = 9 has been created
+Canonization algorithm finished in 105955ms
+Graph with n = 50, m = 422, d = 9 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 50, m = 279, d = 9 has been created
+Canonization algorithm finished in 101813ms
+Finished evaluating for n = 50, d = 9 with average time: 88255.5ms
+
+
+Graph with n = 50, m = 136, d = 8 has been created
+Canonization algorithm finished in 79880ms
+Graph with n = 50, m = 321, d = 8 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 50, m = 62, d = 8 has been created
+Canonization algorithm finished in 84939ms
+Graph with n = 50, m = 330, d = 8 has been created
+Canonization algorithm finished in 111287ms
+Graph with n = 50, m = 46, d = 8 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 50, m = 217, d = 8 has been created
+Canonization algorithm finished in 91769ms
+Graph with n = 50, m = 198, d = 8 has been created
+Canonization algorithm finished in 78565ms
+Graph with n = 50, m = 46, d = 8 has been created
+Canonization algorithm finished in 20368ms
+Graph with n = 50, m = 138, d = 8 has been created
+Canonization algorithm finished in 85339ms
+Graph with n = 50, m = 43, d = 8 has been created
+Canonization algorithm finished in 4826ms
+Finished evaluating for n = 50, d = 8 with average time: 79697.8ms
+
+
+Graph with n = 50, m = 1377, d = 50 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 50, m = 2381, d = 50 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 50, m = 1201, d = 50 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 50, m = 2122, d = 50 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 50, m = 2086, d = 50 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 50, m = 2119, d = 50 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 50, m = 1066, d = 50 has been created
+Canonization algorithm finished in 120014ms
+Graph with n = 50, m = 1123, d = 50 has been created
+Canonization algorithm finished in 120005ms
+Graph with n = 50, m = 2250, d = 50 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 50, m = 659, d = 50 has been created
+Canonization algorithm finished in 120003ms
+Finished evaluating for n = 50, d = 50 with average time: 120004.1ms
+
+
+Evaluating for n = 55 and cnt = 10
+Graph with n = 55, m = 54, d = 3 has been created
+Canonization algorithm finished in 55800ms
+Graph with n = 55, m = 12, d = 3 has been created
+Canonization algorithm finished in 11ms
+Graph with n = 55, m = 16, d = 3 has been created
+Canonization algorithm finished in 17ms
+Graph with n = 55, m = 103, d = 3 has been created
+Canonization algorithm finished in 108219ms
+Graph with n = 55, m = 88, d = 3 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 156, d = 3 has been created
+Canonization algorithm finished in 100602ms
+Graph with n = 55, m = 25, d = 3 has been created
+Canonization algorithm finished in 65ms
+Graph with n = 55, m = 56, d = 3 has been created
+Canonization algorithm finished in 40566ms
+Graph with n = 55, m = 108, d = 3 has been created
+Canonization algorithm finished in 92638ms
+Graph with n = 55, m = 118, d = 3 has been created
+Canonization algorithm finished in 109611ms
+Finished evaluating for n = 55, d = 3 with average time: 62753.2ms
+
+
+Graph with n = 55, m = 274, d = 5 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 55, m = 27, d = 5 has been created
+Canonization algorithm finished in 32ms
+Graph with n = 55, m = 52, d = 5 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 55, m = 55, d = 5 has been created
+Canonization algorithm finished in 37905ms
+Graph with n = 55, m = 181, d = 5 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 55, m = 196, d = 5 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 55, m = 214, d = 5 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 55, m = 235, d = 5 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 139, d = 5 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 140, d = 5 has been created
+Canonization algorithm finished in 120003ms
+Finished evaluating for n = 55, d = 5 with average time: 99795.5ms
+
+
+Graph with n = 55, m = 223, d = 7 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 98, d = 7 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 142, d = 7 has been created
+Canonization algorithm finished in 111516ms
+Graph with n = 55, m = 221, d = 7 has been created
+Canonization algorithm finished in 120009ms
+Graph with n = 55, m = 371, d = 7 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 107, d = 7 has been created
+Canonization algorithm finished in 102089ms
+Graph with n = 55, m = 327, d = 7 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 290, d = 7 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 247, d = 7 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 55, m = 18, d = 7 has been created
+Canonization algorithm finished in 21ms
+Finished evaluating for n = 55, d = 7 with average time: 105365.2ms
+
+
+Graph with n = 55, m = 167, d = 9 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 55, m = 377, d = 9 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 249, d = 9 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 459, d = 9 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 89, d = 9 has been created
+Canonization algorithm finished in 105177ms
+Graph with n = 55, m = 105, d = 9 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 329, d = 9 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 271, d = 9 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 333, d = 9 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 55, m = 199, d = 9 has been created
+Canonization algorithm finished in 120003ms
+Finished evaluating for n = 55, d = 9 with average time: 118519.7ms
+
+
+Graph with n = 55, m = 150, d = 8 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 371, d = 8 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 188, d = 8 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 387, d = 8 has been created
+Canonization algorithm finished in 120006ms
+Graph with n = 55, m = 225, d = 8 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 155, d = 8 has been created
+Canonization algorithm finished in 114509ms
+Graph with n = 55, m = 243, d = 8 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 298, d = 8 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 251, d = 8 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 55, m = 413, d = 8 has been created
+Canonization algorithm finished in 120002ms
+Finished evaluating for n = 55, d = 8 with average time: 119453.5ms
+
+
+Graph with n = 55, m = 2361, d = 55 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 55, m = 2505, d = 55 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 401, d = 55 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 887, d = 55 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 846, d = 55 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 1871, d = 55 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 356, d = 55 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 55, m = 766, d = 55 has been created
+Canonization algorithm finished in 120005ms
+Graph with n = 55, m = 264, d = 55 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 55, m = 753, d = 55 has been created
+Canonization algorithm finished in 120002ms
+Finished evaluating for n = 55, d = 55 with average time: 120002.8ms
+
+
+Evaluating for n = 60 and cnt = 10
+Graph with n = 60, m = 4, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 60, m = 140, d = 3 has been created
+Canonization algorithm finished in 120010ms
+Graph with n = 60, m = 121, d = 3 has been created
+Canonization algorithm finished in 120007ms
+Graph with n = 60, m = 140, d = 3 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 34, d = 3 has been created
+Canonization algorithm finished in 115ms
+Graph with n = 60, m = 8, d = 3 has been created
+Canonization algorithm finished in 4ms
+Graph with n = 60, m = 154, d = 3 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 60, m = 126, d = 3 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 34, d = 3 has been created
+Canonization algorithm finished in 12717ms
+Graph with n = 60, m = 55, d = 3 has been created
+Canonization algorithm finished in 120004ms
+Finished evaluating for n = 60, d = 3 with average time: 73287.0ms
+
+
+Graph with n = 60, m = 14, d = 5 has been created
+Canonization algorithm finished in 11ms
+Graph with n = 60, m = 171, d = 5 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 160, d = 5 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 193, d = 5 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 60, m = 20, d = 5 has been created
+Canonization algorithm finished in 6ms
+Graph with n = 60, m = 77, d = 5 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 60, m = 65, d = 5 has been created
+Canonization algorithm finished in 116422ms
+Graph with n = 60, m = 38, d = 5 has been created
+Canonization algorithm finished in 22376ms
+Graph with n = 60, m = 227, d = 5 has been created
+Canonization algorithm finished in 120008ms
+Graph with n = 60, m = 134, d = 5 has been created
+Canonization algorithm finished in 120003ms
+Finished evaluating for n = 60, d = 5 with average time: 85883.6ms
+
+
+Graph with n = 60, m = 84, d = 7 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 60, m = 383, d = 7 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 199, d = 7 has been created
+Canonization algorithm finished in 120007ms
+Graph with n = 60, m = 131, d = 7 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 326, d = 7 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 289, d = 7 has been created
+Canonization algorithm finished in 120005ms
+Graph with n = 60, m = 256, d = 7 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 393, d = 7 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 276, d = 7 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 342, d = 7 has been created
+Canonization algorithm finished in 120001ms
+Finished evaluating for n = 60, d = 7 with average time: 120003.4ms
+
+
+Graph with n = 60, m = 405, d = 9 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 60, m = 494, d = 9 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 193, d = 9 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 397, d = 9 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 275, d = 9 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 288, d = 9 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 60, m = 47, d = 9 has been created
+Canonization algorithm finished in 59399ms
+Graph with n = 60, m = 29, d = 9 has been created
+Canonization algorithm finished in 39ms
+Graph with n = 60, m = 219, d = 9 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 392, d = 9 has been created
+Canonization algorithm finished in 120004ms
+Finished evaluating for n = 60, d = 9 with average time: 101946.4ms
+
+
+Graph with n = 60, m = 391, d = 8 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 31, d = 8 has been created
+Canonization algorithm finished in 420ms
+Graph with n = 60, m = 55, d = 8 has been created
+Canonization algorithm finished in 89100ms
+Graph with n = 60, m = 212, d = 8 has been created
+Canonization algorithm finished in 120006ms
+Graph with n = 60, m = 344, d = 8 has been created
+Canonization algorithm finished in 120021ms
+Graph with n = 60, m = 50, d = 8 has been created
+Canonization algorithm finished in 120008ms
+Graph with n = 60, m = 326, d = 8 has been created
+Canonization algorithm finished in 120001ms
+Graph with n = 60, m = 93, d = 8 has been created
+Canonization algorithm finished in 120007ms
+Graph with n = 60, m = 352, d = 8 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 112, d = 8 has been created
+Canonization algorithm finished in 120004ms
+Finished evaluating for n = 60, d = 8 with average time: 104957.3ms
+
+
+Graph with n = 60, m = 110, d = 60 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 60, m = 2690, d = 60 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 60, m = 2136, d = 60 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 3093, d = 60 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 2946, d = 60 has been created
+Canonization algorithm finished in 120002ms
+Graph with n = 60, m = 3314, d = 60 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 1550, d = 60 has been created
+Canonization algorithm finished in 120003ms
+Graph with n = 60, m = 1751, d = 60 has been created
+Canonization algorithm finished in 120009ms
+Graph with n = 60, m = 2972, d = 60 has been created
+Canonization algorithm finished in 120004ms
+Graph with n = 60, m = 271, d = 60 has been created
+Canonization algorithm finished in 120006ms
+Finished evaluating for n = 60, d = 60 with average time: 120004.2ms
+
+
+Evaluation ended

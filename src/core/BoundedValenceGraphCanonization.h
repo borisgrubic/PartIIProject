@@ -21,6 +21,13 @@ bool testIsomorphismBetweenBoundedValenceGraphs(
     EdgeSet*
 );
 
+bool testIsomorphismBetweenBoundedValenceGraphsSlow(
+    ElementSet*,
+    EdgeSet*,
+    ElementSet*,
+    EdgeSet* 
+);
+
 ElementSet* findMinimalAdjacencyMatrixConnected(
     ElementSet* nodes,
     EdgeSet* edges,

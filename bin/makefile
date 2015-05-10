@@ -7,7 +7,7 @@ DIRS = ../src/types/ ../src/utils/ ../src/core/
 SOURCES = $(foreach d, $(DIRS), $(wildcard $(d)*.cpp) )
 OBJECTS = $(SOURCES:.cpp=.o)
 
-TEST_DIRS = ../test/core/ ../test/types/ ../test/utils/ ../test/
+TEST_DIRS = ../test/core/ ../test/types/ ../test/utils/ ../test/ 
 TEST_SOURCES = $(foreach d, $(TEST_DIRS), $(wildcard $(d)*.cpp) )
 TEST_OBJECTS = $(TEST_SOURCES:.cpp=.o)
 TEST_TARGET = testAll
@@ -17,6 +17,13 @@ all: $(OBJECTS)
 test: $(TEST_TARGET) $(TEST_OBJECTS) $(OBJECTS)
 	./$(TEST_TARGET)
 	
+evaluate: canonize 
+	cp ../evaluate/performance.py .
+	python3 performance.py
+
+canonize: $(OBJECTS)
+	$(CC) ../evaluate/canonize.cpp $(notdir $(OBJECTS)) -g -o canonize
+
 $(TEST_TARGET): $(TEST_OBJECTS) $(OBJECTS)
 	$(CC) $(notdir $(TEST_OBJECTS)) $(notdir $(OBJECTS)) -g -o $(TEST_TARGET)
 
